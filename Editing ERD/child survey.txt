@@ -1,0 +1,51 @@
+Certainly, to capture detailed data about the parent's child in the Survey table for personalizing toy recommendations, you can include a range of attributes. Here are detailed attributes you can consider:
+
+**Survey:**
+
+- **SurveyID** (Primary Key)
+- **UserID** (Foreign Key to User)
+- **ChildsAge** (Age of the child, e.g., 2 years, 5 years, etc.)
+- **ChildsGender** (Gender of the child, e.g., Male, Female, Other)
+- **ChildsInterests** (Interests or hobbies of the child, e.g., art, science, sports)
+- **ChildsDevelopmentalMilestones**
+  - LanguageDevelopment (e.g., vocabulary size, language skills)
+  - MotorSkillsDevelopment (e.g., fine motor skills, gross motor skills)
+  - CognitiveDevelopment (e.g., problem-solving, memory)
+  - SocialDevelopment (e.g., interaction with peers, communication)
+  - EmotionalDevelopment (e.g., handling emotions, empathy)
+- **ChildsPersonalityTraits**
+  - Introverted (Yes/No)
+  - Extroverted (Yes/No)
+  - Shy (Yes/No)
+  - Outgoing (Yes/No)
+  - Curious (Yes/No)
+  - Adventurous (Yes/No)
+  - Analytical (Yes/No)
+  - Creative (Yes/No)
+  - Empathetic (Yes/No)
+- **ChildsLearningStyle**
+  - Visual (Yes/No)
+  - Auditory (Yes/No)
+  - Kinesthetic (Yes/No)
+- **ChildsFavoriteColors** (Colors preferred by the child)
+- **ChildsFavoriteCharacters** (Favorite cartoon or fictional characters)
+- **ChildsAllergies** (Any allergies or sensitivities)
+- **ChildsSpecialNeeds** (If the child has any special needs or considerations)
+- **ChildsDevelopmentalChallenges** (If the child faces any developmental challenges)
+- **ChildsLanguageSkills**
+  - PrimaryLanguage (e.g., English, Spanish)
+  - Bilingual (Yes/No)
+  - LanguageProficiency (basic, intermediate, advanced)
+- **ChildsReadingLevel** (if applicable)
+- **ChildsEducationalGoals** (e.g., academic goals, skills development goals)
+- **ChildsPhysicalActivityLevel** (e.g., active, sedentary)
+- **ChildsFavoriteToys** (Existing favorite toys or types of toys)
+- **ChildsPreferredActivities** (Preferred activities, e.g., drawing, playing outside)
+- **ChildsPreferredSubjects** (Preferred subjects in school, e.g., math, science)
+- **ChildsMediaConsumption** (Favorite books, TV shows, movies, games)
+- **ChildsSocialInteractions** (How the child interacts with peers, adults, siblings)
+- **ChildsEmotionalWellbeing** (General emotional state, e.g., happy, anxious)
+- **ChildsHobbies** (Any specific hobbies or interests)
+- **ChildsChallenges** (Challenges the child faces, e.g., communication difficulties)
+
+These detailed attributes provide a comprehensive profile of the child, including their age, gender, interests, developmental milestones, personality traits, learning style, and more. This information can help personalize toy recommendations to better suit the child's needs and preferences. You can adapt or expand these attributes based on your project's requirements and the level of personalization you aim to achieve.

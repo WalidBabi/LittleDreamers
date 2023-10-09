@@ -1,0 +1,94 @@
+To capture these attributes from the user and store them in your database table, you'll need to create a user interface that allows parents or guardians to input this information during the registration or profile setup process. Here's a list of attributes and their corresponding data types for your database table:
+
+**Table Name: ChildSurvey**
+
+1. **ChildsAge**
+   - Data Type: Integer (Store the age in years)
+
+2. **ChildsGender**
+   - Data Type: String (Store gender as "Male," "Female," or "Other")
+
+3. **ChildsInterests**
+   - Data Type: Text (Store multiple interests as a comma-separated list or in a separate table if needed)
+
+4. **ChildsDevelopmentalMilestones**
+   - Data Type: JSON (Store developmental milestones as a JSON object with sub-attributes)
+     - LanguageDevelopment: Integer (e.g., vocabulary size)
+     - MotorSkillsDevelopment: Text (e.g., fine motor skills, gross motor skills)
+     - CognitiveDevelopment: Text (e.g., problem-solving, memory)
+     - SocialDevelopment: Text (e.g., interaction with peers, communication)
+     - EmotionalDevelopment: Text (e.g., handling emotions, empathy)
+
+5. **ChildsPersonalityTraits**
+   - Data Type: JSON (Store personality traits as a JSON object with Boolean values)
+     - Introverted: Boolean
+     - Extroverted: Boolean
+     - Shy: Boolean
+     - Outgoing: Boolean
+     - Curious: Boolean
+     - Adventurous: Boolean
+     - Analytical: Boolean
+     - Creative: Boolean
+     - Empathetic: Boolean
+
+6. **ChildsLearningStyle**
+   - Data Type: JSON (Store learning styles as a JSON object with Boolean values)
+     - Visual: Boolean
+     - Auditory: Boolean
+     - Kinesthetic: Boolean
+
+7. **ChildsFavoriteColors**
+   - Data Type: Text (Store multiple colors as a comma-separated list or in a separate table if needed)
+
+8. **ChildsFavoriteCharacters**
+   - Data Type: Text (Store multiple characters as a comma-separated list or in a separate table if needed)
+
+9. **ChildsAllergies**
+   - Data Type: Text (Store allergy information as a text field)
+
+10. **ChildsSpecialNeeds**
+    - Data Type: Text (Store special needs information as a text field)
+
+11. **ChildsDevelopmentalChallenges**
+    - Data Type: Text (Store developmental challenges as a text field)
+
+12. **ChildsLanguageSkills**
+    - Data Type: JSON (Store language skills as a JSON object)
+      - PrimaryLanguage: String (e.g., "English," "Spanish")
+      - Bilingual: Boolean
+      - LanguageProficiency: String (e.g., "basic," "intermediate," "advanced")
+
+13. **ChildsReadingLevel**
+    - Data Type: String (Store reading level as text if applicable)
+
+14. **ChildsEducationalGoals**
+    - Data Type: Text (Store educational goals as a text field)
+
+15. **ChildsPhysicalActivityLevel**
+    - Data Type: String (Store physical activity level as text)
+
+16. **ChildsFavoriteToys**
+    - Data Type: Text (Store multiple favorite toys as a comma-separated list or in a separate table if needed)
+
+17. **ChildsPreferredActivities**
+    - Data Type: Text (Store multiple preferred activities as a comma-separated list or in a separate table if needed)
+
+18. **ChildsPreferredSubjects**
+    - Data Type: Text (Store multiple preferred subjects as a comma-separated list or in a separate table if needed)
+
+19. **ChildsMediaConsumption**
+    - Data Type: Text (Store multiple media consumption preferences as a comma-separated list or in a separate table if needed)
+
+20. **ChildsSocialInteractions**
+    - Data Type: Text (Store information about social interactions as a text field)
+
+21. **ChildsEmotionalWellbeing**
+    - Data Type: String (Store emotional wellbeing as text)
+
+22. **ChildsHobbies**
+    - Data Type: Text (Store multiple hobbies as a comma-separated list or in a separate table if needed)
+
+23. **ChildsChallenges**
+    - Data Type: Text (Store information about challenges as a text field)
+
+By designing your database table to accommodate these attributes with the specified data types, you can effectively capture and store a wide range of information about each child's development, preferences, and characteristics. This data can then be used to provide highly personalized toy recommendations based on the child's unique profile.

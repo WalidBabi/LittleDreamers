@@ -1,0 +1,56 @@
+Certainly, here are more developmental-related attributes that you can consider adding to the `Toy` entity to provide detailed information about how each toy supports a child's development:
+
+**Toy Developmental Attributes:**
+
+1. **Cognitive Development:**
+   - Problem-Solving Skills: Does the toy encourage problem-solving and critical thinking?
+   - Memory Enhancement: Does the toy help improve memory or recall abilities?
+   - Mathematical Skills: Does the toy involve math-related activities or concepts?
+   - Language Development: Does the toy promote language skills and vocabulary expansion?
+
+2. **Motor Skills Development:**
+   - Fine Motor Skills: Does the toy require precision and control of small movements?
+   - Gross Motor Skills: Does the toy involve physical activities that promote large muscle development?
+
+3. **Social and Emotional Development:**
+   - Social Interaction: Does the toy facilitate interaction with peers or adults?
+   - Emotional Expression: Does the toy encourage emotional expression and empathy?
+   - Conflict Resolution: Does the toy teach conflict resolution and cooperation skills?
+
+4. **Creativity and Imagination:**
+   - Creative Play: Does the toy inspire creative and imaginative play?
+   - Storytelling: Does the toy encourage storytelling and imaginative narratives?
+
+5. **Sensory Stimulation:**
+   - Sensory Exploration: Does the toy engage multiple senses (sight, sound, touch, smell, taste)?
+   - Sensory Integration: Does the toy help with sensory integration and awareness?
+
+6. **Communication Skills:**
+   - Communication Enhancement: Does the toy promote communication skills, including verbal and non-verbal communication?
+   - Social Communication: Does the toy aid in social communication and interaction?
+
+7. **Problem-Solving and Logic:**
+   - Logical Thinking: Does the toy involve logic-based challenges or puzzles?
+   - Spatial Reasoning: Does the toy enhance spatial reasoning and understanding of space and shapes?
+
+8. **Emotional Regulation:**
+   - Emotional Regulation: Does the toy assist in managing and regulating emotions?
+   - Stress Relief: Does the toy provide a calming or stress-relief effect?
+
+9. **Language and Literacy:**
+   - Reading Readiness: Does the toy support early reading and literacy skills?
+   - Phonics and Vocabulary: Does the toy focus on phonics or vocabulary building?
+
+10. **Science and Exploration:**
+    - Science Exploration: Does the toy encourage scientific curiosity and exploration?
+    - Nature and Environment: Does the toy relate to nature and environmental awareness?
+
+11. **Music and Arts:**
+    - Musical Skills: Does the toy promote musical skills and appreciation?
+    - Artistic Expression: Does the toy allow for creative artistic expression?
+
+12. **Physical Activity:**
+    - Physical Fitness: Does the toy promote physical activity and exercise?
+    - Coordination and Balance: Does the toy improve coordination and balance?
+
+These additional attributes provide a detailed breakdown of how each toy contributes to various aspects of a child's development. By including such information in your toy database, you can offer highly tailored recommendations based on specific developmental goals and needs.
