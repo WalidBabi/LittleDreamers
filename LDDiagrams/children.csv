@@ -283,7 +283,7 @@ id,parent_id,childname,child_age,child_gender,child_preferred_category,child_Cog
 282,174,Ella,2,Female,Infant Toys,5,4,3,1,2
 283,205,Oliver,6,Male,Interactive Toys,2,3,1,5,4
 284,123,Sophia,9,Female,Arts and Crafts,4,5,2,3,1
-285,290,Amelia,4,Female,Remote Control,1,2,3,5,
+285,290,Amelia,4,Female,Remote Control,1,2,3,5,3
 286,131,Liam,7,Male,Interactive Books,2,5,3,1,4
 287,229,Ava,3,Female,Dolls and Accessories,4,2,1,5,3
 288,202,Olivia,6,Female,STEM Toys,1,4,2,3,5
@@ -360,7 +360,7 @@ id,parent_id,childname,child_age,child_gender,child_preferred_category,child_Cog
 359,123,Harper,2,Female,Science and Nature,1,3,4,2,5
 360,238,Jack,6,Male,STEM Toys,2,5,1,4,3
 361,297,Ella,9,Female,Interactive Toys,3,2,4,5,1
-362,171,Oliver,3,Male,Remote Control,4,1,2,3,
+362,171,Oliver,3,Male,Remote Control,4,1,2,3,3
 363,331,Mia,5,Female,Stuffed Animals,2,3,1,5,4
 364,228,Lucas,8,Male,STEM Toys,4,1,5,2,3
 365,141,Emma,3,Female,Interactive Toys,5,2,3,4,1

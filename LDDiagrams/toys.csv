@@ -18,7 +18,7 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 17,Soft Dollhouse,Adorable soft dollhouse for imaginative play,Dolls and Accessories,28.95,dollhouse.jpg,16,7,Male,Fisher-Price,Christmas,3,2,4,1,5
 18,Construction Vehicle Set,Durable construction vehicles for sandbox fun,Vehicle Toys,19.5,construction_vehicles.jpg,25,6,Male,Kangaroo Manufacturing,New Year,2,5,3,1,4
 19,Chess and Checkers Set,Classic chess and checkers set for strategic play,Board Games,21.99,chess_set.jpg,18,6,Male,RoosterFin Games,Christmas,5,4,3,2,1
-20,Stuffed Animal Zoo,Organizer for stuffed animals with zoo theme,Storage and Organization,31.25,stuffed_animal_zoo.jpg,12,10,Male,Tangle Creations,Thanksgiving,2,1,4,3,5
+20,Stuffed Animal Zoo,Organizer for stuffed animals with zoo theme,Stuffed Animals,31.25,stuffed_animal_zoo.jpg,12,10,Male,Tangle Creations,Thanksgiving,2,1,4,3,5
 21,Remote Control Helicopter,Mini helicopter with remote control,Remote Control,45.5,helicopter_rc.jpg,15,9,Male,McNeill Designs,Christmas,4,5,3,2,1
 22,Interactive Storybook,Touch-sensitive storybook for early readers,Books and Learning,14.99,storybook.jpg,30,5,Male,Duncan Toys,Christmas,3,2,4,1,5
 23,Magnetic Building Tiles,Colorful magnetic tiles for creative construction,Educational,26.99,magnetic_tiles.jpg,20,8,Male,Blue Orange Games,Easter,4,3,2,1,5
@@ -33,8 +33,8 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 32,Construction Paper Set,Vibrant construction paper for arts and crafts projects,Arts and Crafts,9.5,construction_paper.jpg,35,5,Male,Manhattan Toy,New Year,2,3,4,1,5
 33,Magic Wand and Hat Set,Magician's wand and hat for magical play,Pretend Play,16.75,magic_wand_set.jpg,25,8,Male,Schylling,Christmas,3,2,4,1,5
 34,Wooden Jigsaw Puzzles,Assorted wooden jigsaw puzzles for problem-solving,Educational,13.99,jigsaw_puzzles.jpg,30,7,Male,T.S. Shure,Thanksgiving,3,4,2,1,5
-35,Outdoor Explorer Kit,Kit for young explorers with binoculars, compass,28.95,explorer_kit.jpg,15,10,Male,Schleich,Thanksgiving,3,5,4,3,5
-36,Plush Animal Hand Puppets,Soft and cute animal hand puppets for imaginative play,Puppets,19.25,hand_puppets.jpg,20,8,Male,Micro Kickboard,Thanksgiving,3,2,4,1,5
+35,Outdoor Explorer Kit,Kit for young explorers with binoculars,Outdoor Play,28.95,explorer_kit.jpg,15,10,Male,Schleich,Thanksgiving,3,5,4,3,5
+36,Plush Animal Hand Puppets,Soft and cute animal hand puppets for imaginative play,Pretend Play,19.25,hand_puppets.jpg,20,8,Male,Micro Kickboard,Thanksgiving,3,2,4,1,5
 37,Miniature Dollhouse Furniture,Mini furniture set for dollhouse play,Dolls and Accessories,12.99,dollhouse_furniture.jpg,40,7,Male,B. Toys,New Year,2,1,4,3,5
 38,Soccer Ball and Goal Set,Mini soccer ball and goal for backyard fun,Sports and Outdoor Games,24.5,soccer_set.jpg,18,4,Male,Anki,Christmas,4,5,3,2,1
 39,Musical Keyboard for Kids,Colorful musical keyboard for budding musicians,Musical Toys,36.99,musical_keyboard.jpg,12,4,Male,Anki,Christmas,3,4,2,1,5
@@ -63,7 +63,7 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 62,Kids Gardening Set,Complete gardening set for young green thumbs,Outdoor Play,19.75,gardening_set.jpg,18,9,Male,Mudpuppy,Thanksgiving,3,4,2,1,5
 63,Remote Control Quadcopter,Quadcopter drone with remote control for outdoor fun,Remote Control,59.99,quadcopter.jpg,10,9,Male,PlaSmart,Thanksgiving,5,4,3,2,1
 64,Wooden Memory Match Game,Classic wooden memory match game for cognitive development,Educational,14.25,memory_match_game.jpg,30,7,Male,Geospace,Thanksgiving,3,4,2,1,5
-65,Stuffed Animal Storage Hammock,Hammock for organizing and displaying stuffed animals,Storage and Organization,13.5,storage_hammock.jpg,25,10,Male,Diggin,Thanksgiving,2,1,4,3,5
+65,Stuffed Animal Storage Hammock,Hammock for organizing and displaying stuffed animals,Stuffed Animals,13.5,storage_hammock.jpg,25,10,Male,Diggin,Thanksgiving,2,1,4,3,5
 66,Toy Cash Register,Interactive toy cash register for pretend play,Pretend Play,26.99,cash_register.jpg,18,8,Male,Manhattan Toy,New Year,3,2,4,1,5
 67,Race Car Track Set,Exciting race car track set with loop-de-loop,Vehicle Toys,32.5,race_car_track_set.jpg,15,4,Male,Mudpuppy,New Year,4,5,3,2,1
 68,Interactive Learning Globe,Interactive globe for learning about geography and cultures,Educational,49.99,learning_globe.jpg,12,6,Male,LeapFrog,Christmas,4,3,2,1,5
@@ -92,7 +92,7 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 91,Wooden Puzzle Cube,Wooden puzzle cube for developing problem-solving skills,Educational,11.25,puzzle_cube.jpg,30,5,Male,Toysmith,New Year,3,2,4,1,5
 92,Doctor Role Play Kit,Complete doctor role play kit with medical accessories,Pretend Play,27.5,doctor_role_play_kit.jpg,15,7,Male,EPOCH Co.,New Year,3,2,4,1,5
 93,Remote Control Submarine,Remote control submarine for underwater adventures,Remote Control,33.99,submarine_rc.jpg,20,9,Male,Diggin,New Year,4,5,3,2,1
-94,Stuffed Animal Organizer,Organizer for neatly storing and displaying stuffed animals,Storage and Organization,19.99,stuffed_animal_organizer.jpg,25,10,Male,National Geographic,Thanksgiving,2,1,4,3,5
+94,Stuffed Animal Organizer,Organizer for neatly storing and displaying stuffed animals,Stuffed Animals,19.99,stuffed_animal_organizer.jpg,25,10,Male,National Geographic,Thanksgiving,2,1,4,3,5
 95,Mini Soccer Goal Set,Mini soccer goal set for backyard matches,Sports and Outdoor Games,22.5,soccer_goal_set.jpg,18,4,Male,HearthSong,Christmas,4,5,3,2,1
 96,Artistic Watercolor Set,Watercolor painting set for budding artists,Arts and Crafts,18.99,watercolor_set.jpg,20,6,Male,Crayola,Thanksgiving,3,4,2,1,5
 97,Robot Building Blocks,DIY robot building blocks kit for STEM education,Educational,26.99,robot_building_blocks.jpg,15,9,Male,Little Live Pets,New Year,5,5,3,2,1
@@ -177,7 +177,7 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 176,Imagination Station Tent,Spacious imagination station tent for creative play,Outdoor Play,45.95,imagination_station_tent.jpg,12,8,Male,Vtech,New Year,4,3,5,2,1
 177,Wooden Pattern Solver,Wooden pattern solver for developing problem-solving skills,Educational,14.5,wooden_pattern_solver.jpg,30,5,Male,Ideal Toy Corp.,Christmas,3,2,4,1,5
 178,Medical Marvel Role Play,Complete medical role play set with realistic accessories,Pretend Play,31.5,medical_marvel_role_play.jpg,15,7,Male,Gamewright,Christmas,3,2,4,1,5
-179,Toy Haven Organizer,Organizer for neatly storing and displaying various toys,Storage and Organization,22.99,toy_haven_organizer.jpg,25,10,Male,Thames & Kosmos,New Year,2,1,4,3,5
+179,Toy Haven Organizer,Organizer for neatly storing and displaying various toys,Stuffed Animals,22.99,toy_haven_organizer.jpg,25,10,Male,Thames & Kosmos,New Year,2,1,4,3,5
 180,Watercolor Wonders Set,Watercolor painting set for exploring artistic wonders,Arts and Crafts,21.99,watercolor_wonders_set.jpg,20,6,Male,Tedco Toys,New Year,3,4,2,1,5
 181,Bot Builder Engineering Kit,DIY bot builder engineering kit for STEM education,Educational,34.99,bot_builder_engineering_kit.jpg,15,9,Female,Jakks Pacific,Thanksgiving,5,5,3,2,1
 182,Sparkling Unicorn Palace,Magical unicorn palace for enchanting adventures,Pretend Play,34.99,unicorn_palace.jpg,20,8,Female,Iwako,Thanksgiving,4,3,5,2,1
@@ -299,7 +299,7 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 298,Space Command Shuttle Expedition,Launch space missions with the Space Command Shuttle Expedition,Science and Nature,45.99,space_command_shuttle_expedition.jpg,10,6,Male,Learning Resources,Easter,4,3,2,1,5
 299,Animal Safari Jeep Adventure,Embark on a safari with the Animal Safari Jeep Adventure,Outdoor Play,26.99,animal_safari_jeep_adventure.jpg,20,8,Male,Barbie,Thanksgiving,4,3,5,2,1
 300,Fairy Tale Kingdom Castle,Rule a fairy tale kingdom with this magical castle playset,Pretend Play,37.99,fairy_tale_kingdom_castle.jpg,15,8,Female,Learning Resources,Thanksgiving,4,3,5,2,1
-301,Music Maestro Keyboard Harmony,Create musical harmony with the Music Maestro Keyboard,Music and Arts,28.95,music_maestro_keyboard_harmony.jpg,18,4,Female,Little Tikes,New Year,3,4,2,1,5
+301,Music Maestro Keyboard Harmony,Create musical harmony with the Music Maestro Keyboard,Musical Toys,28.95,music_maestro_keyboard_harmony.jpg,18,4,Female,Little Tikes,New Year,3,4,2,1,5
 302,Retro Arcade Gaming Challenge,Challenge friends with the Retro Arcade Gaming Challenge,Electronics,42.5,retro_arcade_gaming_challenge.jpg,30,6,Male,T.S. Shure,Christmas,5,5,3,2,1
 303,Artistic Wonders Sketch Studio,Explore artistic wonders with the Sketch Studio,Arts and Crafts,22.75,artistic_wonders_sketch_studio.jpg,20,5,Male,Waboba,Thanksgiving,3,4,2,1,5
 304,Sports Superstar Basketball Hoop,Shoot hoops like a sports superstar with this basketball hoop,Sports and Outdoor Games,36.99,sports_superstar_basketball_hoop.jpg,15,4,Male,Hexbug,Thanksgiving,4,5,3,2,1
@@ -336,7 +336,7 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 335,Jungle Safari Animal Exploration,Explore the jungle with the Safari Animal Exploration set,Science and Nature,29.95,jungle_safari_animal_exploration.jpg,20,7,Male,Carrera,Christmas,4,3,2,1,5
 336,Majestic Jungle Explorer Kit,Embark on a wild journey with the Majestic Jungle Explorer Kit,Outdoor Play,29.99,majestic_jungle_explorer_kit.jpg,15,4,Male,Skyrocket Toys,New Year,4,3,5,2,1
 337,Penguin Parade Igloo Playset,Join a cute penguin parade in the Penguin Parade Igloo Playset,Pretend Play,19.99,penguin_parade_igloo_playset.jpg,25,8,Male,4M,Thanksgiving,3,2,4,1,5
-338,Funky Beat Dance Mat,Dance to the funky beat with this interactive Dance Mat,Music and Arts,45.5,funky_beat_dance_mat.jpg,18,9,Male,Uncle Milton,New Year,3,4,2,1,5
+338,Funky Beat Dance Mat,Dance to the funky beat with this interactive Dance Mat,Musical Toys,45.5,funky_beat_dance_mat.jpg,18,9,Male,Uncle Milton,New Year,3,4,2,1,5
 339,Dino Dig Adventure Excavator,Unearth dinosaur fossils with the Dino Dig Adventure Excavator,Educational,24.75,dino_dig_adventure_excavator.jpg,30,6,Male,International Playthings,New Year,4,5,3,2,1
 340,Fairytale Princess Dress-Up Trunk,Transform into a fairytale princess with this Dress-Up Trunk,Pretend Play,32.5,fairytale_princess_dress_up_trunk.jpg,15,8,Female,Mudpuppy,Thanksgiving,4,3,5,2,1
 341,Super Soccer Showdown Goal Set,Score goals in the Super Soccer Showdown Goal Set,Sports and Outdoor Games,22.99,super_soccer_showdown_goal_set.jpg,25,4,Male,The Learning Journey,Christmas,4,5,3,2,1
@@ -390,7 +390,7 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 389,Sparkling Galaxy Adventure Kit,Embark on a cosmic journey with the Sparkling Galaxy Adventure Kit,Science and Nature,29.99,sparkling_galaxy_adventure_kit.jpg,15,4,Female,VTech,Thanksgiving,4,3,5,2,1
 390,Time Traveler Chrono Cruiser,Explore different eras with the Time Traveler Chrono Cruiser,STEM Toys,39.95,time_traveler_chrono_cruiser.jpg,20,5,Female,Sassy,New Year,4,3,2,1,5
 391,Arctic Explorer Ice Fortress,Conquer icy challenges with the Arctic Explorer Ice Fortress,Pretend Play,19.99,arctic_explorer_ice_fortress.jpg,25,8,Female,Educational Insights,Christmas,3,2,4,1,5
-392,Funky Groove Dance Revolution,Dance to the funky beats with the Funky Groove Dance Revolution,Music and Arts,45.5,funky_groove_dance_revolution.jpg,18,9,Female,Manhattan Toy,Easter,3,4,2,1,5
+392,Funky Groove Dance Revolution,Dance to the funky beats with the Funky Groove Dance Revolution,Musical Toys,45.5,funky_groove_dance_revolution.jpg,18,9,Female,Manhattan Toy,Easter,3,4,2,1,5
 393,Dino Excavation Adventure Truck,Uncover prehistoric secrets with the Dino Excavation Adventure Truck,Educational,24.75,dino_excavation_adventure_truck.jpg,30,6,Male,PlayMonster,Easter,4,5,3,2,1
 394,Enchanting Princess Wardrobe,Transform into royalty with the Enchanting Princess Wardrobe,Pretend Play,32.5,enchanting_princess_wardrobe.jpg,15,8,Female,Manhattan Toy,Easter,4,3,5,2,1
 395,Soccer Pro Goal Scorer Set,Become a soccer pro with the Soccer Pro Goal Scorer Set,Sports and Outdoor Games,22.99,soccer_pro_goal_scorer_set.jpg,25,4,Female,WowToyz,Christmas,4,5,3,2,1
@@ -438,7 +438,7 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 437,RoboCraft Engineering Set,Unleash creativity with the RoboCraft Engineering Set,STEM Toys,29.99,robo_craft_engineering_set.jpg,15,5,Female,PicassoTiles,New Year,4,3,5,2,1
 438,Starship Galaxy Explorer,Embark on a cosmic adventure with the Starship Galaxy Explorer,Science and Nature,39.95,starship_galaxy_explorer.jpg,20,6,Female,Meccano,New Year,4,3,2,1,5
 439,Arctic Adventure Base Camp,Conquer icy challenges with the Arctic Adventure Base Camp,Outdoor Play,19.99,arctic_adventure_base_camp.jpg,25,4,Female,Zing Toys,Thanksgiving,3,2,4,1,5
-440,Electric Groove Dance Mat,Dance to the electric beats with the Electric Groove Dance Mat,Music and Arts,45.5,electric_groove_dance_mat.jpg,18,4,Female,Alex Toys,Easter,3,4,2,1,5
+440,Electric Groove Dance Mat,Dance to the electric beats with the Electric Groove Dance Mat,Musical Toys,45.5,electric_groove_dance_mat.jpg,18,4,Female,Alex Toys,Easter,3,4,2,1,5
 441,Dino Explorer Dig Kit,Uncover prehistoric wonders with the Dino Explorer Dig Kit,Educational,24.75,dino_explorer_dig_kit.jpg,30,6,Male,Hape,New Year,4,5,3,2,1
 442,Enchanted Princess Castle,Rule your kingdom with the Enchanted Princess Castle,Pretend Play,32.5,enchanted_princess_castle.jpg,15,8,Female,Mudpuppy,Easter,4,3,5,2,1
 443,Super Striker Soccer Set,Become a soccer star with the Super Striker Soccer Set,Sports and Outdoor Games,22.99,super_striker_soccer_set.jpg,25,4,Female,Hexbug,Thanksgiving,4,5,3,2,1
@@ -553,7 +553,7 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 552,Vibrant Paper Craft Set,Vibrant paper for arts and crafts projects,Arts and Crafts,9.99,paper_craft_set.jpg,35,5,Female,Toy Biz,Easter,2,3,4,1,5
 553,Wooden Puzzle Challenge,Assorted wooden puzzles for problem-solving,Educational,14.99,puzzle_challenge.jpg,30,7,Female,Tedco Toys,Thanksgiving,3,4,2,1,5
 554,Nature Explorer Discovery Kit,Kit for young nature explorers with binoculars and compass,Science and Nature,28.95,nature_discovery_kit.jpg,15,10,Female,Mukikim,Thanksgiving,3,5,4,3,5
-555,Plush Animal Puppet Theater,Soft and cute animal hand puppets for puppet theater fun,Puppets,19.25,animal_puppet_theater.jpg,20,8,Female,Small World Toys,Thanksgiving,3,2,4,1,5
+555,Plush Animal Puppet Theater,Soft and cute animal hand puppets for puppet theater fun,Pretend Play,19.25,animal_puppet_theater.jpg,20,8,Female,Small World Toys,Thanksgiving,3,2,4,1,5
 556,Soccer Challenge Goal Set,Mini soccer ball and goal for backyard challenge,Sports and Outdoor Games,26.5,soccer_challenge_goal_set.jpg,18,4,Female,Mezco Toyz,Christmas,4,5,3,2,1
 557,Musical Piano Magic,Colorful musical piano for budding young musicians,Musical Toys,36.99,musical_piano_magic.jpg,12,4,Female,Mayfair Games,Easter,3,4,2,1,5
 558,Adventure Galaxy Explorer Set,Embark on a cosmic journey with this galaxy explorer playset,Action Figures,29.99,galaxy_explorer_set.jpg,20,8,Female,Playmobil,Thanksgiving,5,4,3,2,1
@@ -665,19 +665,19 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 664,RoboTech Warriors Battle Pack,Assemble your team and engage in epic battles with the RoboTech Warriors Battle Pack,Action Figures,39.99,robotech_warriors_battle_pack.jpg,20,6,Male,Blue Orange Games,Easter,5,4,3,2,1
 665,Ultimate Racing Drone Circuit,Experience high-speed racing thrills with the Ultimate Racing Drone Circuit,Remote Control,49.95,ultimate_racing_drone_circuit.jpg,15,9,Male,Toysmith,Christmas,5,4,3,2,1
 666,Space Explorer Rocket Launcher,Blast off into space adventures with the Space Explorer Rocket Launcher,Action Figures,29.75,space_explorer_rocket_launcher.jpg,25,5,Male,Yookidoo,Easter,4,3,5,2,1
-667,Construction Master Builder Set,Build and create amazing structures with the Construction Master Builder Set, Educational,34.5,construction_master_builder_set.jpg,22,4,Male,PopSockets,New Year,3,4,2,1,5
-668,DinoQuest Paleontology Kit,Embark on a dinosaur excavation journey with the DinoQuest Paleontology Kit, Science and Nature,28.99,dinoquest_paleontology_kit.jpg,18,6,Male,VTech,Christmas,4,5,3,2,1
+667,Construction Master Builder Set,Build and create amazing structures with the Construction Master Builder Set,Educational,34.5,construction_master_builder_set.jpg,22,4,Male,PopSockets,New Year,3,4,2,1,5
+668,DinoQuest Paleontology Kit,Embark on a dinosaur excavation journey with the DinoQuest Paleontology Kit,Science and Nature,28.99,dinoquest_paleontology_kit.jpg,18,6,Male,VTech,Christmas,4,5,3,2,1
 669,Superhero Command Center,Command your superhero team with the Superhero Command Center,Action Figures,42.95,superhero_command_center.jpg,15,8,Male,Spin Master,Thanksgiving,5,5,3,2,1
 670,Adventure Wilderness Survival Kit,Explore the great outdoors with the Adventure Wilderness Survival Kit,Outdoor Play,26.5,adventure_wilderness_survival_kit.jpg,18,6,Male,KidKraft,New Year,4,3,5,2,1
 671,Robot Xtreme Battle Arena,Engage in intense robot battles with the Robot Xtreme Battle Arena,Remote Control,59.99,robot_xtreme_battle_arena.jpg,12,9,Male,Yomega,New Year,5,4,3,2,1
-672,MegaBuilder Construction Crane,Operate a powerful construction crane with the MegaBuilder Construction Crane, Remote Control,36.75,megabuilder_construction_crane.jpg,20,5,Male,Kangaroo Manufacturing,New Year,4,3,2,1,5
+672,MegaBuilder Construction Crane,Operate a powerful construction crane with the MegaBuilder Construction Crane,Remote Control,36.75,megabuilder_construction_crane.jpg,20,5,Male,Kangaroo Manufacturing,New Year,4,3,2,1,5
 673,FutureTech Inventor Lab,Invent and experiment with the FutureTech Inventor Lab,STEM Toys,32.99,futuretech_inventor_lab.jpg,25,9,Male,Mukikim,Easter,5,4,3,2,1
 674,DinoRangers Action Figure Set,Join the elite DinoRangers team with this action figure set,Action Figures,22.5,dinorangers_action_figure_set.jpg,30,4,Male,The Learning Journey,Easter,3,2,4,1,5
 675,Rocket Launch Command Center,Command your own rocket launch missions with the Rocket Launch Command Center,Action Figures,45.25,rocket_launch_command_center.jpg,20,6,Male,Carrera,Christmas,4,3,5,2,1
 676,TechGadget Explorer Kit,Explore the world of tech gadgets with the TechGadget Explorer Kit,STEM Toys,27.5,techgadget_explorer_kit.jpg,25,6,Male,Play Visions,New Year,5,4,3,2,1
 677,Wildlife Safari Adventure Jeep,Embark on a wildlife safari adventure with the Wildlife Safari Adventure Jeep,Action Figures,38.5,wildlife_safari_adventure_jeep.jpg,15,5,Male,The Learning Journey,Thanksgiving,4,3,5,2,1
 678,Ultimate Ninja Warrior Training Set,Train to become the ultimate ninja with this Warrior Training Set,Action Figures,54.99,ultimate_ninja_warrior_training_set.jpg,12,8,Male,Ogosport,Thanksgiving,5,5,3,2,1
-679,Futuristic Space Explorer Helmet,Experience space exploration with the Futuristic Space Explorer Helmet, Pretend Play,19.75,futuristic_space_explorer_helmet.jpg,25,7,Male,Jazwares,Easter,3,2,4,1,5
+679,Futuristic Space Explorer Helmet,Experience space exploration with the Futuristic Space Explorer Helmet,Pretend Play,19.75,futuristic_space_explorer_helmet.jpg,25,7,Male,Jazwares,Easter,3,2,4,1,5
 680,SuperSpeed Racing Track Set,Feel the thrill of super-speed racing with this Racing Track Set,Remote Control,29.99,superspeed_racing_track_set.jpg,18,5,Male,Kangaroo Manufacturing,New Year,4,5,3,2,1
 681,Rocket Scientist Laboratory Kit,Become a rocket scientist with the Rocket Scientist Laboratory Kit,STEM Toys,36.25,rocket_scientist_laboratory_kit.jpg,15,9,Male,Toy State,New Year,5,4,3,2,1
 682,Space Odyssey Astronaut Suit,Embark on a space odyssey in this realistic Astronaut Suit,Pretend Play,34.99,space_odyssey_astronaut_suit.jpg,25,8,Male,Siku,New Year,3,2,4,1,5
@@ -715,7 +715,7 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 714,Soccer Star Kick Trainer,Perfect your soccer skills with the Soccer Star Kick Trainer,Sports and Outdoor Games,27.5,soccer_star_kick_trainer.jpg,25,6,Male,Top Trumps,New Year,4,5,3,2,1
 715,Sci-Fi Laser Battle Set,Engage in epic laser battles with the Sci-Fi Laser Battle Set,Interactive Toys,49.99,sci_fi_laser_battle_set.jpg,12,9,Male,Zapf Creation,Thanksgiving,5,4,3,2,1
 716,Junior Coding Robot Kit,Learn coding with the Junior Coding Robot Kit,STEM Toys,38.75,junior_coding_robot_kit.jpg,20,6,Male,Edushape,Thanksgiving,5,4,3,2,1
-717,Racing Legends Toy Car Collection,Collect iconic toy cars with the Racing Legends Toy Car Collection,Collectibles,33.5,racing_legends_toy_car_collection.jpg,25,4,Male,Diggin,New Year,3,2,4,1,5
+717,Racing Legends Toy Car Collection,Collect iconic toy cars with the Racing Legends Toy Car Collection,Vehicle Toys,33.5,racing_legends_toy_car_collection.jpg,25,4,Male,Diggin,New Year,3,2,4,1,5
 718,Extreme Skateboard Ramp Set,Perform extreme stunts with the Extreme Skateboard Ramp Set,Sports and Outdoor Games,26.5,extreme_skateboard_ramp_set.jpg,30,9,Male,Faber-Castell,New Year,4,5,3,2,1
 719,Space Cadet Rocket Launcher,Launch rockets into space with the Space Cadet Rocket Launcher,STEM Toys,35.25,space_cadet_rocket_launcher.jpg,18,6,Male,Barbie,Easter,5,4,3,2,1
 720,Fantasy Knight Castle Playset,Enter the world of knights and dragons with the Fantasy Knight Castle Playset,Pretend Play,29.99,fantasy_knight_castle_playset.jpg,20,4,Male,Micro Kickboard,Thanksgiving,3,4,2,1,5
@@ -730,7 +730,7 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 729,Speed Racer Turbo Track Set,Zoom around the track with the Speed Racer Turbo Track Set,Remote Control,33.75,speed_racer_turbo_track_set.jpg,20,6,Male,Build-A-Bear Workshop,New Year,4,5,3,2,1
 730,Dino Excavation Adventure Kit,Embark on a prehistoric adventure with the Dino Excavation Adventure Kit,STEM Toys,28.5,dino_excavation_adventure_kit.jpg,25,9,Male,Schleich,Christmas,5,4,3,2,1
 731,Astronaut Space Mission Set,Blast off to space with the Astronaut Space Mission Set,Action Figures,36.99,astronaut_space_mission_set.jpg,18,6,Male,Radio Flyer,Easter,4,3,2,1,5
-732,Electric Guitar Rockstar Kit,Become a rockstar with the Electric Guitar Rockstar Kit,Music and Arts,39.95,electric_guitar_rockstar_kit.jpg,30,4,Male,Orb Factory,New Year,3,2,4,1,5
+732,Electric Guitar Rockstar Kit,Become a rockstar with the Electric Guitar Rockstar Kit,Musical Toys,39.95,electric_guitar_rockstar_kit.jpg,30,4,Male,Orb Factory,New Year,3,2,4,1,5
 733,Jungle Expedition Safari Kit,Explore the wild with the Jungle Expedition Safari Kit,Outdoor Play,24.75,jungle_expedition_safari_kit.jpg,25,6,Male,Mukikim,New Year,4,3,5,2,1
 734,Construction Engineer Building Set,Build amazing structures with the Construction Engineer Building Set,Educational,32.5,construction_engineer_building_set.jpg,20,6,Male,Play Visions,Easter,5,4,3,2,1
 735,Fireman Rescue Water Hose,Be a hero with the Fireman Rescue Water Hose,Outdoor Play,31.25,fireman_rescue_water_hose.jpg,18,8,Male,GUND,Easter,3,2,4,1,5
@@ -739,7 +739,7 @@ id,name,description,category,price,image,quantity,age,gender,company,holiday,cog
 738,Robotic Engineer Experiment Kit,Learn robotics with the Robotic Engineer Experiment Kit,STEM Toys,29.95,robotic_engineer_experiment_kit.jpg,20,6,Male,RoosterFin Games,Christmas,5,4,3,2,1
 739,Race Car Driver Helmet Set,Feel the excitement with the Race Car Driver Helmet Set,Interactive Toys,48.99,race_car_driver_helmet_set.jpg,12,9,Male,Hog Wild,Thanksgiving,5,4,3,2,1
 740,Junior Scientist Chemistry Lab,Discover the wonders of chemistry with the Junior Scientist Chemistry Lab,STEM Toys,37.75,junior_scientist_chemistry_lab.jpg,20,6,Male,Faber-Castell,New Year,5,4,3,2,1
-741,Speedway Legends Die-Cast Cars,Collect iconic die-cast cars with the Speedway Legends Die-Cast Cars,Collectibles,33.5,speedway_legends_die_cast_cars.jpg,25,4,Male,Zing Toys,New Year,3,2,4,1,5
+741,Speedway Legends Die-Cast Cars,Collect iconic die-cast cars with the Speedway Legends Die-Cast Cars,Vehicle Toys,33.5,speedway_legends_die_cast_cars.jpg,25,4,Male,Zing Toys,New Year,3,2,4,1,5
 742,Skateboard Trick Master Ramp,Master skateboard tricks with the Skateboard Trick Master Ramp,Sports and Outdoor Games,26.99,skateboard_trick_master_ramp.jpg,30,9,Male,Duncan Toys,New Year,4,5,3,2,1
 743,Galactic Explorer Rocket Set,Launch into space with the Galactic Explorer Rocket Set,STEM Toys,35.25,galactic_explorer_rocket_set.jpg,18,6,Male,Crocodile Creek,Thanksgiving,5,4,3,2,1
 744,Medieval Knight Castle Playset,Enter the world of knights and dragons with the Medieval Knight Castle Playset,Pretend Play,29.99,medieval_knight_castle_playset.jpg,20,4,Male,KidKraft,Thanksgiving,3,4,2,1,5
