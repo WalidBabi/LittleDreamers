@@ -169,6 +169,25 @@ class Builder
     }
 
     /**
+     * Determine if the given view exists.
+     *
+     * @param  string  $view
+     * @return bool
+     */
+    public function hasView($view)
+    {
+        $view = $this->connection->getTablePrefix().$view;
+
+        foreach ($this->getViews() as $value) {
+            if (strtolower($view) === strtolower($value['name'])) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Get the tables that belong to the database.
      *
      * @return array
@@ -190,6 +209,16 @@ class Builder
         return $this->connection->getPostProcessor()->processViews(
             $this->connection->selectFromWriteConnection($this->grammar->compileViews())
         );
+    }
+
+    /**
+     * Get the user-defined types that belong to the database.
+     *
+     * @return array
+     */
+    public function getTypes()
+    {
+        throw new LogicException('This database driver does not support user-defined types.');
     }
 
     /**
@@ -320,6 +349,36 @@ class Builder
 
         return $this->connection->getPostProcessor()->processColumns(
             $this->connection->selectFromWriteConnection($this->grammar->compileColumns($table))
+        );
+    }
+
+    /**
+     * Get the indexes for a given table.
+     *
+     * @param  string  $table
+     * @return array
+     */
+    public function getIndexes($table)
+    {
+        $table = $this->connection->getTablePrefix().$table;
+
+        return $this->connection->getPostProcessor()->processIndexes(
+            $this->connection->selectFromWriteConnection($this->grammar->compileIndexes($table))
+        );
+    }
+
+    /**
+     * Get the foreign keys for a given table.
+     *
+     * @param  string  $table
+     * @return array
+     */
+    public function getForeignKeys($table)
+    {
+        $table = $this->connection->getTablePrefix().$table;
+
+        return $this->connection->getPostProcessor()->processForeignKeys(
+            $this->connection->selectFromWriteConnection($this->grammar->compileForeignKeys($table))
         );
     }
 
