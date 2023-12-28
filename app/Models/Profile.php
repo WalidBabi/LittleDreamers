@@ -11,4 +11,14 @@ class Profile extends Authenticatable
 {
     use HasApiTokens, HasFactory;
     protected $guarded = [];
+    // a profile has many admins
+    public function admins(): HasMany
+    {
+        return $this->hasMany(Admin::class);
+    }
+// a profile has many parents
+    public function parents(): HasMany
+    {
+        return $this->hasMany(Parent::class);
+    }
 }

@@ -9,4 +9,10 @@ class Admin extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    //An admin belongs to a profile
+    public function profile(): BelongsTo
+    {
+        return $this->belongsTo(Profile::class);
+    }
 }

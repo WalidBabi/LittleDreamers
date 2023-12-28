@@ -9,4 +9,9 @@ class ToyDescription extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    // a toy_description belongs to a toy
+    public function toy(): BelongsTo
+    {
+        return $this->belongsTo(Toy::class);
+    }
 }
