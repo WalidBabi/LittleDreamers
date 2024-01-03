@@ -56,6 +56,5 @@ class PassportAuthController extends Controller
         return response([
             'message' => 'Logged out successfully'
         ]);
-
     }
 }
