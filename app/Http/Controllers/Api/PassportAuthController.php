@@ -15,22 +15,24 @@ class PassportAuthController extends Controller
     public function register(Request $request)
     {
         $this->validate($request, [
-            'username' => 'required|min:4',
+            'first_name' => 'required|min:4',
+            'last_name' => 'required|min:4',
             'email' => 'required|email',
             'password' => 'required|min:8',
         ]);
- 
+
         $user = Profile::create([
-            'username' => $request->username,
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
             'email' => $request->email,
             'password' => bcrypt($request->password)
         ]);
- 
+
         $token = $user->createToken('Register')->accessToken;
- 
-        return response()->json(['token' => $token], 200);
+
+        return response()->json(['token' => $token], 200) ->header('Location', '/');
     }
- 
+
     /**
      * Login Req
      */
@@ -40,7 +42,7 @@ class PassportAuthController extends Controller
             'email' => $request->email,
             'password' => $request->password
         ];
- 
+
         if (auth()->attempt($data)) {
             $token = auth()->user()->createToken('Login')->accessToken;
             return response()->json(['token' => $token], 200);
@@ -49,7 +51,7 @@ class PassportAuthController extends Controller
         }
     }
 
-    public function logout(Request $request) 
+    public function logout(Request $request)
     {
         $request->user()->token()->revoke();
 
