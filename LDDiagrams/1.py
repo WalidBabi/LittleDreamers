@@ -55,7 +55,6 @@ toy_features.to_csv("toy_features_preprocessed.csv", index=False)
 # Output preprocessed child features to CSV
 child_features.to_csv("child_features_preprocessed.csv", index=False)
 
-
 def get_content_based_recommendations(child_id):
     # Extract relevant features for the given child_id
     child_features_input = child_features.loc[child_id, ['child_age', 'child_CognitiveDevelopment', 'child_MotorSkillsDevelopment', 'child_SocialDevelopment', 'child_EmotionalDevelopment', 'child_Language_and_Literacy']]
