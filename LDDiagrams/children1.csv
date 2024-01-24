@@ -1,76 +1,76 @@
-Age,Developmental Stage,Interests and Preferences,Challenges or Learning Needs
-3,Early Childhood,Cars, None
-5,Mid Childhood,Art and Crafts,Speech Development
-2,Early Childhood,Stuffed Animals, Fine Motor Skills
-4,Mid Childhood,Outdoor Play, None
-6,Late Childhood,Board Games, Cognitive Development
-3,Early Childhood,Dolls, Sensory Processing
-5,Mid Childhood,Legos, None
-2,Early Childhood,Music and Instruments, Language Development
-4,Mid Childhood,Puzzles, Fine Motor Skills
-6,Late Childhood,Video Games, Social Skills
-3,Early Childhood,Action Figures, None
-5,Mid Childhood,Science Kits, Cognitive Development
-2,Early Childhood,Play Kitchen, Speech Development
-4,Mid Childhood,Sports and Outdoor Games, None
-6,Late Childhood,Building Blocks, Fine Motor Skills
-3,Early Childhood,Coloring and Drawing, Sensory Processing
-5,Mid Childhood,Reading and Books, Speech Development
-2,Early Childhood,Play Dough, None
-4,Mid Childhood,Play Dough, Cognitive Development
-6,Late Childhood,Computer Programming, Fine Motor Skills
-3,Early Childhood,Trains, None
-5,Mid Childhood,Chess, Cognitive Development
-2,Early Childhood,Water Play, Sensory Processing
-4,Mid Childhood,Math Games, None
-6,Late Childhood,Magic Tricks, Cognitive Development
-3,Early Childhood,Bicycles and Riding Toys, Fine Motor Skills
-5,Mid Childhood,DIY Science Experiments, Speech Development
-2,Early Childhood,Playhouse, None
-4,Mid Childhood,Geography and Maps, Cognitive Development
-6,Late Childhood,Remote Control Toys, Fine Motor Skills
-3,Early Childhood,Toy Instruments, Sensory Processing
-5,Mid Childhood,Robotics Kits, Cognitive Development
-2,Early Childhood,Play Tents, None
-4,Mid Childhood,Writing and Drawing Tablets, Fine Motor Skills
-6,Late Childhood,Strategy Board Games, Speech Development
-3,Early Childhood,Toy Tool Set, None
-5,Mid Childhood,Play Dough, Cognitive Development
-2,Early Childhood,Magnetic Building Blocks, Fine Motor Skills
-4,Mid Childhood,Language Learning Games, Speech Development
-6,Late Childhood,Outdoor Adventure Gear, None
-3,Early Childhood,Modeling Clay, Sensory Processing
-5,Mid Childhood,Virtual Reality Games, Cognitive Development
-2,Early Childhood,Interactive Storytelling Toys, None
-4,Mid Childhood,Play Dough, Fine Motor Skills
-6,Late Childhood,LEGO Mindstorms, Cognitive Development
-3,Early Childhood,Dress-up and Costumes, None
-5,Mid Childhood,Photography, Speech Development
-2,Early Childhood,Swing Set, Fine Motor Skills
-4,Mid Childhood,Origami, None
-6,Late Childhood,3D Printing Kits, Cognitive Development
-3,Early Childhood,Playdough Tools and Accessories, Sensory Processing
-5,Mid Childhood,History and Archaeology Kits, Speech Development
-2,Early Childhood,Magnetic Alphabet Letters, None
-4,Mid Childhood,Model Trains, Fine Motor Skills
-6,Late Childhood,Escape Room Games, Cognitive Development
-3,Early Childhood,Bubbles and Bubble Wands, None
-5,Mid Childhood,Remote Control Drones, Speech Development
-2,Early Childhood,Toy Microscopes, Fine Motor Skills
-4,Mid Childhood,Coding Board Games, None
-6,Late Childhood,Artificial Intelligence Toys, Cognitive Development
-3,Early Childhood,Sand and Water Tables, Sensory Processing
-5,Mid Childhood,Comic Books, Speech Development
-2,Early Childhood,Toy Binoculars, None
-4,Mid Childhood,Outdoor Climbing Set, Fine Motor Skills
-6,Late Childhood,Chess, Cognitive Development
-3,Early Childhood,Play Kitchen, None
-5,Mid Childhood,Magnetic Poetry Kits, Speech Development
-2,Early Childhood,Tricycles, Fine Motor Skills
-4,Mid Childhood,Woodworking Kits, None
-6,Late Childhood,Programming Robots, Cognitive Development
-3,Early Childhood,Coloring Books, Sensory Processing
-5,Mid Childhood,Space Exploration Kits, Speech Development
-2,Early Childhood,Toy Vacuum Cleaner, None
-4,Mid Childhood,Math Puzzles, Fine Motor Skills
-6,Late Childhood,DIY Electronics Kits, Cognitive Development
+Age,Interests,Challenges
+3,Cars, None
+5,Art and Crafts,Speech Development
+2,Stuffed Animals, Fine Motor Skills
+4,Outdoor Play, None
+6,Board Games, Cognitive Development
+3,Dolls, Sensory Processing
+5,Legos, None
+2,Music and Instruments, Language Development
+4,Puzzles, Fine Motor Skills
+6,Video Games, Social Skills
+3,Action Figures, None
+5,Science Kits, Cognitive Development
+2,Play Kitchen, Speech Development
+4,Sports and Outdoor Games, None
+6,Building Blocks, Fine Motor Skills
+3,Coloring and Drawing, Sensory Processing
+5,Reading and Books, Speech Development
+2,Play Dough, None
+4,Play Dough, Cognitive Development
+6,Computer Programming, Fine Motor Skills
+3,Trains, None
+5,Chess, Cognitive Development
+2,Water Play, Sensory Processing
+4,Math Games, None
+6,Magic Tricks, Cognitive Development
+3,Bicycles and Riding Toys, Fine Motor Skills
+5,DIY Science Experiments, Speech Development
+2,Playhouse, None
+4,Geography and Maps, Cognitive Development
+6,Remote Control Toys, Fine Motor Skills
+3,Toy Instruments, Sensory Processing
+5,Robotics Kits, Cognitive Development
+2,Play Tents, None
+4,Writing and Drawing Tablets, Fine Motor Skills
+6,Strategy Board Games, Speech Development
+3,Toy Tool Set, None
+5,Play Dough, Cognitive Development
+2,Magnetic Building Blocks, Fine Motor Skills
+4,Language Learning Games, Speech Development
+6,Outdoor Adventure Gear, None
+3,Modeling Clay, Sensory Processing
+5,Virtual Reality Games, Cognitive Development
+2,Interactive Storytelling Toys, None
+4,Play Dough, Fine Motor Skills
+6,LEGO Mindstorms, Cognitive Development
+3,Dress-up and Costumes, None
+5,Photography, Speech Development
+2,Swing Set, Fine Motor Skills
+4,Origami, None
+6,3D Printing Kits, Cognitive Development
+3,Playdough Tools and Accessories, Sensory Processing
+5,History and Archaeology Kits, Speech Development
+2,Magnetic Alphabet Letters, None
+4,Model Trains, Fine Motor Skills
+6,Escape Room Games, Cognitive Development
+3,Bubbles and Bubble Wands, None
+5,Remote Control Drones, Speech Development
+2,Toy Microscopes, Fine Motor Skills
+4,Coding Board Games, None
+6,Artificial Intelligence Toys, Cognitive Development
+3,Sand and Water Tables, Sensory Processing
+5,Comic Books, Speech Development
+2,Toy Binoculars, None
+4,Outdoor Climbing Set, Fine Motor Skills
+6,Chess, Cognitive Development
+3,Play Kitchen, None
+5,Magnetic Poetry Kits, Speech Development
+2,Tricycles, Fine Motor Skills
+4,Woodworking Kits, None
+6,Programming Robots, Cognitive Development
+3,Coloring Books, Sensory Processing
+5,Space Exploration Kits, Speech Development
+2,Toy Vacuum Cleaner, None
+4,Math Puzzles, Fine Motor Skills
+6,DIY Electronics Kits, Cognitive Development
