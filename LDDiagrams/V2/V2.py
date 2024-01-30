@@ -3,8 +3,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Load data
-toys_df = pd.read_csv(r"C:\Users\User\Desktop\المشروع الفصلي\AI\my_version\2\toys.csv")
-children_df = pd.read_csv(r"C:\Users\User\Desktop\المشروع الفصلي\AI\my_version\2\childrin.csv")
+toys_df = pd.read_csv("LDDiagrams/V2/toys.csv")
+children_df = pd.read_csv("LDDiagrams/V2/childrin.csv")
 
 #- Index Model : Vector space model
 class indexer:
