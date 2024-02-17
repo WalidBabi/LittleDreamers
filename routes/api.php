@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\PassportAuthController;
+use App\Http\Controllers\Api\ProductController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,3 +22,6 @@ Route::post('login', [PassportAuthController::class, 'login']);
 Route::middleware('auth:api')->group(function () {
     Route::post('logout', [PassportAuthController::class, 'logout']);
 });
+
+//display products
+Route::get('/products', [ProductController::class, 'index']);
