@@ -1,4 +1,4 @@
-id,parent_id,name,age,gender,Interests_and_Preferences,Challenges_or_Learning_Needs
+id,parent_id,name,age,gender,interests_and_preferences,challenges_or_learning_needs
 1,213,Sophia,4,Female,Art and Crafts,Speech Development
 2,112,Liam,2,Male,Outdoor Exploration,Social Skills
 3,45,Olivia,6,Female,Science Experiments,Critical Thinking

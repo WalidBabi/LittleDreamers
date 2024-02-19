@@ -1,4 +1,4 @@
-id,company_id,description,category,age,gender,holiday,Skill Development,Play Pattern
+id,company_id,description,category,age,gender,holiday,skill_development,play_pattern
 1,1,Colorful building blocks for creative play,Educational,6,Male,Christmas,Fine Motor Skills,Constructive Play
 2,2,Soft and huggable teddy bear for comfort,Stuffed Animals,3,Male,Thanksgiving,Emotional Intelligence,Comfort Play
 3,3,Exciting dinosaur adventure set with figurines,Action Figures,8,Male,Easter,Cognitive Skills,Imaginative Play
