@@ -3,7 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Load data
-toys_df = pd.read_csv("LDDiagrams/Data/toys.csv")
+toys_df = pd.read_csv("LDDiagrams/Data/toys_description.csv")
 children_df = pd.read_csv("LDDiagrams/Data/children.csv")
 
 #- Index Model : Vector space model
@@ -11,7 +11,7 @@ class indexer:
 
     def __init__(self, documents_df):
       # Concatenate the features into a single text feature
-        documents_df['combined_features'] = documents_df['age'].astype(str) + ' ' + documents_df['Skill Development'] + ' ' + documents_df['Play Pattern']
+        documents_df['combined_features'] = documents_df['age'].astype(str) + ' ' + documents_df['skill_development'] + ' ' + documents_df['play_pattern']+ ' ' + documents_df['gender']+ ' ' + documents_df['description']
         # Create a TF-IDF vectorizer
         self.tfidf_vectorizer = TfidfVectorizer()
         #-then finally, fit the documents and transform
@@ -39,15 +39,14 @@ class Retriever:
         ).sort_values(by=['score'], ascending=False)
         return results[results["score"]>0]
     
-child_id = 1
+child_id = 10
 
 # Assuming the DataFrame is named 'children_df'
 # Accessing the specified columns for the child with the given ID
-child_data = children_df.loc[child_id, ['age', 'Interests_and_Preferences', 'Challenges_or_Learning_Needs']]
+child_data = children_df.loc[child_id, ['age', 'interests_and_preferences', 'challenges_or_learning_needs','gender']]
 
 # Convert the information to text without column names
-child_data = f"{child_data['age']} {child_data['Interests_and_Preferences']} {child_data['Challenges_or_Learning_Needs']}"
-
+child_data = f"{child_data['age']} {child_data['interests_and_preferences']} {child_data['challenges_or_learning_needs']} {child_data['gender']}"
 
 chold_vector=vsm.vectorize(child_data)
 rt = Retriever()
