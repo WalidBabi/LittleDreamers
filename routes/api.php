@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ChildFormController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\PassportAuthController;
@@ -25,3 +26,5 @@ Route::middleware('auth:api')->group(function () {
 
 //display products
 Route::get('/products', [ProductController::class, 'index']);
+
+Route::post('/recommendations', [ChildFormController::class,'processForm']);

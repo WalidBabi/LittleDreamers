@@ -3,57 +3,62 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Child;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Validator;
 
 class ChildFormController extends Controller
 {
-    public function submitForm(Request $request)
+    public function processForm(Request $request)
     {
-        // Validate the incoming request
-        $validator = Validator::make($request->all(), [
-            'childName' => 'required|string',
-            'childAge' => 'required|integer',
-            // Add validation rules for other fields if needed
-        ]);
+        // Validate form data (uncomment if needed)
+        // $validator = Validator::make($request->all(), [
+        //     'name' => 'required|string',
+        //     'age' => 'required|integer',
+        //     'gender' => 'required|string',
+        //     'interests_and_preferences' => 'required|string',
+        //     'challenges_or_learning_needs' => 'required|string',
+        // ]);
 
-        if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()], 422);
-        }
+        // if ($validator->fails()) {
+        //     return response()->json(['error' => $validator->errors()], 400);
+        // }
 
-        // Save the form data to your database or perform any other actions
-        // Assuming you have a Child model
-        $child = new \App\Models\Child();
-        $child->name = $request->input('childName');
-        $child->age = $request->input('childAge');
-        $child->gender = $request->input('childGender');
-        // Save other fields as needed
+        // Save form data to the database
+        $child = new Child();
+        $child->name = $request->input('name');
+        $child->age = $request->input('age');
+        $child->gender = $request->input('gender');
+        $child->interests_and_preferences = $request->input('interests_and_preferences');
+        $child->challenges_or_learning_needs = $request->input('challenges_or_learning_needs');
         $child->save();
 
-        // Prepare the data to send to the Python algorithm
+        // Prepare data for Python script (use actual form data)
         $childData = [
-            'age' => $request->input('childAge'),
-            'Interests_and_Preferences' => implode(',', $request->input('favoritePatterns')),
-            'Challenges_or_Learning_Needs' => implode(',', $request->input('learningNeeds'))
+            'age' => $child->age,
+            'gender' => $child->gender,
+            'interests_and_preferences' => $child->interests_and_preferences,
+            'challenges_or_learning_needs' => $child->challenges_or_learning_needs,
         ];
 
-        // Convert the array to JSON for passing to the Python script
-        $childDataJson = json_encode($childData);
+        // Ensure proper JSON encoding and command execution
+        $jsonData = json_encode($childData);
+        $escapedJsonData = escapeshellarg($jsonData);
+        $command = "python 'c:/Users/User/OneDrive/Desktop/LD/LDDiagrams/recommendation_algorithm.py' \"$escapedJsonData\"";
 
         // Execute the Python script
-        $process = new Process(['python', 'path/to/your/python/script.py', $childDataJson]);
+        $process = new Process($command);
         $process->run();
 
-        // Check if the execution was successful
-        if (!$process->isSuccessful()) {
-            throw new ProcessFailedException($process);
+        // Handle output and potential errors
+        if ($process->isSuccessful()) {
+            $output = $process->getOutput();
+            $recommendations = json_decode($output);
+            return response()->json($recommendations);
+        } else {
+            $error = $process->getErrorOutput();
+            return response()->json(['error' => $error], 500); // Internal Server Error
         }
-
-        // Get the output of the Python script (recommended toys)
-        $recommendedToys = $process->getOutput();
-
-        // Return a response with the recommended toys
-        return response()->json(['toys' => $recommendedToys]);
     }
 }

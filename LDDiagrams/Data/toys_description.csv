@@ -1,9 +1,9 @@
 id,company_id,description,category,age,gender,holiday,skill_development,play_pattern
-1,1,Colorful building blocks for creative play,Educational,6,Male,Christmas,Fine Motor Skills,Constructive Play
-2,2,Soft and huggable teddy bear for comfort,Stuffed Animals,3,Male,Thanksgiving,Emotional Intelligence,Comfort Play
-3,3,Exciting dinosaur adventure set with figurines,Action Figures,8,Male,Easter,Cognitive Skills,Imaginative Play
-4,4,Tablet for early education and interactive learning,Educational,5,Male,Christmas,Cognitive Skills,Interactive Learning
-5,5,Complete coloring kit with various art supplies,Arts and Crafts,5,Male,Christmas,Fine Motor Skills,Creative Play
+1,1,"Colorful building blocks for creative play",Educational,6,Male,Christmas,"Fine Motor Skills, Spatial Reasoning, Creativity, Problem-Solving, Hand-Eye Coordination, Critical Thinking, Design, Building, Imagination, Exploration","Constructive Play, Imaginative Play, Open-Ended Play, Sensory Play, Collaboration"
+2,2,"Soft and huggable teddy bear for comfort",Stuffed Animals,3,Female,Thanksgiving,"Emotional Intelligence, Social Skills, Self-Soothing, Empathy, Attachment, Security, Nurturing","Comfort Play, Nurturing Play, Pretend Play, Role-Playing, Storytelling"
+3,3,"Exciting dinosaur adventure set with figurines",Action Figures,8,Male,Easter,"Cognitive Skills, Language Development, Imagination, Creativity, Storytelling, Problem-Solving, Historical Knowledge, Scientific Knowledge","Imaginative Play, Cooperative Play, Storytelling Play, Pretend Play, Active Play, Physical Play"
+4,4,"Tablet for early education and interactive learning",Educational,5,Male,Christmas,"Cognitive Skills, Literacy Skills, Numeracy Skills, Problem-Solving, Critical Thinking, Digital Literacy, Technology Skills, Communication Skills, Information Processing","Interactive Learning, Educational Play, Screen-Based Play, Guided Play, Independent Play"
+5,5,"Complete coloring kit with various art supplies",Arts and Crafts,5,Male,Christmas,"Fine Motor Skills, Creativity, Self-Expression, Color Recognition, Hand-Eye Coordination, Artistic Expression, Color Mixing, Design","Creative Play, Open-Ended Play, Artistic Expression, Individual Play, Sensory Play"
 6,6,DIY robot building kit for STEM education,Educational,9,Male,New Year,Cognitive Skills,Constructive Play
 7,7,Soft and safe puzzle play mat for infants,Infant Toys,2,Male,Easter,Cognitive Skills,Problem Solving
 8,8,Imaginative play tent for indoor adventures,Outdoor Play,8,Male,Thanksgiving,Physical Activity,Imaginative Play
