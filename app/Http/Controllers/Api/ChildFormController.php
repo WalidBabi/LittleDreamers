@@ -44,15 +44,12 @@ class ChildFormController extends Controller
         ];
 
         // Ensure proper JSON encoding and command execution
-        $jsonData = json_encode($childData);
-
-        $escapedJsonData = escapeshellarg($jsonData);
-        $escapedJsonDataWithQuotes = '' . $escapedJsonData . '';
+        $JsonData = json_encode($childData);
 
         $command = [
             'C:\Users\waled\AppData\Local\Programs\Python\Python311\python.exe',
             'C:/Users/waled/Desktop/LittleDreamers/LDDiagrams/recommendation_algorithm.py',
-            $escapedJsonDataWithQuotes,
+            $JsonData,
         ];
 
         // Execute the Python script

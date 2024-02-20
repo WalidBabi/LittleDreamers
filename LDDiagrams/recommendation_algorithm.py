@@ -39,11 +39,9 @@ class Retriever:
 
 # Load child data from JSON input
 def load_child_data():
-    child_data_string = sys.argv[1]
-    print(child_data_string)
-    # child_data = json.loads(child_data_string)  # Parse JSON string into dictionary
-    # print(child_data)
-    return child_data_string
+    child_data = sys.argv[1]
+    return child_data
+
 
 # Main function to execute recommendation algorithm
 def main():
@@ -51,23 +49,26 @@ def main():
     # Load child data
     child_data = load_child_data()
     
-    # # Load toys data
-    # toys_df = pd.read_csv("C:/Users/waled/Desktop/LittleDreamers/LDDiagrams/Data/toys_description.csv")
+    # Load toys data
+    toys_df = pd.read_csv("C:/Users/waled/Desktop/LittleDreamers/LDDiagrams/Data/toys_description.csv")
 
-    # # Create indexer and retriever objects
-    # vsm = Indexer(toys_df)
-    # rt = Retriever()
+    # Create indexer and retriever objects
+    vsm = Indexer(toys_df)
+    rt = Retriever()
 
-    # # Convert child data to text
-    # child_text = f"{child_data['name']} {child_data['age']} {child_data['gender']} {child_data['interests_and_preferences']} {child_data['challenges_or_learning_needs']}"
-    # child_vector = vsm.vectorize(child_text)
+    # Convert child data to text
+    child_text = f"{child_data['name']} {child_data['age']} {child_data['gender']} {child_data['interests_and_preferences']} {child_data['challenges_or_learning_needs']}"
+    print(child_text)  # Just for debugging
+    child_vector = vsm.vectorize(child_text)
 
-    # # Retrieve toy recommendations
-    # recommendations = rt.retrieve(child_vector, vsm)
+    # Retrieve toy recommendations
+    recommendations = rt.retrieve(child_vector, vsm)
 
-    # # Print or return toy recommendations
-    # print(recommendations.head())
+    # Print or return toy recommendations
+    print(recommendations.head())
 
 
 if __name__ == "__main__":
     main()
+
+
