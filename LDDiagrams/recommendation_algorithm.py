@@ -4,17 +4,12 @@ from sklearn.metrics.pairwise import cosine_similarity
 import sys
 import json
 
-# Load data
-toys_df = pd.read_csv("LDDiagrams/Data/toys_description.csv")
-
 # Index Model: Vector space model
 class Indexer:
 
     def __init__(self, documents_df):
         # Concatenate the features into a single text feature
-        documents_df['combined_features'] = documents_df['age'].astype(str) + ' ' + documents_df[
-            'skill_development'] + ' ' + documents_df['play_pattern'] + ' ' + documents_df[
-                                                'gender'] + ' ' + documents_df['description']
+        documents_df['combined_features'] = documents_df['age'].astype(str) + ' ' + documents_df['skill_development'] + ' ' + documents_df['play_pattern'] + ' ' + documents_df['gender'] + ' ' + documents_df['description']
         # Create a TF-IDF vectorizer
         self.tfidf_vectorizer = TfidfVectorizer()
         # Fit the documents and transform
@@ -44,31 +39,34 @@ class Retriever:
 
 # Load child data from JSON input
 def load_child_data():
-    child_json = sys.argv[1]
-    child_data = json.loads(child_json)
-    return child_data
-
+    child_data_string = sys.argv[1]
+    print(child_data_string)
+    # child_data = json.loads(child_data_string)  # Parse JSON string into dictionary
+    # print(child_data)
+    return child_data_string
 
 # Main function to execute recommendation algorithm
 def main():
+    # print(sys.argv[0])
     # Load child data
     child_data = load_child_data()
-    # Load toys data
-    toys_df = pd.read_csv("LDDiagrams/Data/toys_description.csv")
+    
+    # # Load toys data
+    # toys_df = pd.read_csv("C:/Users/waled/Desktop/LittleDreamers/LDDiagrams/Data/toys_description.csv")
 
-    # Create indexer and retriever objects
-    vsm = Indexer(toys_df)
-    rt = Retriever()
+    # # Create indexer and retriever objects
+    # vsm = Indexer(toys_df)
+    # rt = Retriever()
 
-    # Convert child data to text
-    child_text = f"{child_data['age']} {child_data['interests_and_preferences']} {child_data['challenges_or_learning_needs']} {child_data['gender']}"
-    child_vector = vsm.vectorize(child_text)
+    # # Convert child data to text
+    # child_text = f"{child_data['name']} {child_data['age']} {child_data['gender']} {child_data['interests_and_preferences']} {child_data['challenges_or_learning_needs']}"
+    # child_vector = vsm.vectorize(child_text)
 
-    # Retrieve toy recommendations
-    recommendations = rt.retrieve(child_vector, vsm)
+    # # Retrieve toy recommendations
+    # recommendations = rt.retrieve(child_vector, vsm)
 
-    # Print or return toy recommendations
-    print(recommendations.head())
+    # # Print or return toy recommendations
+    # print(recommendations.head())
 
 
 if __name__ == "__main__":

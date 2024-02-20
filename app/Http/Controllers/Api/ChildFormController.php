@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Child;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Validator;
+use Symfony\Component\Process\Process;
 
 class ChildFormController extends Controller
 {
@@ -36,6 +36,7 @@ class ChildFormController extends Controller
 
         // Prepare data for Python script (use actual form data)
         $childData = [
+            'name' => $child->name,
             'age' => $child->age,
             'gender' => $child->gender,
             'interests_and_preferences' => $child->interests_and_preferences,
@@ -44,8 +45,15 @@ class ChildFormController extends Controller
 
         // Ensure proper JSON encoding and command execution
         $jsonData = json_encode($childData);
+
         $escapedJsonData = escapeshellarg($jsonData);
-        $command = "python 'c:/Users/User/OneDrive/Desktop/LD/LDDiagrams/recommendation_algorithm.py' \"$escapedJsonData\"";
+        $escapedJsonDataWithQuotes = '' . $escapedJsonData . '';
+
+        $command = [
+            'C:\Users\waled\AppData\Local\Programs\Python\Python311\python.exe',
+            'C:/Users/waled/Desktop/LittleDreamers/LDDiagrams/recommendation_algorithm.py',
+            $escapedJsonDataWithQuotes,
+        ];
 
         // Execute the Python script
         $process = new Process($command);
