@@ -60,7 +60,7 @@ class ChildFormController extends Controller
         // Handle output and potential errors
         if ($process->isSuccessful()) {
             $output = $process->getOutput();
-            var_dump($output);
+        
             $matches = [];
             // Use regular expression to extract ID numbers
             preg_match_all('/\s+(\d+)\s+/', $output, $matches);
