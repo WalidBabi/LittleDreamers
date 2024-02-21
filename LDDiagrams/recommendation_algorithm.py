@@ -42,7 +42,6 @@ def load_child_data():
     child_data = sys.argv[1]
     return child_data
 
-
 # Main function to execute recommendation algorithm
 def main():
     # print(sys.argv[0])
@@ -56,10 +55,7 @@ def main():
     vsm = Indexer(toys_df)
     rt = Retriever()
 
-    # Convert child data to text
-    child_text = f"{child_data['name']} {child_data['age']} {child_data['gender']} {child_data['interests_and_preferences']} {child_data['challenges_or_learning_needs']}"
-    print(child_text)  # Just for debugging
-    child_vector = vsm.vectorize(child_text)
+    child_vector = vsm.vectorize(child_data)
 
     # Retrieve toy recommendations
     recommendations = rt.retrieve(child_vector, vsm)

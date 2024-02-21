@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Child;
+use App\Models\Toy;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\Process\Process;
@@ -59,8 +60,39 @@ class ChildFormController extends Controller
         // Handle output and potential errors
         if ($process->isSuccessful()) {
             $output = $process->getOutput();
-            $recommendations = json_decode($output);
-            return response()->json($recommendations);
+            var_dump($output);
+            $matches = [];
+            // Use regular expression to extract ID numbers
+            preg_match_all('/\s+(\d+)\s+/', $output, $matches);
+
+            // Check if matches are found
+            if (!empty($matches[1])) {
+                // Extract the first 5 ID numbers
+                $idNumbers = array_slice($matches[1], 0, 5);
+
+                // Add 1 to each extracted number
+                $idNumbers = array_map(function ($num) {
+                    return intval($num) + 1;
+                }, $idNumbers);
+
+                // Query the database for toys based on the extracted IDs
+                $toys = Toy::whereIn('id', $idNumbers)->get();
+
+                // Serialize the toys data
+                $serializedToys = [];
+                foreach ($toys as $toy) {
+                    $serializedToys[] = [
+                        'id' => $toy->id,
+                        'name' => $toy->name,
+                        // Add other fields as needed
+                    ];
+                }
+
+                // Return the toys data as JSON response
+                return response()->json(['toys' => $serializedToys]);
+            } else {
+                return response()->json(['error' => 'No ID numbers found in output'], 500);
+            }
         } else {
             $error = $process->getErrorOutput();
             return response()->json(['error' => $error], 500); // Internal Server Error
