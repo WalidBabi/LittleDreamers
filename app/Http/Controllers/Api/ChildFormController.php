@@ -28,11 +28,11 @@ class ChildFormController extends Controller
 
         // Save form data to the database
         $child = new Child();
-        $child->name = $request->input('name');
-        $child->age = $request->input('age');
-        $child->gender = $request->input('gender');
-        $child->interests_and_preferences = $request->input('interests_and_preferences');
-        $child->challenges_or_learning_needs = $request->input('challenges_or_learning_needs');
+        $child->name = $request->input('childName');
+        $child->age = $request->input('childAge');
+        $child->gender = $request->input('childGender');
+        $child->interests_and_preferences = $request->input('childInterests');
+        $child->challenges_or_learning_needs = $request->input('childChallenges');
         $child->save();
 
         // Prepare data for Python script (use actual form data)
