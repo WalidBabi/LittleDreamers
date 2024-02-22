@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Child;
 use App\Models\Toy;
+use App\Models\ToyDescription;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\Process\Process;
@@ -44,13 +45,30 @@ class ChildFormController extends Controller
             'challenges_or_learning_needs' => $child->challenges_or_learning_needs,
         ];
 
+        // Query the toys_description table for relevant data
+        $toysDescriptions = ToyDescription::all();
+
+        // Extract relevant fields from toys descriptions
+        $toysDescriptionsData = [];
+        foreach ($toysDescriptions as $description) {
+            $toysDescriptionsData[] = [
+                'age' => $description->age,
+                'description' => $description->description,
+                'gender' => $description->gender,
+                'skill_development' => $description->skill_development,
+                'play_pattern' => $description->play_pattern,
+            ];
+        }
+        // dd($toysDescriptionsData);
+
         // Ensure proper JSON encoding and command execution
         $JsonData = json_encode($childData);
-
+        $JsonToysData = json_encode($toysDescriptionsData);
         $command = [
             'C:\Users\waled\AppData\Local\Programs\Python\Python311\python.exe',
             'C:/Users/waled/Desktop/LittleDreamers/LDDiagrams/recommendation_algorithm.py',
             $JsonData,
+            $JsonToysData, 
         ];
 
         // Execute the Python script
@@ -60,7 +78,7 @@ class ChildFormController extends Controller
         // Handle output and potential errors
         if ($process->isSuccessful()) {
             $output = $process->getOutput();
-        
+
             $matches = [];
             // Use regular expression to extract ID numbers
             preg_match_all('/\s+(\d+)\s+/', $output, $matches);

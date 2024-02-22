@@ -38,30 +38,31 @@ class Retriever:
 
 
 # Load child data from JSON input
-def load_child_data():
-    child_data = sys.argv[1]
-    return child_data
+# def load_child_data():
+#     child_data = sys.argv[1]
+#     return child_data
 
 # Main function to execute recommendation algorithm
 def main():
     # print(sys.argv[0])
     # Load child data
-    child_data = load_child_data()
-    
+    # child_data = load_child_data()
+    toys_data = sys.argv[2]
+    print(toys_data)
     # Load toys data
-    toys_df = pd.read_csv("C:/Users/waled/Desktop/LittleDreamers/LDDiagrams/Data/toys_description.csv")
+    # toys_df = pd.read_csv("C:/Users/waled/Desktop/LittleDreamers/LDDiagrams/Data/toys_description.csv")
 
-    # Create indexer and retriever objects
-    vsm = Indexer(toys_df)
-    rt = Retriever()
+    # # Create indexer and retriever objects
+    # vsm = Indexer(toys_df)
+    # rt = Retriever()
 
-    child_vector = vsm.vectorize(child_data)
+    # child_vector = vsm.vectorize(child_data)
 
-    # Retrieve toy recommendations
-    recommendations = rt.retrieve(child_vector, vsm)
+    # # Retrieve toy recommendations
+    # recommendations = rt.retrieve(child_vector, vsm)
 
-    # Print or return toy recommendations
-    print(recommendations.head())
+    # # Print or return toy recommendations
+    # print(recommendations.head())
 
 
 if __name__ == "__main__":
