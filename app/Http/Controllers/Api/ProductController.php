@@ -13,4 +13,15 @@ class ProductController extends Controller
         $products = Toy::all();
         return response()->json($products);
     }
+
+    public function show($id)
+    {
+        $product = Toy::find($id);
+        
+        if (!$product) {
+            return response()->json(['message' => 'Product not found'], 404);
+        }
+        
+        return response()->json($product);
+    }
 }
