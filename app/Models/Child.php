@@ -12,6 +12,7 @@ class Child extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    protected $table = 'children';
     //a child has many orders
     public function orders(): HasMany
     {
@@ -20,7 +21,7 @@ class Child extends Model
     //a child belongs to a parent
     public function parent(): BelongsTo
     {
-        return $this->belongsTo(Parent::class);
+        return $this->belongsTo(Parentt::class);
     }
     //a child has many reviews on many toys
     public function toys(): BelongsToMany

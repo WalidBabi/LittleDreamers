@@ -20,6 +20,6 @@ class Profile extends Authenticatable
 // a profile has many parents
     public function parents(): HasMany
     {
-        return $this->hasMany(Parent::class);
+        return $this->hasMany(Parentt::class);
     }
 }
