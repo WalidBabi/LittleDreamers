@@ -48,8 +48,9 @@ class ChildFormController extends Controller
         // Query the toys_description table for relevant data
         $toysDescriptions = ToyDescription::all();
 
-        // Extract relevant fields from toys descriptions
+        // // Extract relevant fields from toys descriptions
         $toysDescriptionsData = [];
+
         foreach ($toysDescriptions as $description) {
             $toysDescriptionsData[] = [
                 'age' => $description->age,
@@ -63,17 +64,25 @@ class ChildFormController extends Controller
 
         // Ensure proper JSON encoding and command execution
         $JsonData = json_encode($childData);
-        $JsonToysData = json_encode($toysDescriptionsData);
+        // Write JSON data to a temporary file
+        $tmpFile = tempnam(sys_get_temp_dir(), 'toys_descriptions_');
+        file_put_contents($tmpFile, json_encode($toysDescriptionsData));
+
+        // Prepare command with file path as argument
         $command = [
             'C:\Users\waled\AppData\Local\Programs\Python\Python311\python.exe',
             'C:/Users/waled/Desktop/LittleDreamers/LDDiagrams/recommendation_algorithm.py',
             $JsonData,
-            $JsonToysData, 
+            $tmpFile, // Pass file path as argument
         ];
 
         // Execute the Python script
         $process = new Process($command);
         $process->run();
+
+        // Clean up temporary file
+        unlink($tmpFile);
+
 
         // Handle output and potential errors
         if ($process->isSuccessful()) {
@@ -107,9 +116,12 @@ class ChildFormController extends Controller
                 }
 
                 // Return the toys data as JSON response
-                return response()->json(['toys' => $serializedToys]);
+                return response()->json([
+                    'child_id' => $child->id,
+                    'toys' => $serializedToys
+                ]);
             } else {
-                return response()->json(['error' => 'No ID numbers found in output'], 500);
+                return response()->json(['error' => 'No recommendations found in output'], 500);
             }
         } else {
             $error = $process->getErrorOutput();

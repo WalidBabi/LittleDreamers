@@ -3,7 +3,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import sys
 import json
-
+import pymysql
+from pymysql import cursors
 # Index Model: Vector space model
 class Indexer:
 
@@ -38,34 +39,30 @@ class Retriever:
 
 
 # Load child data from JSON input
-# def load_child_data():
-#     child_data = sys.argv[1]
-#     return child_data
+def load_child_data():
+    child_data = sys.argv[1]
+    return child_data
 
 # Main function to execute recommendation algorithm
+
 def main():
-    # print(sys.argv[0])
-    # Load child data
-    # child_data = load_child_data()
-    toys_data = sys.argv[2]
-    print(toys_data)
-    # Load toys data
-    # toys_df = pd.read_csv("C:/Users/waled/Desktop/LittleDreamers/LDDiagrams/Data/toys_description.csv")
+    # Load toy descriptions data from file
+    with open(sys.argv[2], 'r') as f:
+        toys_data = json.load(f)
+    # Load toys data into a DataFrame
+    toys_df = pd.DataFrame(toys_data)
 
-    # # Create indexer and retriever objects
-    # vsm = Indexer(toys_df)
-    # rt = Retriever()
+    # Create indexer and retriever objects
+    vsm = Indexer(toys_df)
+    rt = Retriever()
 
-    # child_vector = vsm.vectorize(child_data)
+    # Process child data (if needed)
+    child_data = load_child_data()
+    child_vector = vsm.vectorize(child_data)
 
-    # # Retrieve toy recommendations
-    # recommendations = rt.retrieve(child_vector, vsm)
-
-    # # Print or return toy recommendations
-    # print(recommendations.head())
-
+    # Retrieve toy recommendations
+    recommendations = rt.retrieve(child_vector, vsm)
+    print(recommendations.head())
 
 if __name__ == "__main__":
     main()
-
-

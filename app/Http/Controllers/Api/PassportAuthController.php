@@ -30,7 +30,7 @@ class PassportAuthController extends Controller
 
         $token = $user->createToken('Register')->accessToken;
 
-        return response()->json(['token' => $token], 200) ->header('Location', '/');
+        return response()->json(['token' => $token], 200)->header('Location', '/');
     }
 
     /**
@@ -44,8 +44,13 @@ class PassportAuthController extends Controller
         ];
 
         if (auth()->attempt($data)) {
+            $user = auth()->user();
+            $fullName = $user->first_name . ' ' . $user->last_name;
             $token = auth()->user()->createToken('Login')->accessToken;
-            return response()->json(['token' => $token], 200);
+            return response()->json([
+                'fullName' => $fullName,
+                'token' => $token
+            ], 200);
         } else {
             return response()->json(['error' => 'Unauthorised'], 401);
         }
