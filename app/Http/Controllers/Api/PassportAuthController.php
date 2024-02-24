@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin;
 use App\Models\Child;
 use App\Models\Parentt;
 use Illuminate\Http\Request;
@@ -130,4 +131,50 @@ class PassportAuthController extends Controller
             'message' => 'Logged out successfully'
         ]);
     }
+
+
+    public function AdminRegister(Request $request)
+    {
+        $this->validate($request, [
+            'first_name' => 'required|min:4',
+            'last_name' => 'required|min:4',
+            'email' => 'required|email',
+            'password' => 'required|min:4',
+        ]);
+
+        $user = Profile::create([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password)
+        ]);
+
+        $profileId = $user->id;
+
+        $token = $user->createToken('Register')->accessToken;
+
+        $admin = new Admin();
+        $admin->profile_id = $profileId; // $profileId is the ID of the associated profile
+        $admin->save();
+
+        return response()->json(['token' => $token], 200)->header('Location', '/');
+    }
+
+    /**
+     * Login Req
+     */
+    public function AdminLogin(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            $user = Auth::user();
+            $token = $user->createToken('Login')->accessToken;
+            return response()->json(['token' => $token], 200)->header('Location', '/');
+        }
+
+        return response()->json(['error' => 'Unauthorized'], 401);
+    }
+
+
 }

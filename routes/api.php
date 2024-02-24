@@ -18,21 +18,23 @@ use App\Http\Controllers\Api\RecommendationController;
 |
 */
 
+//User Auth
 Route::post('register', [PassportAuthController::class, 'register']);
 Route::post('login', [PassportAuthController::class, 'login']);
-
 Route::get('/user-details', [PassportAuthController::class, 'getUserDetails']);
-
- 
 Route::middleware('auth:api')->group(function () {
     Route::post('logout', [PassportAuthController::class, 'logout']);
 });
+
+//Admin Auth
+Route::post('AdminRegister', [PassportAuthController::class, 'AdminRegister']);
+Route::post('AdminLogin', [PassportAuthController::class, 'AdminLogin']);
 
 //display products
 Route::get('/products', [ProductController::class, 'index']);
 //display products details
 Route::get('/products/{id}', [ProductController::class, 'show']);
-
+//Form Submisstion
 Route::post('/Form', [ChildFormController::class,'processForm']);
-
+//Return Recommendations
 Route::get('/recommendations', [RecommendationController::class,'recommendations']);
