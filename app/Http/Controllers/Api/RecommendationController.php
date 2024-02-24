@@ -51,8 +51,8 @@ class RecommendationController extends Controller
 
         // Prepare command with file path as argument
         $command = [
-            'C:\Users\waled\AppData\Local\Programs\Python\Python311\python.exe',
-            'C:/Users/waled/Desktop/LittleDreamers/LDDiagrams/recommendation_algorithm.py',
+            'C:\Python311\python.exe',
+            'D:\LittleDreamers\BackEnd\LittleDreamers-main\LDDiagrams\recommendation_algorithm.py',
             $JsonData,
             $tmpFile, // Pass file path as argument
         ];
@@ -92,15 +92,15 @@ class RecommendationController extends Controller
                 foreach ($toys as $toy) {
                     // Find the corresponding description for the current toy
                     $description = $toys_description->firstWhere('id', $toy->id);
-            
+
                     $serializedToys[] = [
                         'id' => $toy->id,
                         'name' => $toy->name,
                         'description' => $description->description,
-                        'category' =>$description->category,
-                        'holiday' =>$description->holiday,
-                        'skill_development' =>$description->skill_development,
-                        'play_pattern' =>$description->play_pattern,
+                        'category' => $description->category,
+                        'holiday' => $description->holiday,
+                        'skill_development' => $description->skill_development,
+                        'play_pattern' => $description->play_pattern,
                         'price' => $toy->price,
                         'image' => $toy->image,
                     ];
