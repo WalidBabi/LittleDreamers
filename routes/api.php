@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\PassportAuthController;
 use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\RecommendationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,9 @@ use App\Http\Controllers\Api\ProductController;
 
 Route::post('register', [PassportAuthController::class, 'register']);
 Route::post('login', [PassportAuthController::class, 'login']);
+
+Route::get('/user-details', [PassportAuthController::class, 'getUserDetails']);
+
  
 Route::middleware('auth:api')->group(function () {
     Route::post('logout', [PassportAuthController::class, 'logout']);
@@ -29,4 +33,6 @@ Route::get('/products', [ProductController::class, 'index']);
 //display products details
 Route::get('/products/{id}', [ProductController::class, 'show']);
 
-Route::post('/recommendations', [ChildFormController::class,'processForm']);
+Route::post('/Form', [ChildFormController::class,'processForm']);
+
+Route::get('/recommendations', [RecommendationController::class,'recommendations']);

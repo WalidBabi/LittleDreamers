@@ -19,7 +19,7 @@ class ProductController extends Controller
     {
         $product = Toy::find($id);
 
-        $toy_description = ToyDescription::find($id)->toArray();;
+        $toy_description = ToyDescription::find($id)->toArray();
         
         if (!$product) {
             return response()->json(['message' => 'Product not found'], 404);

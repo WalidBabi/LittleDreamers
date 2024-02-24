@@ -8,6 +8,8 @@ use App\Models\Parentt;
 use Illuminate\Http\Request;
 
 use App\Models\Profile;
+use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Auth;
 
 class PassportAuthController extends Controller
 {
@@ -46,65 +48,79 @@ class PassportAuthController extends Controller
      */
     public function login(Request $request)
     {
-        $data = [
-            'email' => $request->email,
-            'password' => $request->password
-        ];
+        $credentials = $request->only('email', 'password');
 
-        if (auth()->attempt($data)) {
-            $user = auth()->user();
-            $fullName = $user->first_name . ' ' . $user->last_name;
+        if (Auth::attempt($credentials)) {
+            $user = Auth::user();
             $token = $user->createToken('Login')->accessToken;
-
-            $profile_id = $user->id;
-            // dd($profile_id);
-            $parent_ids = $user->parents;
-            // dd($parent_ids);
-            foreach ($parent_ids as $parent_id) {
-                $parent_id = $parent_id->id;
-            }
-            // dd($parent_id);
-            $parent = Parentt::find($parent_id);
-            // dd($parent);
-
-            $children_ids = $parent->children;
-            foreach ($children_ids as $child_id) {
-                $child_id = $child_id->id;
-            }
-            // dd($child_id);
-            $children = [];
-
-            $children = [];
-
-            if ($parent) {
-                // Retrieve children of the parent
-                $children_data = $parent->children->map(function ($child) {
-                    return [
-                        'child_id' => $child->id,
-                        'name' => $child->name,
-                        'age' => $child->age,
-                        'gender' => $child->gender,
-                        'interests_and_preferences' => $child->interests_and_preferences,
-                        'challenges_or_learning_needs' => $child->challenges_or_learning_needs
-                    ];
-                });
-
-                if ($children_data->isNotEmpty()) {
-                    $children = $children_data->toArray();
-                }
-            }
-
-            // Return response with user's full name, token, and children
-            return response()->json([
-                'parent_id' => $parent_id,
-                'fullName' => $fullName,
-                // 'token' => $token,
-                'children' => $children
-            ], 200);
-        } else {
-            return response()->json(['error' => 'Unauthorised'], 401);
+            return response()->json(['token' => $token], 200)->header('Location', '/');
         }
+
+        return response()->json(['error' => 'Unauthorized'], 401);
     }
+
+    public function getUserDetails(Request $request)
+    {
+        // Authenticate the user using the token
+        if ($request->header('Authorization')) {
+            $token = str_replace('Bearer ', '', $request->header('Authorization'));
+            $user = User::where('api_token', $token)->first();
+            if (!$user) {
+                return response()->json(['error' => 'Unauthorized'], 401);
+            }
+        } else {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $user = auth()->user();
+        $fullName = $user->first_name . ' ' . $user->last_name;
+
+        $profile_id = $user->id;
+        // dd($profile_id);
+        $parent_ids = $user->parents;
+        // dd($parent_ids);
+        foreach ($parent_ids as $parent_id) {
+            $parent_id = $parent_id->id;
+        }
+        // dd($parent_id);
+        $parent = Parentt::find($parent_id);
+        // dd($parent);
+
+        $children_ids = $parent->children;
+        foreach ($children_ids as $child_id) {
+            $child_id = $child_id->id;
+        }
+        // dd($child_id);
+        $children = [];
+
+        $children = [];
+
+        if ($parent) {
+            // Retrieve children of the parent
+            $children_data = $parent->children->map(function ($child) {
+                return [
+                    'child_id' => $child->id,
+                    'name' => $child->name,
+                    'age' => $child->age,
+                    'gender' => $child->gender,
+                    'interests_and_preferences' => $child->interests_and_preferences,
+                    'challenges_or_learning_needs' => $child->challenges_or_learning_needs
+                ];
+            });
+
+            if ($children_data->isNotEmpty()) {
+                $children = $children_data->toArray();
+            }
+        }
+
+        // Return response with user's full name, token, and children
+        return response()->json([
+            'parent_id' => $parent_id,
+            'fullName' => $fullName,
+            'children' => $children
+        ], 200);
+    }
+
 
     public function logout(Request $request)
     {
