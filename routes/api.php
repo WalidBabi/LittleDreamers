@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\PassportAuthController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\RecommendationController;
+use App\Http\Controllers\Api\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +39,5 @@ Route::get('/products/{id}', [ProductController::class, 'show']);
 Route::post('/Form', [ChildFormController::class,'processForm']);
 //Return Recommendations
 Route::get('/recommendations', [RecommendationController::class,'recommendations']);
+//search 
+Route::get('/search', [SearchController::class, 'search']);
