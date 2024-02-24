@@ -52,7 +52,7 @@ class RecommendationController extends Controller
         // Prepare command with file path as argument
         $command = [
             'C:\Python311\python.exe',
-            'D:\LittleDreamers\BackEnd\LittleDreamers-main\LDDiagrams\recommendation_algorithm.py',
+            'D:\LittleDreamers-main\LittleDreamers\LDDiagrams\recommendation_algorithm.py',
             $JsonData,
             $tmpFile, // Pass file path as argument
         ];
