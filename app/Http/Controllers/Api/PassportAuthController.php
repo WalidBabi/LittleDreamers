@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Auth;
 
 class PassportAuthController extends Controller
 {
-    /**
-     * Registration Req
-     */
     public function register(Request $request)
     {
         $this->validate($request, [
@@ -44,9 +41,6 @@ class PassportAuthController extends Controller
         return response()->json(['token' => $token], 200)->header('Location', '/');
     }
 
-    /**
-     * Login Req
-     */
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
@@ -128,7 +122,6 @@ class PassportAuthController extends Controller
         ], 200);
     }
 
-
     public function logout(Request $request)
     {
         $request->user()->token()->revoke();
@@ -137,7 +130,6 @@ class PassportAuthController extends Controller
             'message' => 'Logged out successfully'
         ]);
     }
-
 
     public function AdminRegister(Request $request)
     {
@@ -166,9 +158,6 @@ class PassportAuthController extends Controller
         return response()->json(['token' => $token], 200)->header('Location', '/');
     }
 
-    /**
-     * Login Req
-     */
     public function AdminLogin(Request $request)
     {
         $credentials = $request->only('email', 'password');
@@ -176,11 +165,13 @@ class PassportAuthController extends Controller
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
             $token = $user->createToken('Login')->accessToken;
+
+             // Store the token in the api_token column of the Profiles table
+             $user->remember_token = $token;
+             $user->save();
             return response()->json(['token' => $token], 200)->header('Location', '/');
         }
 
         return response()->json(['error' => 'Unauthorized'], 401);
     }
-
-
 }

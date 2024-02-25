@@ -18,14 +18,13 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Toy::find($id);
-
-        $toy_description = ToyDescription::find($id)->toArray();
-        
+    
         if (!$product) {
             return response()->json(['message' => 'Product not found'], 404);
         }
-
-        // return response()->json($product);
+    
+        $toy_description = ToyDescription::where('toy_id', $id)->orderBy('created_at', 'desc')->get()->toArray();
+    
         return response()->json([
             'product' => $product,
             'description' => $toy_description 
