@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 19, 2024 at 01:11 PM
+-- Generation Time: Feb 24, 2024 at 01:14 PM
 -- Server version: 8.0.31
--- PHP Version: 7.4.33
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,7 +35,14 @@ CREATE TABLE IF NOT EXISTS `admins` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `admins_profile_id_foreign` (`profile_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`id`, `profile_id`, `created_at`, `updated_at`) VALUES
+(1, 21, '2024-02-24 09:02:05', '2024-02-24 09:02:05');
 
 -- --------------------------------------------------------
 
@@ -46,17 +53,28 @@ CREATE TABLE IF NOT EXISTS `admins` (
 DROP TABLE IF EXISTS `children`;
 CREATE TABLE IF NOT EXISTS `children` (
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `parent_id` bigint UNSIGNED NOT NULL,
+  `parent_id` bigint UNSIGNED NOT NULL DEFAULT '1',
   `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `age` int NOT NULL,
   `gender` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `interests_and_preferences` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `challenges_or_learning_needs` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `interests_and_preferences` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `challenges_or_learning_needs` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `children_parent_id_foreign` (`parent_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `children`
+--
+
+INSERT INTO `children` (`id`, `parent_id`, `name`, `age`, `gender`, `interests_and_preferences`, `challenges_or_learning_needs`, `created_at`, `updated_at`) VALUES
+(4, 1, 'John', 10, 'male', 'Art and Crafts she loves teddy bears', 'Empathy, Attachment', '2024-02-23 16:55:34', '2024-02-23 16:55:34'),
+(3, 5, 'jihad', 2, 'Female', 'basket ball', 'motor skills', NULL, NULL),
+(5, 1, 'John', 10, 'male', 'Art and Crafts she loves teddy bears', 'Empathy, Attachment', '2024-02-23 17:00:06', '2024-02-23 17:00:06'),
+(6, 1, 'John', 10, 'male', 'Art and Crafts she loves teddy bears', 'Empathy, Attachment', '2024-02-24 06:52:18', '2024-02-24 06:52:18'),
+(1, 5, 'Aboda', 1, 'Male', 'football', 'social skills ', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -929,7 +947,132 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('d1be3c162dc23281d049ceb7a2849ba3b6979739486e6aa11ad056c5d5c0b6345a3e915307c074e4', 9, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-01-08 13:11:27', '2024-01-08 13:11:27', '2025-01-08 16:11:27'),
 ('9d48536c43b6a43c1d7fd056d5963b55797e64d134c6a82f06a0982aa4b1c47ea814b5a9704c1360', 9, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-01-08 13:11:39', '2024-01-08 13:11:39', '2025-01-08 16:11:39'),
 ('16bc845ca35c892de93bf1ba64355e6b8ef57890f98cade7b892a712e1dea15d5d4dbce629084bda', 9, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-01-08 13:15:04', '2024-01-08 13:15:04', '2025-01-08 16:15:04'),
-('2d621b5c3d982b3cec667c9faabadadeb9ba77a08b471ecc1915c5d06d120cec2345bc557ed4ac59', 9, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-01-09 04:04:27', '2024-01-09 04:04:28', '2025-01-09 07:04:27');
+('2d621b5c3d982b3cec667c9faabadadeb9ba77a08b471ecc1915c5d06d120cec2345bc557ed4ac59', 9, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-01-09 04:04:27', '2024-01-09 04:04:28', '2025-01-09 07:04:27'),
+('a2737777f53a764e2e0cd41dd7f554889672994a0b6d229d8f9141fa64bff71aae2b73fc0722a38b', 10, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-21 18:43:57', '2024-02-21 18:43:57', '2025-02-21 21:43:57'),
+('d5c4c0b4316b6fd1f7d888e3d910cbcd86f54ce1df6e0c05061addb1e49f851fca325e7da3e97498', 10, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-21 18:43:58', '2024-02-21 18:43:58', '2025-02-21 21:43:58'),
+('dc712e2efbad213d2764a0ae5559f98341d86cd4b23237385b4b1650c112d1c2bfa6da4741ffcf68', 10, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-21 18:44:00', '2024-02-23 05:57:27', '2025-02-21 21:44:00'),
+('6c494982fab9b6daecf317bf0e632e5fdd967bdd50f62bd98696a8f544b2ac330fffc302ad291693', 10, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-22 19:01:00', '2024-02-22 19:01:01', '2025-02-22 22:01:00'),
+('e56cf206d15e0c25018e5df4fc2d1121ce95e8d39d5cc03d35416233e9de17f413ca657961a5c572', 10, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-22 19:01:50', '2024-02-22 19:01:50', '2025-02-22 22:01:50'),
+('08646bd930f9c6ce64443d9713471bc085a361b8a780714bbb733af2f34a60aa8f84f5a44ffe859d', 10, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-23 13:43:02', '2024-02-23 13:54:56', '2025-02-23 16:43:02'),
+('ea22c902ec7c4bb37a1173a23627f28d924496c31ee606ada1b43224ca41b24f79e66e80ba06c610', 10, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-23 13:55:02', '2024-02-23 14:22:45', '2025-02-23 16:55:02'),
+('7d2de59c3609a692ee7fcbaa1bb580a1103ca972cdea5f11674c49a710b9ed70eab5bd16088051e1', 10, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 14:27:35', '2024-02-23 14:27:35', '2025-02-23 17:27:35'),
+('ec21e96b838dcc962957ebaa2a110613ac2a8ab44a3ba1941faa398c4e8c4b534c7f9e7e7ecf9af8', 10, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 14:44:06', '2024-02-23 14:44:06', '2025-02-23 17:44:06'),
+('9e32e31e1f797e26d5fd0d8c39609f4e500fc283e914d21dc809dff5bc0e9ceee7296443047ec8f1', 11, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-23 14:57:31', '2024-02-23 14:57:31', '2025-02-23 17:57:31'),
+('859651b7b6d3926b79c0313076c23688db8683030978fc9b7cc3174038033ee529d827f2916a872a', 12, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-23 15:00:27', '2024-02-23 15:00:27', '2025-02-23 18:00:27'),
+('4d28db975e5df67a190f783f639f59714b6b68e2915e1289bc41803c4226dda70218e926437db6c0', 13, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-23 15:01:20', '2024-02-23 15:01:20', '2025-02-23 18:01:20'),
+('468fb5bdb4c4b27805e5cfe1cdc1c37d1afde460900aef03cb9605449b36125ad467bd2623965e9e', 14, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-23 15:01:50', '2024-02-23 15:01:50', '2025-02-23 18:01:50'),
+('93718e4135f49bd1577e2e2b3544f22d89d4e633e89831511b38a2c210e4002a4a5e5dec33a347af', 15, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-23 15:02:16', '2024-02-23 15:02:16', '2025-02-23 18:02:16'),
+('9bb58246a1ca7def397086245e60bdbd88c921555d418b71262dec0c70e2d8a54e9c4f01d594fb11', 16, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-23 15:03:01', '2024-02-23 15:03:01', '2025-02-23 18:03:01'),
+('36e0f8f30e2f189e24cee3b41c8ca614820fbfbc533c4d7bbf18f5d530d09016b1e3ede1a999d2a5', 16, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-23 15:03:02', '2024-02-23 15:06:39', '2025-02-23 18:03:02'),
+('14cd4a3d22e1dec89a0732d8b1cf0bbbd1cb11953350609768c6984cd810d123aadb84240d187f20', 16, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:04:49', '2024-02-23 15:04:49', '2025-02-23 18:04:49'),
+('72397532034264040b146a0569a7646ab1838548e9a85e6887abc5669601afc8b95470619faed74d', 17, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-23 15:05:11', '2024-02-23 15:05:11', '2025-02-23 18:05:11'),
+('02d2843dea682e189b311331b9d12e6864fa6f01097aaba75353dcc5b6f5b4bd2a9ddc701a24e486', 17, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:05:12', '2024-02-23 15:05:12', '2025-02-23 18:05:12'),
+('3888c48fface33605d352810bb5f5450090871ec75792cb0905ac3f4734948455c12f87df034bb1a', 17, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:05:16', '2024-02-23 15:05:16', '2025-02-23 18:05:16'),
+('04780ca7facbfdff2ffa16c549af581736caea16680477acebe724855d665e0b49ea9ab29e638055', 17, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:06:46', '2024-02-23 15:06:46', '2025-02-23 18:06:46'),
+('5c312ce41c67c752a539fb23839f911b41d3523aee383d49e79d33be455301acfb8433c5af2feffb', 17, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:07:12', '2024-02-23 15:07:12', '2025-02-23 18:07:12'),
+('b477ade5cfb249c0b6b147a884dae1a4e694722b4f5b09772d0fafd039f6168147424db7692c9504', 17, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:08:09', '2024-02-23 15:08:09', '2025-02-23 18:08:09'),
+('a5bf07e13c58733f514c79ab37fab50976b1d75e03302f4c46254aedac15cfe5fd6a1390943e720a', 18, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-23 15:10:14', '2024-02-23 15:10:14', '2025-02-23 18:10:14'),
+('d7a6754a07138371ca207ca16b80965e2da6bc25fcdfa7290572422243b12d69e0a7241bdb99637b', 18, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:10:15', '2024-02-23 15:10:15', '2025-02-23 18:10:15'),
+('c1d3dec5d0a7ef71f43e1baed9c3fd3783724e8ad18c5559fc25acb35ef7695c1bf1697b1262ae56', 18, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:12:26', '2024-02-23 15:12:26', '2025-02-23 18:12:26'),
+('0960417df0c9293da99b9a93f87f618762b803cf4592c10feb1078aff8088a683698ab70a3866a2f', 18, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:12:37', '2024-02-23 15:12:37', '2025-02-23 18:12:37'),
+('d9dad1be103655ce31d30b9922013cbaba896060cfd70e02575678b69367f08833a828e4a3a2960b', 18, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-23 15:13:06', '2024-02-23 15:20:22', '2025-02-23 18:13:06'),
+('d8718cce6fff7196da817aaac35781604e583f8ab02ff2374f5e3970ded6728bf63821dc6ec51422', 18, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:20:26', '2024-02-23 15:20:26', '2025-02-23 18:20:26'),
+('edeea8c744f036d1512f92d2e1574ccc151f80bb4928c002b155fff9defac2ba0324aa2621627672', 18, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:20:34', '2024-02-23 15:20:34', '2025-02-23 18:20:34'),
+('560f1da3782c5b478076893d935aab87341a58563db19ffdea52dcaa690b8a5b13e64ce7143293df', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-23 15:25:40', '2024-02-23 15:25:40', '2025-02-23 18:25:40'),
+('5421b4c31a78eccf13a7b5a05c9714b8ddc28154ce842101db2fc00dbe013b6ced64c6c3c3264d9a', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:25:54', '2024-02-23 15:25:54', '2025-02-23 18:25:54'),
+('64ff926cb8c313f51eecea017b5d2066378d950ee3590b7a655d7421d7d8b111a0f0d165c39b3dc0', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:26:42', '2024-02-23 15:26:42', '2025-02-23 18:26:42'),
+('3fc8e51703fdbbad6dfbd804352d7ccfc797add5256968a91c5283e1d3219b447cf7579b5d96fe4d', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:29:31', '2024-02-23 15:29:31', '2025-02-23 18:29:31'),
+('2b3abc65a153e1585e38e14282d2421ccf7cca7f3e89105ea8ce64994dae4393bc547b9fd94ca440', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:32:22', '2024-02-23 15:32:22', '2025-02-23 18:32:22'),
+('b372f53f9a9276228c146b2ec596229f0ff809619754d9541c9c001b3f85bf901fb577ba7b580bab', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:33:09', '2024-02-23 15:33:09', '2025-02-23 18:33:09'),
+('9700703f7d7b29ee0cc75b33f4c90a83df6c9ee1cac5add4821b78dd4351758388493065e9b31827', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:34:20', '2024-02-23 15:34:20', '2025-02-23 18:34:20'),
+('347e267b3324c82d73ec495ddefa99c3585e4319d134d35b7515176683448a022d0f7a438657d88d', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:35:07', '2024-02-23 15:35:08', '2025-02-23 18:35:07'),
+('2d0f5f2328048ff7a56d43f33489a11ef573d3612e99f31d6a0317218443dcc5457fd092a3d3fdcb', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:35:28', '2024-02-23 15:35:28', '2025-02-23 18:35:28'),
+('3fe978daf48eb4c09d7761c9e1ea7ee2d5ebe57bec6dcb9920c135e212e0b63c76a146fcb8c844df', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:35:38', '2024-02-23 15:35:38', '2025-02-23 18:35:38'),
+('f776cc1ee33b12b71d8602ddfe1313e2d969b7dfa69f6715515d5490c5b39acf68970f39103b640c', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:37:22', '2024-02-23 15:37:22', '2025-02-23 18:37:22'),
+('ecc5941a54571a121a8c09faff62ba25bb1f888d77b20f0d7b78532f7dfc8c6494c8138721c4d569', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:37:52', '2024-02-23 15:37:52', '2025-02-23 18:37:52'),
+('0e468c6c48202d1beb827c65b252f15424934f61149b6b364a50190feac6213297621055f8921e3c', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:38:05', '2024-02-23 15:38:05', '2025-02-23 18:38:05'),
+('ae9ef5ad5b0da79073b92a3f90546b579f2a5dc9e812b3edb41ba15435ee03a94460d12485304641', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:39:16', '2024-02-23 15:39:16', '2025-02-23 18:39:16'),
+('18ec8ff724bfb56dbd915fa8ddc99410e2313c98bafd0a7e074a993b6a75de0c6e6bd9dc972af0d9', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:39:52', '2024-02-23 15:39:52', '2025-02-23 18:39:52'),
+('15547ec06e8e3dbf5c19d2cb7b79353ecdeb5bea1be2d4e5c6018deaf935b71d6695592094130f93', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:40:31', '2024-02-23 15:40:31', '2025-02-23 18:40:31'),
+('f7e31fcc3e3406788e42aa594968b5e49a1d3338f29debae732aae0e96c6a58709a0c575848e1d28', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:41:41', '2024-02-23 15:41:41', '2025-02-23 18:41:41'),
+('9432a7d78e43c027fc5a54e56931f5267f8e7da38f55d4255be29bcbb1eeeb57dbc7ebd94e3b96b4', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:42:20', '2024-02-23 15:42:20', '2025-02-23 18:42:20'),
+('f91d7103bf622896863adfe6f2fbf299ff91e7a5b08456508b021ca8e50f3baae18f224a88f5e745', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:43:26', '2024-02-23 15:43:26', '2025-02-23 18:43:26'),
+('3bf33a90aeec63d69b235bc712ab11eb46d7751de3e7d19c153d33261ed3422b1b5fd9f9fc8d0bfa', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:43:36', '2024-02-23 15:43:37', '2025-02-23 18:43:36'),
+('447a34e0056aa1a05cce3aced2901e15216136f6b25d227f4c4cf337f881e6094a7639e3af5d830f', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:43:50', '2024-02-23 15:43:50', '2025-02-23 18:43:50'),
+('e7687b2131fcc31889962fd06e3cfb669a324de74015a27fd5aa72b0ca8c301e2b8125ecb389f35d', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:44:24', '2024-02-23 15:44:24', '2025-02-23 18:44:24'),
+('19439a165cabb4d2c882b5a961e3b4bc90b3798f56248776a592f86abf41dc921553f98a68ebc649', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:45:02', '2024-02-23 15:45:02', '2025-02-23 18:45:02'),
+('a583dd36b31e06d941a8fcf1a40975af5ac876af0466ed664c901c663f27358f94e36be12f2d9c07', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:45:49', '2024-02-23 15:45:49', '2025-02-23 18:45:49'),
+('d746ecf5ad9bca28c083b730d6a36594f294e4a8fb8004c66ad2463d7dc76b08e19f07751a323bdf', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:46:24', '2024-02-23 15:46:24', '2025-02-23 18:46:24'),
+('5d132018baca79ffdfccdcca0f60ae348c3d72a1af319984e8db0dbef602ab66a7d9d7b564f30523', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:47:49', '2024-02-23 15:47:49', '2025-02-23 18:47:49'),
+('4dabcd3b7f3b5979371347b6233afa1a3f90c31bba9d10e6e0b47f52386885c0f0d5e475dcd268f8', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:48:12', '2024-02-23 15:48:12', '2025-02-23 18:48:12'),
+('ce482ec14e3cafa138f322472bb356e4dbdc6330f6ac44ec683c49fd657f7adb1950166bdf1ec3b6', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:48:25', '2024-02-23 15:48:25', '2025-02-23 18:48:25'),
+('66c233b13119628e053f866afef85bcc3508467eaf0e43847bd27ed2edd8f99aefcd40f3eadf6ccf', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:48:41', '2024-02-23 15:48:41', '2025-02-23 18:48:41'),
+('de29bfbcecdd8e56f958175f3ecb2461867bbda3cda46c1db82e8e6f7a5ced13499df8f03cc70453', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:48:48', '2024-02-23 15:48:48', '2025-02-23 18:48:48'),
+('8d0d3e14bb23fe3fe2449028cb8230a8e72d4322389c43f4b402e7baa4aa34b20862efbb70c7e7a0', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:49:35', '2024-02-23 15:49:35', '2025-02-23 18:49:35'),
+('d31ca811f4a4f5303dc32e4ff1b0206498b53769d13643d44bfee318a09030c4e6abfc08cb1b4caa', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:50:24', '2024-02-23 15:50:24', '2025-02-23 18:50:24'),
+('03e77b2ea2b6ab1dcb42c5d55326da310341d4dfe528f3eb9acc2e5bb4f5567e57879a38a13aadef', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:50:32', '2024-02-23 15:50:32', '2025-02-23 18:50:32'),
+('70c2775a47a5a52f378fbd18f572aa50493b20e18f48906eaea5cd90487e29d76124e20e53678df3', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:51:17', '2024-02-23 15:51:17', '2025-02-23 18:51:17'),
+('a653024c5e3195d45786140a3e80df6175f5633314a8c876eb368708cbf44301fb7592697fd618c5', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:52:01', '2024-02-23 15:52:01', '2025-02-23 18:52:01'),
+('bfb36277f098bd49019f19aa43a24e2a914d83939a7da6f8d1b7446679cbb31c147b9747ed649db0', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:52:12', '2024-02-23 15:52:12', '2025-02-23 18:52:12'),
+('44b19daf9c2354c97374a078886c3234d462a9ef68deced0211acde876cc037a18b5f1c901a38fa0', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:52:47', '2024-02-23 15:52:47', '2025-02-23 18:52:47'),
+('d1f3e93e4907f5ccf6d1f01b734f9e31f34ee04ac51b35e44543fb86586147c67c311048ff16dbdc', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:53:02', '2024-02-23 15:53:02', '2025-02-23 18:53:02'),
+('5c863412e2bff656f73dc0cb0c5c594ab524e86826a5a2201f8d3f956e6a84ed342ed192a2f4c33e', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:53:50', '2024-02-23 15:53:50', '2025-02-23 18:53:50'),
+('2231d7fe5bf323b53c66fb32b722ea428fe8e5c0df8f7af30d198438a8c9420d2cbcccd7650db72b', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:55:37', '2024-02-23 15:55:37', '2025-02-23 18:55:37'),
+('3638d53e59d0ca1881b7b63ede5d626d349ebcf71037bff52f785202c3d1e12b41a3ed1a653e2dba', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:55:49', '2024-02-23 15:55:49', '2025-02-23 18:55:49'),
+('32068d46cae5cdfefd4d09fd20284f2a4d8ba500c87c68f347674504eac85c67361f146427f82bd5', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:56:15', '2024-02-23 15:56:15', '2025-02-23 18:56:15'),
+('34049c2a54e40d9e39f438776dfca8bb3b991f9792e364f615efb125050c860369e00bd0c4e42823', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:57:07', '2024-02-23 15:57:08', '2025-02-23 18:57:07'),
+('79d31783bf467eae082280022ab928cdf3d99a36682128d44a25b132e2bc4b0f2848e37b9a10a990', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:58:04', '2024-02-23 15:58:04', '2025-02-23 18:58:04'),
+('47abab45aeb85da988404c8665b51db676b5ef5f7545685ec330379dca3fe60a0a414c5d1cd5cf52', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:58:23', '2024-02-23 15:58:23', '2025-02-23 18:58:23'),
+('2351b1fe91ccc2b8b239f395df1c158c468c8fcdb16c425d5a98d8dc2fc922e0cf2a3dfc3c257a9a', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 15:59:39', '2024-02-23 15:59:39', '2025-02-23 18:59:39'),
+('2f79699e9003c413828b2aa34b840046545118bb67afd4ca5aedc88f23c5f3e78b37c7678c63877e', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:00:02', '2024-02-23 16:00:02', '2025-02-23 19:00:02'),
+('aa14f5c59b81ce3c78243767e0db1191305092378343fb3986cc978ec81961cb449e15308200ca6c', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:00:24', '2024-02-23 16:00:25', '2025-02-23 19:00:24'),
+('ba82aa1c2d955dd28e31f4818b4e5c276feb653d57f7c5569a2a02241ab7288e96e2b242401d4158', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:01:57', '2024-02-23 16:01:57', '2025-02-23 19:01:57'),
+('3553331e223a2f98917e7149a73de2c294a268c4146880546c4f3d1d84cd3fffb571f61d3eefd88f', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:02:36', '2024-02-23 16:02:36', '2025-02-23 19:02:36'),
+('7514bc0e793081a2719b969f16a4c4c230f41132c64bf8419690fc4fe534e63089d1eeb1e076dab2', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:05:40', '2024-02-23 16:05:40', '2025-02-23 19:05:40'),
+('f5d85fa83da02babe347ac670e6c5a71e1fdaacd53b57452b5d58220b345140f08e79577c5630ae3', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-23 16:06:52', '2024-02-23 16:06:52', '2025-02-23 19:06:52'),
+('72d698c83762719994faeaaf082407519be213c1e522e30a0f58e09ab6343585b6eea75c952d9cae', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:06:53', '2024-02-23 16:06:53', '2025-02-23 19:06:53'),
+('ae0e614da61cab483fc3001c2cfb008f7760c5919806786974a03bdf132199b415c3fb5def383ed6', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:07:10', '2024-02-23 16:07:10', '2025-02-23 19:07:10'),
+('c73e3fe5a83faed1ad43694e5593488af78f9fee4e5c9464a7a3d6675135b5510224db6543d68e2b', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:07:31', '2024-02-23 16:07:31', '2025-02-23 19:07:31'),
+('50bde8583373c92fff2976931f85181c93ed934e7e95f2ec99a5dae162de117ce5fdda832c3cb830', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:08:21', '2024-02-23 16:08:21', '2025-02-23 19:08:21'),
+('512b40aa8a133fb4c0addbc1776565c050455b70a06b40828a2d3df0dc35c72c37e355a03f72738c', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:08:32', '2024-02-23 16:08:32', '2025-02-23 19:08:32'),
+('9383221e871f486f4294b851fa5032fb6d07a37b47771d220aa4af9dc2f3370627eb12a09239407f', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:08:47', '2024-02-23 16:08:47', '2025-02-23 19:08:47'),
+('7d97fbcbcc272cf90b910b2017abe57a9e4b1841726399d7cd5e23ce0ce6b2e84df24829474119bc', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:08:56', '2024-02-23 16:08:56', '2025-02-23 19:08:56'),
+('e11182c781c7df8524083bbf57a813692032313f061abb1fc68ba7bff84c66442ba678fc67b53c04', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:09:10', '2024-02-23 16:09:10', '2025-02-23 19:09:10'),
+('7f5da952dc181cdc62b8f84ed22bc95a714553fced6698ece6060219e7874bc50c494450c3b52b5c', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:10:29', '2024-02-23 16:10:29', '2025-02-23 19:10:29'),
+('0d6eaa5444c71d0c2761791f66a0b3513e792d7670d6e0927ef1052c9f258e24e6b8057e28502d63', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:11:09', '2024-02-23 16:11:09', '2025-02-23 19:11:09'),
+('81ae781c7c2550a09c656e44f7c6baa665743cf4df82d39f3a890c35726940306934a0035a1e0216', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:12:43', '2024-02-23 16:12:43', '2025-02-23 19:12:43'),
+('13e7d8f782eca432544d94186f564c29aa69617eb1ddd77ed640ecc5adaf153ea20241d441d80460', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:13:23', '2024-02-23 16:13:23', '2025-02-23 19:13:23'),
+('5f53b87820630bcb0b630fb5bd5f1a2f0346b400b5dd0feababff625002f2168e885685517a84a3b', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:13:47', '2024-02-23 16:13:47', '2025-02-23 19:13:47'),
+('40e65576637b7e9e59d9389c489ec248a14bb81aba4f4a0957a41084cdd00b8ad2cd27cebba9049f', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:14:45', '2024-02-23 16:14:45', '2025-02-23 19:14:45'),
+('36b2f8896853d42626ba4ebaf852c84d688a47a524c8479b6935fe392774621416aeb80eef70f182', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:15:40', '2024-02-23 16:15:40', '2025-02-23 19:15:40'),
+('f6aeb20de3fb00b1335042fa06e790d2811348d9c9ad286958ec9a878c050c987814d461aceb3703', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:16:37', '2024-02-23 16:16:37', '2025-02-23 19:16:37'),
+('6243dfb5b70c63d6bb75c2c16b05da0bf99f20ab51926a64fe6b4901a8d6c47b44b9e506903932c5', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:20:07', '2024-02-23 16:20:07', '2025-02-23 19:20:07'),
+('c12fe833b6d9b466903c6b66bb3125d7e39f5671cfc3aba2f9d284a4ae7f1ef088bb4bcc6043af6f', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:20:31', '2024-02-23 16:20:31', '2025-02-23 19:20:31'),
+('7a4aa49cbef90d062bb42b5752a1753ca3243e571ab5a217c93acef0269074973dc848bbd60d3db2', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:20:47', '2024-02-23 16:20:47', '2025-02-23 19:20:47'),
+('0f911a3221e5fdf73096275cf65a36e6795a6b6a673409ef8c8a27338f32c8da2c9d493396f5fd6a', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:20:57', '2024-02-23 16:20:57', '2025-02-23 19:20:57'),
+('16e70ba2112b5f8bb811bb6a60c32e6a9cab5c1d40d8c87beb47000ef83d56492f89f7291f47387d', 19, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:23:24', '2024-02-23 16:23:24', '2025-02-23 19:23:24'),
+('afa14b7b8d56e2235f375db945122b38faf2d26511341a6ca5aba99ce2dcf79325b82042ec6a2705', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:23:34', '2024-02-23 16:23:34', '2025-02-23 19:23:34'),
+('5a3746041d3681392a08489918dc894c3b1b48639b7e863f210d04a5d7be83f8918a9f11f5f3e3b6', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:24:15', '2024-02-23 16:24:15', '2025-02-23 19:24:15'),
+('54874396ff64175775af8f84f48e2a239c12555c37c8c2a7c668616dd5b59e18cb899bb374320aca', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:26:04', '2024-02-23 16:26:04', '2025-02-23 19:26:04'),
+('211c8ef9d72047f35793b3f1501a8c830cadffd90d7893cc4f308cb5686c8ebb7974b3f338ad91c6', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:26:52', '2024-02-23 16:26:52', '2025-02-23 19:26:52'),
+('1c45d0be0e915979fef41a97e2ad0c1660412baff0e7e0bdaa3477b5ba06129b281a0c3478970d62', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:27:03', '2024-02-23 16:27:03', '2025-02-23 19:27:03'),
+('6efad808027401bf56094ac94fd3ff802a0e06e3d108d132a417ec0c0f093ff6982e8601fd28b42d', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:28:24', '2024-02-23 16:28:24', '2025-02-23 19:28:24'),
+('b3f3625a7cf5f1dd120d1fc26235e384ed714dd9ba309e15f3215fb3e0c4f7155947db4e571afb65', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 16:28:51', '2024-02-23 16:28:51', '2025-02-23 19:28:51'),
+('2879d02ffe81c9ab0c7ad78769be3b438a91b0cbc34a773c8f21a7cf25bea03e1cd536d3705c93ff', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 17:55:09', '2024-02-23 17:55:09', '2025-02-23 20:55:09'),
+('7fce896c158671ba34b8ad306287c64b41c589acdbde6c7ce9bf1f4dfe3ffba697af7b455ca1cd2d', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-23 17:57:10', '2024-02-23 17:57:10', '2025-02-23 20:57:10'),
+('c258173374d0a78a8beae404c272676db0c6fb86a73d0c1bec1adf8d00b68a63d78464b051423a67', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-24 06:28:22', '2024-02-24 06:28:23', '2025-02-24 09:28:22'),
+('deca3601b76399989794a4f98e953e7724e50c09516ad4d29a748e5eb186aa1782ea8e0be6b64db5', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-24 06:32:45', '2024-02-24 06:32:45', '2025-02-24 09:32:45'),
+('da4b792a16172f5db7c0b8a483862c3932c7ce431836792543e169ed68d10f03f998359c9459e575', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-24 06:33:45', '2024-02-24 06:33:45', '2025-02-24 09:33:45'),
+('2ae9664b9479279215b310e2eefbafe7b365c9a4145f217fc51bce0292fb88b117ee352a3caf1064', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-24 06:37:16', '2024-02-24 06:37:16', '2025-02-24 09:37:16'),
+('a87d7452dbb6c2b0b5bcb3b1a3b29644f97d0c42224087b190c358cc5666f844c4bc47e7963176d8', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-24 06:37:20', '2024-02-24 08:56:23', '2025-02-24 09:37:20'),
+('438ffdb3f1018dbdf0f04cbb5e907dc9fc8c404633cce30f362acff126a0240717ffed32e239dd11', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-24 06:44:10', '2024-02-24 06:44:11', '2025-02-24 09:44:10'),
+('3998b894b9d65775a4228a84447aeddd85a59985a420c9db336e18d861f9143f1f656aecfe071f34', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-24 06:45:41', '2024-02-24 06:45:41', '2025-02-24 09:45:41'),
+('41afd2658516927f200e214c3b84d31ce9a726c5bc535d7435f3274ea48b5b4eeefd2c424180d4da', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-24 06:45:42', '2024-02-24 06:45:42', '2025-02-24 09:45:42'),
+('fd7007c82c7d37d0df6c87088e3272cc744d1a18fcef8c7252570835be01b562e451ab8cd15153eb', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-24 06:46:06', '2024-02-24 06:46:06', '2025-02-24 09:46:06'),
+('c97a270d785ac4b86f235fce792151c4ee89469664d9f31791f6a65e91e2ce0859674a991baaff32', 21, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-24 09:02:05', '2024-02-24 09:02:05', '2025-02-24 12:02:05'),
+('3a8f1a769bcb0aede45b1a6a2659fbbadb3f05a8c04d6077326c638bdf6601f5abe11f0461b519ff', 21, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-24 09:03:31', '2024-02-24 09:03:31', '2025-02-24 12:03:31'),
+('d206310edd2309ba0a6bae626e82e0266ee7aca1114c8b1182d710f726d4466cb04f02937358ea43', 21, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-24 09:16:40', '2024-02-24 09:16:40', '2025-02-24 12:16:40'),
+('a97bd9d9719c2a1045589a558b251461c5af4fcfdacaaa382f023530421e3de3c75f5d3790dc7bdc', 21, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-24 09:19:14', '2024-02-24 09:19:14', '2025-02-24 12:19:14');
 
 -- --------------------------------------------------------
 
@@ -1069,7 +1212,15 @@ CREATE TABLE IF NOT EXISTS `parents` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `parents_profile_id_foreign` (`profile_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `parents`
+--
+
+INSERT INTO `parents` (`id`, `profile_id`, `created_at`, `updated_at`) VALUES
+(5, 20, '2024-02-23 16:06:52', '2024-02-23 16:06:52'),
+(4, 19, '2024-02-23 15:25:40', '2024-02-23 15:25:40');
 
 -- --------------------------------------------------------
 
@@ -1126,14 +1277,16 @@ CREATE TABLE IF NOT EXISTS `profiles` (
   `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `profiles_email_unique` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `profiles`
 --
 
 INSERT INTO `profiles` (`id`, `first_name`, `last_name`, `email`, `password`, `created_at`, `updated_at`, `remember_token`) VALUES
-(9, 'walid', 'babi', 'walidbabi@gmail.com', '$2y$12$9TcNgOiCg4kpTvN34mS0JuxfpPawromhMrBFb2XOVHK.q5BT7bjoa', '2024-01-08 13:09:54', '2024-01-08 13:09:54', NULL);
+(21, 'Mahmoud', 'Babi', 'Mahmoud@gmail.com', '$2y$12$J5KIblnvc9QEuErXt4Gn5uwWl4bDYa4wdZYhlKNACjG9sDXzAghxe', '2024-02-24 09:02:05', '2024-02-24 09:02:05', NULL),
+(19, 'walid', 'babi', 'waledo9397@gmail.com', '$2y$12$Dp0ZpTLjTN2.rA.i/y4rweBk/Vbvmz3jzKmfiGangT8B9crbnkD3S', '2024-02-23 15:25:40', '2024-02-23 15:25:40', NULL),
+(20, 'bashar', 'Usif', 'bashar9397@gmail.com', '$2y$12$.TUCW2DTBZLCU8TaxT3T8uhUN3EAmGOAyx8iSiJ9Cr.R34yvuFHOi', '2024-02-23 16:06:52', '2024-02-23 16:06:52', NULL);
 
 -- --------------------------------------------------------
 
@@ -1179,46 +1332,46 @@ CREATE TABLE IF NOT EXISTS `toys` (
 --
 
 INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quantity`, `created_at`, `updated_at`) VALUES
-(1, 1, 'ABC Building Blocks', 19.99, 'abc_blocks.jpg', 50, NULL, NULL),
-(2, 2, 'Plush Teddy Bear', 14.95, 'teddy_bear.jpg', 30, NULL, NULL),
-(3, 3, 'Dino Adventure Set', 29.99, 'dino_set.jpg', 20, NULL, NULL),
-(4, 4, 'Interactive Learning Tablet', 39.99, 'learning_tablet.jpg', 15, NULL, NULL),
-(5, 5, 'Artistic Coloring Kit', 16.49, 'coloring_kit.jpg', 40, NULL, NULL),
-(6, 6, 'Robot Building Kit', 24.99, 'robot_kit.jpg', 25, NULL, NULL),
-(7, 7, 'Puzzle Play Mat', 22.95, 'puzzle_mat.jpg', 35, NULL, NULL),
-(8, 8, 'Adventure Play Tent', 34.99, 'play_tent.jpg', 18, NULL, NULL),
-(9, 9, 'Musical Instruments Set', 27.50, 'music_set.jpg', 22, NULL, NULL),
-(10, 10, 'Remote Control Car', 32.99, 'rc_car.jpg', 12, NULL, NULL),
-(11, 11, 'Soft Baby Rattle', 9.95, 'baby_rattle.jpg', 50, NULL, NULL),
-(12, 12, 'Creative Play Dough Kit', 18.75, 'play_dough_kit.jpg', 28, NULL, NULL),
-(13, 13, 'Outdoor Sports Ball Set', 26.50, 'sports_ball_set.jpg', 15, NULL, NULL),
-(14, 14, 'Wooden Alphabet Blocks', 12.99, 'alphabet_blocks.jpg', 40, NULL, NULL),
-(15, 15, 'Toy Kitchen Playset', 49.99, 'kitchen_playset.jpg', 10, NULL, NULL),
-(16, 16, 'Science Experiment Kit', 36.75, 'science_kit.jpg', 20, NULL, NULL),
-(17, 17, 'Soft Dollhouse', 28.95, 'dollhouse.jpg', 16, NULL, NULL),
-(18, 18, 'Construction Vehicle Set', 19.50, 'construction_vehicles.jpg', 25, NULL, NULL),
-(19, 19, 'Chess and Checkers Set', 21.99, 'chess_set.jpg', 18, NULL, NULL),
-(20, 20, 'Stuffed Animal Zoo', 31.25, 'stuffed_animal_zoo.jpg', 12, NULL, NULL),
-(21, 21, 'Remote Control Helicopter', 45.50, 'helicopter_rc.jpg', 15, NULL, NULL),
-(22, 22, 'Interactive Storybook', 14.99, 'storybook.jpg', 30, NULL, NULL),
-(23, 23, 'Magnetic Building Tiles', 26.99, 'magnetic_tiles.jpg', 20, NULL, NULL),
-(24, 24, 'Dress-Up Costume Set', 29.95, 'dress_up_costume.jpg', 18, NULL, NULL),
-(25, 25, 'Bouncing Ball with Handle', 12.75, 'bouncing_ball.jpg', 40, NULL, NULL),
-(26, 26, 'Toy Doctor Kit', 19.99, 'doctor_kit.jpg', 25, NULL, NULL),
-(27, 27, 'Wooden Train Set', 34.50, 'train_set.jpg', 15, NULL, NULL),
-(28, 28, 'Animal Shape Sorting Cube', 15.25, 'sorting_cube.jpg', 30, NULL, NULL),
-(29, 29, 'Colorful Play Tunnel', 22.99, 'play_tunnel.jpg', 20, NULL, NULL),
-(30, 30, 'Art Easel with Accessories', 39.95, 'art_easel.jpg', 12, NULL, NULL),
-(31, 31, 'Interactive Talking Robot', 49.99, 'talking_robot.jpg', 10, NULL, NULL),
-(32, 32, 'Construction Paper Set', 9.50, 'construction_paper.jpg', 35, NULL, NULL),
-(33, 33, 'Magic Wand and Hat Set', 16.75, 'magic_wand_set.jpg', 25, NULL, NULL),
-(34, 34, 'Wooden Jigsaw Puzzles', 13.99, 'jigsaw_puzzles.jpg', 30, NULL, NULL),
-(35, 35, 'Outdoor Explorer Kit', 28.95, 'explorer_kit.jpg', 15, NULL, NULL),
-(36, 36, 'Plush Animal Hand Puppets', 19.25, 'hand_puppets.jpg', 20, NULL, NULL),
-(37, 37, 'Miniature Dollhouse Furniture', 12.99, 'dollhouse_furniture.jpg', 40, NULL, NULL),
-(38, 38, 'Soccer Ball and Goal Set', 24.50, 'soccer_set.jpg', 18, NULL, NULL),
-(39, 39, 'Musical Keyboard for Kids', 36.99, 'musical_keyboard.jpg', 12, NULL, NULL),
-(40, 40, 'Science Fiction Spaceship', 42.50, 'spaceship_toy.jpg', 10, NULL, NULL),
+(1, 1, 'ABC Building Blocks', 19.99, 'http://localhost:8000/img/1.jpg', 50, NULL, NULL),
+(2, 2, 'Plush Teddy Bear', 14.95, 'http://localhost:8000/img/2.jpg', 30, NULL, NULL),
+(3, 3, 'Dino Adventure Set', 29.99, 'http://localhost:8000/img/3.jpg', 20, NULL, NULL),
+(4, 4, 'Interactive Learning Tablet', 39.99, 'http://localhost:8000/img/4.jpg', 15, NULL, NULL),
+(5, 5, 'Artistic Coloring Kit', 16.49, 'http://localhost:8000/img/5.jpg', 40, NULL, NULL),
+(6, 6, 'Robot Building Kit', 24.99, 'http://localhost:8000/img/6.jpg', 25, NULL, NULL),
+(7, 7, 'Puzzle Play Mat', 22.95, 'http://localhost:8000/img/7.jpg', 35, NULL, NULL),
+(8, 8, 'Adventure Play Tent', 34.99, 'http://localhost:8000/img/8.jpg', 18, NULL, NULL),
+(9, 9, 'Musical Instruments Set', 27.50, 'http://localhost:8000/img/9.jpg', 22, NULL, NULL),
+(10, 10, 'Remote Control Car', 32.99, 'http://localhost:8000/img/10.jpg', 12, NULL, NULL),
+(11, 11, 'Soft Baby Rattle', 9.95, 'http://localhost:8000/img/11.jpg', 50, NULL, NULL),
+(12, 12, 'Creative Play Dough Kit', 18.75, 'http://localhost:8000/img/12.jpg', 28, NULL, NULL),
+(13, 13, 'Outdoor Sports Ball Set', 26.50, 'http://localhost:8000/img/13.jpg', 15, NULL, NULL),
+(14, 14, 'Wooden Alphabet Blocks', 12.99, 'http://localhost:8000/img/14.jpg', 40, NULL, NULL),
+(15, 15, 'Toy Kitchen Playset', 49.99, 'http://localhost:8000/img/15.jpg', 10, NULL, NULL),
+(16, 16, 'Science Experiment Kit', 36.75, 'http://localhost:8000/img/16.jpg', 20, NULL, NULL),
+(17, 17, 'Soft Dollhouse', 28.95, 'http://localhost:8000/img/17.jpg', 16, NULL, NULL),
+(18, 18, 'Construction Vehicle Set', 19.50, 'http://localhost:8000/img/18.jpg', 25, NULL, NULL),
+(19, 19, 'Chess and Checkers Set', 21.99, 'http://localhost:8000/img/19.jpg', 18, NULL, NULL),
+(20, 20, 'Stuffed Animal Zoo', 31.25, 'http://localhost:8000/img/20.jpg', 12, NULL, NULL),
+(21, 21, 'Remote Control Helicopter', 45.50, 'http://localhost:8000/img/21.jpg', 15, NULL, NULL),
+(22, 22, 'Interactive Storybook', 14.99, 'http://localhost:8000/img/22.jpg', 30, NULL, NULL),
+(23, 23, 'Magnetic Building Tiles', 26.99, 'http://localhost:8000/img/23.jpg', 20, NULL, NULL),
+(24, 24, 'Dress-Up Costume Set', 29.95, 'http://localhost:8000/img/24.jpg', 18, NULL, NULL),
+(25, 25, 'Bouncing Ball with Handle', 12.75, 'http://localhost:8000/img/25.jpg', 40, NULL, NULL),
+(26, 26, 'Toy Doctor Kit', 19.99, 'http://localhost:8000/img/26.jpg', 25, NULL, NULL),
+(27, 27, 'Wooden Train Set', 34.50, 'http://localhost:8000/img/27.jpg', 15, NULL, NULL),
+(28, 28, 'Animal Shape Sorting Cube', 15.25, 'http://localhost:8000/img/28.jpg', 30, NULL, NULL),
+(29, 29, 'Colorful Play Tunnel', 22.99, 'http://localhost:8000/img/29.jpg', 20, NULL, NULL),
+(30, 30, 'Art Easel with Accessories', 39.95, 'http://localhost:8000/img/30.jpg', 12, NULL, NULL),
+(31, 31, 'Interactive Talking Robot', 49.99, 'http://localhost:8000/img/31.jpg', 10, NULL, NULL),
+(32, 32, 'Construction Paper Set', 9.50, 'http://localhost:8000/img/32.jpg', 35, NULL, NULL),
+(33, 33, 'Magic Wand and Hat Set', 16.75, 'http://localhost:8000/img/33.jpg', 25, NULL, NULL),
+(34, 34, 'Wooden Jigsaw Puzzles', 13.99, 'http://localhost:8000/img/34.jpg', 30, NULL, NULL),
+(35, 35, 'Outdoor Explorer Kit', 28.95, 'http://localhost:8000/img/35.jpg', 15, NULL, NULL),
+(36, 36, 'Plush Animal Hand Puppets', 19.25, 'http://localhost:8000/img/36.jpg', 20, NULL, NULL),
+(37, 37, 'Miniature Dollhouse Furniture', 12.99, 'http://localhost:8000/img/37.jpg', 40, NULL, NULL),
+(38, 38, 'Soccer Ball and Goal Set', 24.50, 'http://localhost:8000/img/38.jpg', 18, NULL, NULL),
+(39, 39, 'Musical Keyboard for Kids', 36.99, 'http://localhost:8000/img/39.jpg', 12, NULL, NULL),
+(40, 40, 'Science Fiction Spaceship', 42.50, 'http://localhost:8000/img/40.jpg', 10, NULL, NULL),
 (41, 41, 'Artificial Intelligence Robot', 59.99, 'ai_robot.jpg', 8, NULL, NULL),
 (42, 42, 'Basketball Hoop and Ball Set', 29.75, 'basketball_set.jpg', 15, NULL, NULL),
 (43, 43, 'Wooden Building Blocks', 17.99, 'wooden_blocks.jpg', 25, NULL, NULL),
@@ -1698,13 +1851,13 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (517, 517, 'Robotic Coding Quest Lab', 45.50, 'robotic_coding_quest_lab.jpg', 18, NULL, NULL),
 (518, 518, 'Soccer Pro Training Masterclass', 22.99, 'soccer_pro_training_masterclass.jpg', 15, NULL, NULL),
 (519, 519, 'Robot Explorer Space Adventure', 34.95, 'robot_explorer_space_adventure.jpg', 18, NULL, NULL),
-(520, 520, 'Artistic Masterpiece Easel Studio', 28.99, 'artistic_masterpiece_easel_studio.jpg', 25, NULL, NULL),
+(520, 520, 'Artistic Masterpiece Easel Studio', 28.99, 'artistic_masterpiece_easel_studio.jpg', 25, NULL, NULL);
+INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quantity`, `created_at`, `updated_at`) VALUES
 (521, 521, 'Farmyard Friends Plush Wonderland', 19.75, 'farmyard_friends_plush_wonderland.jpg', 30, NULL, NULL),
 (522, 522, 'Smart Science Discovery Lab', 42.99, 'smart_science_discovery_lab.jpg', 20, NULL, NULL),
 (523, 523, 'Princess Palace Tea Fantasy Set', 28.50, 'princess_palace_tea_fantasy_set.jpg', 25, NULL, NULL),
 (524, 524, 'Racing Champion Turbo Speedway', 37.25, 'racing_champion_turbo_speedway.jpg', 18, NULL, NULL),
-(525, 525, 'Robotics Engineer Innovation Lab', 33.95, 'robotics_engineer_innovation_lab.jpg', 20, NULL, NULL);
-INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quantity`, `created_at`, `updated_at`) VALUES
+(525, 525, 'Robotics Engineer Innovation Lab', 33.95, 'robotics_engineer_innovation_lab.jpg', 20, NULL, NULL),
 (526, 526, 'Pet Vet Animal Rescue Clinic', 26.50, 'pet_vet_animal_rescue_clinic.jpg', 15, NULL, NULL),
 (527, 527, 'Fairy Tale Storybook Adventures', 22.99, 'fairy_tale_storybook_adventures.jpg', 30, NULL, NULL),
 (528, 528, 'Dinosaur Safari Jeep Expedition', 29.75, 'dinosaur_safari_jeep_expedition.jpg', 25, NULL, NULL),
@@ -1946,8 +2099,8 @@ CREATE TABLE IF NOT EXISTS `toys_descriptions` (
   `age` int NOT NULL,
   `gender` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `holiday` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Skill Development` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Play Pattern` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `skill_development` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `play_pattern` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -1958,7 +2111,7 @@ CREATE TABLE IF NOT EXISTS `toys_descriptions` (
 -- Dumping data for table `toys_descriptions`
 --
 
-INSERT INTO `toys_descriptions` (`id`, `company_id`, `description`, `category`, `age`, `gender`, `holiday`, `Skill Development`, `Play Pattern`, `created_at`, `updated_at`) VALUES
+INSERT INTO `toys_descriptions` (`id`, `company_id`, `description`, `category`, `age`, `gender`, `holiday`, `skill_development`, `play_pattern`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Colorful building blocks for creative play', 'Educational', 6, 'Male', 'Christmas', 'Fine Motor Skills', 'Constructive Play', NULL, NULL),
 (2, 2, 'Soft and huggable teddy bear for comfort', 'Stuffed Animals', 3, 'Male', 'Thanksgiving', 'Emotional Intelligence', 'Comfort Play', NULL, NULL),
 (3, 3, 'Exciting dinosaur adventure set with figurines', 'Action Figures', 8, 'Male', 'Easter', 'Cognitive Skills', 'Imaginative Play', NULL, NULL),
@@ -2272,7 +2425,7 @@ INSERT INTO `toys_descriptions` (`id`, `company_id`, `description`, `category`, 
 (311, 311, 'Discover the cosmos with the Space Explorer Telescope', 'Science and Nature', 6, 'Male', 'Easter', 'Cognitive Skills', 'Exploration Play', NULL, NULL),
 (312, 312, 'Create digital art with the Pixel Power Digital Art Studio', 'Arts and Crafts', 5, 'Male', 'New Year', 'Fine Motor Skills', 'Artistic Play', NULL, NULL),
 (313, 313, 'Embark on a puzzle quest with mythical creatures', 'Educational', 7, 'Male', 'Easter', 'Cognitive Skills', 'Constructive Play', NULL, NULL);
-INSERT INTO `toys_descriptions` (`id`, `company_id`, `description`, `category`, `age`, `gender`, `holiday`, `Skill Development`, `Play Pattern`, `created_at`, `updated_at`) VALUES
+INSERT INTO `toys_descriptions` (`id`, `company_id`, `description`, `category`, `age`, `gender`, `holiday`, `skill_development`, `play_pattern`, `created_at`, `updated_at`) VALUES
 (314, 314, 'Explore the great outdoors with the Outdoor Explorer Adventure Kit', 'Science and Nature', 5, 'Male', 'Thanksgiving', 'Imagination', 'Outdoor Play', NULL, NULL),
 (315, 315, 'Learn coding with the Robot Squad Coding Adventure', 'STEM Toys', 9, 'Male', 'Thanksgiving', 'Cognitive Skills', 'Technology Play', NULL, NULL),
 (316, 316, 'Train to be a superhero in the Superhero Training Headquarters', 'Pretend Play', 8, 'Male', 'Thanksgiving', 'Imagination', 'Pretend Play', NULL, NULL),
@@ -2577,7 +2730,7 @@ INSERT INTO `toys_descriptions` (`id`, `company_id`, `description`, `category`, 
 (615, 615, 'Adopt a robotic pet companion for interactive and playful moments', 'Interactive Toys', 7, 'Female', 'New Year', 'Social Skills', 'Pretend Play', NULL, NULL),
 (616, 616, 'Create stunning galaxy paintings with this artistic painting kit', 'Arts and Crafts', 6, 'Female', 'Christmas', 'Fine Motor Skills', 'Artistic Play', NULL, NULL),
 (617, 617, 'Experience the Wild West with the cowboy adventure playset', 'Pretend Play', 4, 'Female', 'Easter', 'Imagination', 'Pretend Play', NULL, NULL);
-INSERT INTO `toys_descriptions` (`id`, `company_id`, `description`, `category`, `age`, `gender`, `holiday`, `Skill Development`, `Play Pattern`, `created_at`, `updated_at`) VALUES
+INSERT INTO `toys_descriptions` (`id`, `company_id`, `description`, `category`, `age`, `gender`, `holiday`, `skill_development`, `play_pattern`, `created_at`, `updated_at`) VALUES
 (618, 618, 'Build and explore a futuristic space station with this playset', 'Action Figures', 6, 'Female', 'New Year', 'Imagination', 'Pretend Play', NULL, NULL),
 (619, 619, 'Cuddle up with the magical rainbow unicorn plush', 'Stuffed Animals', 10, 'Female', 'New Year', 'Imagination', 'Comfort Play', NULL, NULL),
 (620, 620, 'Compete in the robot soccer championship for thrilling matches', 'Remote Control', 9, 'Female', 'Easter', 'Physical Activity', 'Sports Play', NULL, NULL),

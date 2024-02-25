@@ -53,7 +53,12 @@ class PassportAuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
+            // dd($user );
             $token = $user->createToken('Login')->accessToken;
+
+            // Store the token in the api_token column of the Profiles table
+            $user->remember_token = $token;
+            $user->save();
             return response()->json(['token' => $token], 200)->header('Location', '/');
         }
 
@@ -65,20 +70,21 @@ class PassportAuthController extends Controller
         // Authenticate the user using the token
         if ($request->header('Authorization')) {
             $token = str_replace('Bearer ', '', $request->header('Authorization'));
-            $user = User::where('api_token', $token)->first();
-            if (!$user) {
+            // dd( $token );
+            $profile = Profile::where('remember_token', $token)->first();
+            // dd( $profile );
+            if (!$profile) {
                 return response()->json(['error' => 'Unauthorized'], 401);
             }
         } else {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
-
-        $user = auth()->user();
-        $fullName = $user->first_name . ' ' . $user->last_name;
-
-        $profile_id = $user->id;
+       
+        $fullName = $profile->first_name . ' ' . $profile->last_name;
+        // dd($fullName);
+        $profile_id = $profile->id;
         // dd($profile_id);
-        $parent_ids = $user->parents;
+        $parent_ids = $profile->parents;
         // dd($parent_ids);
         foreach ($parent_ids as $parent_id) {
             $parent_id = $parent_id->id;
