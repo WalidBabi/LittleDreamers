@@ -11,19 +11,19 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Toy::all();
+        $products = Toy::orderBy('created_at', 'desc')->get();
         return response()->json($products);
     }
 
     public function show($id)
     {
         $product = Toy::find($id);
-    
+
         if (!$product) {
             return response()->json(['message' => 'Product not found'], 404);
         }
     
-        $toy_description = ToyDescription::where('toy_id', $id)->orderBy('created_at', 'desc')->get()->toArray();
+        $toy_description = ToyDescription::where('id', $id)->get()->toArray();
     
         return response()->json([
             'product' => $product,
