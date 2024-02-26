@@ -26,6 +26,7 @@ class ChildFormController extends Controller
 
         // Save form data to the database
         $child = new Child();
+        $child->parent_id = $request->input('parent_id');
         $child->name = $request->input('childName');
         $child->age = $request->input('childAge');
         $child->gender = $request->input('childGender');
