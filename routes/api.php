@@ -41,5 +41,7 @@ Route::post('/Form', [ChildFormController::class,'processForm']);
 Route::get('/recommendations', [RecommendationController::class,'recommendations']);
 //search 
 Route::get('/search', [SearchController::class, 'search']);
+//filters
+Route::get('/filter', [SearchController::class, 'getFilters']);
 //Review toy
 Route::post('/Review', [ProductController::class,'Review']);
