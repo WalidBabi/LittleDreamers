@@ -13,6 +13,6 @@ class Company extends Model
     // a compant has many toys
     public function toys(): HasMany
     {
-        return $this->hasMany(Toy::class);
+        return $this->hasMany(ToyDescription::class);
     }
 }

@@ -51,4 +51,47 @@ class SearchController extends Controller
         // Return the response
         return response()->json($filters);
     }
+
+    public function handleCheckboxSubmission(Request $request)
+    {
+        // Retrieve selected categories, ages, holidays, skill developments, and companies
+        $selectedCategories = $request->input('categories', []);
+        $selectedAges = $request->input('ages', []);
+        $selectedHolidays = $request->input('holidays', []);
+        $selectedSkillDevelopments = $request->input('skill_developments', []);
+        $selectedCompanies = $request->input('companies', []);
+
+        // Query toys based on selected criteria and company, eager loading the company relationship
+        $toys = Toy::with(['toy_description', 'toy_description.company'])
+            ->whereHas('toy_description', function ($query) use ($selectedCompanies, $selectedCategories, $selectedAges, $selectedHolidays, $selectedSkillDevelopments) {
+                if (!empty($selectedCompanies)) {
+                    $query->whereIn('company_id', $selectedCompanies);
+                }
+                if (!empty($selectedCategories)) {
+                    $query->whereIn('category', $selectedCategories);
+                }
+                if (!empty($selectedAges)) {
+                    $query->whereIn('age', $selectedAges);
+                }
+                if (!empty($selectedHolidays)) {
+                    $query->whereIn('holiday', $selectedHolidays);
+                }
+                if (!empty($selectedSkillDevelopments)) {
+                    $query->whereIn('skill_development', $selectedSkillDevelopments);
+                }
+            })
+            ->get();
+
+        // Return the filtered toys along with the company name
+        $filteredToys = $toys->map(function ($toy) {
+            return [
+                'toy' => $toy,
+                'company_name' => $toy->toy_description->company->name
+            ];
+        });
+
+        return response()->json([
+            'toys' => $filteredToys,
+        ]);
+    }
 }
