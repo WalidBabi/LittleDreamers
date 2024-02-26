@@ -24,7 +24,7 @@ class ProductController extends Controller
             return response()->json(['message' => 'Product not found'], 404);
         }
 
-        $toy_description = ToyDescription::where('id', $id)->get()->toArray();
+        $toy_description = ToyDescription::find($id);
 
         return response()->json([
             'product' => $product,
