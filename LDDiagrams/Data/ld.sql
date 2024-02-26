@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 25, 2024 at 01:07 PM
+-- Generation Time: Feb 26, 2024 at 06:18 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.2.0
 
@@ -37,13 +37,6 @@ CREATE TABLE IF NOT EXISTS `admins` (
   KEY `admins_profile_id_foreign` (`profile_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `admins`
---
-
-INSERT INTO `admins` (`id`, `profile_id`, `created_at`, `updated_at`) VALUES
-(1, 21, '2024-02-24 09:02:05', '2024-02-24 09:02:05');
-
 -- --------------------------------------------------------
 
 --
@@ -63,18 +56,7 @@ CREATE TABLE IF NOT EXISTS `children` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `children_parent_id_foreign` (`parent_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `children`
---
-
-INSERT INTO `children` (`id`, `parent_id`, `name`, `age`, `gender`, `interests_and_preferences`, `challenges_or_learning_needs`, `created_at`, `updated_at`) VALUES
-(4, 1, 'John', 10, 'male', 'Art and Crafts she loves teddy bears', 'Empathy, Attachment', '2024-02-23 16:55:34', '2024-02-23 16:55:34'),
-(3, 5, 'jihad', 2, 'Female', 'basket ball', 'motor skills', NULL, NULL),
-(5, 1, 'John', 10, 'male', 'Art and Crafts she loves teddy bears', 'Empathy, Attachment', '2024-02-23 17:00:06', '2024-02-23 17:00:06'),
-(6, 1, 'John', 10, 'male', 'Art and Crafts she loves teddy bears', 'Empathy, Attachment', '2024-02-24 06:52:18', '2024-02-24 06:52:18'),
-(1, 5, 'Aboda', 1, 'Male', 'football', 'social skills ', NULL, NULL);
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1079,7 +1061,51 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('fe1bbc9ac10ac28f64192dd31d853ecfc4bcfa7a5658896ac0605a71fd8b6878035487c6a5a08493', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-25 04:18:19', '2024-02-25 04:18:19', '2025-02-25 07:18:19'),
 ('131c2a39a478693e6fa6ba77d1899141b06386d60715da1a23550e7b797d1b1668d5636d6d1bb678', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-25 04:31:57', '2024-02-25 04:31:57', '2025-02-25 07:31:57'),
 ('3e001cbe558fe0d92a7001252233c304bbf6aa0a340b24f0acb8bc1270b34adc956a7874e46a5345', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-25 04:32:08', '2024-02-25 04:32:08', '2025-02-25 07:32:08'),
-('f3be7d053013141d357928cfc044e982c9ac5ba45a6391c4e3cb531f2be26bdd1f814fcd59761aec', 21, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-25 04:55:48', '2024-02-25 04:55:48', '2025-02-25 07:55:48');
+('f3be7d053013141d357928cfc044e982c9ac5ba45a6391c4e3cb531f2be26bdd1f814fcd59761aec', 21, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-25 04:55:48', '2024-02-25 04:55:48', '2025-02-25 07:55:48'),
+('130e01ca208281676008e61d60632a385affe31db1c55bc5c04f82031163142e547319210ed7bc0b', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-25 14:16:19', '2024-02-25 14:16:19', '2025-02-25 17:16:19'),
+('5f03a5cd89b9e888d0702da2045ab3eab974d528af8dafcf869a7c1b346e5f74ce0cc7e2af98f01a', 21, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-25 14:17:59', '2024-02-25 14:17:59', '2025-02-25 17:17:59'),
+('33185e73624337419386d87187896b6455db9a19e07afb7966fd6b5f1235d627de1d295db067aee6', 21, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-25 14:27:15', '2024-02-25 14:27:15', '2025-02-25 17:27:15'),
+('f1127114d0945897d0b646ec586886264107980b90985e10d02515793f588eb110b8468d6c21a9ca', 21, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-25 14:27:43', '2024-02-25 14:28:11', '2025-02-25 17:27:43'),
+('3a9d83a37d16e5cdf2a945f17fc7614e32a0e13782af55273eca4325465501540e1b5d9712762adb', 21, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-25 14:30:07', '2024-02-25 14:30:27', '2025-02-25 17:30:07'),
+('78ab504f11c037ed6045e4d19b71a628981c9a74b8e53275e8a8b079eb27306ea451ef7530ad97af', 21, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-25 14:36:58', '2024-02-25 14:37:06', '2025-02-25 17:36:58'),
+('4b925c0eb71c5d915925ff073786d2c85708ec0bc8cc0fe10ab250761b37aaea6bf68b97644259b0', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-25 14:39:55', '2024-02-25 14:40:18', '2025-02-25 17:39:55'),
+('9ddf7d0146bfc1f9832380fdaddbd1a5ce0fbf9b481d6dbccc9ba941d63f37342a460fd00d04180e', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-25 14:40:24', '2024-02-25 14:40:52', '2025-02-25 17:40:24'),
+('faf309f30106b4a9e86f6764a70cd62b9783fb24bfaea0388ae1f240baa65d26c8a485b3a02382ed', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-25 15:43:25', '2024-02-25 15:43:25', '2025-02-25 18:43:25'),
+('740c39ec6ed2ce56b74844cdf78292a6962672f07eeb19787353474953942c642e4416875a1a8dfa', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-25 15:44:11', '2024-02-25 15:44:11', '2025-02-25 18:44:11'),
+('4ddef1eba4670c222f8d5ed8b28b74cef2cc73dd7b1b2e4769f48aa53ef4d682e0850e86e8ad4adc', 20, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-25 16:09:08', '2024-02-25 16:09:08', '2025-02-25 19:09:08'),
+('ba05907a2bba92a50f04a77b33d309b1978a8da8f01f2dbb31a6170fde7524857400f7805dbc8ca9', 22, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-25 18:31:02', '2024-02-25 18:31:02', '2025-02-25 21:31:02'),
+('e97ddd9fe21fadc519abe923644b4bcf5b14a46496d4764f08609e256d4928d78c5eeead6f3bfad0', 22, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-25 18:31:03', '2024-02-25 18:31:03', '2025-02-25 21:31:03'),
+('1cd2ca795533e20fe6a13618dc41e61467c34e01b5341d78de25851e6cfeeb8ce3d962e81ae40e4c', 22, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-25 18:31:04', '2024-02-26 05:32:58', '2025-02-25 21:31:04'),
+('f5894374c176dfefb2206d36247afc997db692147853a4a7a61b13bae4575b7aa8854b08b29f2465', 22, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 05:33:14', '2024-02-26 05:33:14', '2025-02-26 08:33:14'),
+('6a8c1c0c8574485bc20066fb06bc8958b8c8355e65270461eca70b5328ef289603ffc366bba69dab', 22, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 05:33:52', '2024-02-26 05:33:52', '2025-02-26 08:33:52'),
+('db0219efa6f98d27fef60edc9dc3813bd1414fa03cb6acab4dc27e7410bc7734a8d3c848ed0af02b', 23, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-26 05:34:43', '2024-02-26 05:34:43', '2025-02-26 08:34:43'),
+('c7d1a78fa125f12d5e9b989fc1b4e91cb7eab57e7629f2b0354cfdd3afd30901e7745c02cfb28d1c', 23, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 05:34:47', '2024-02-26 05:34:47', '2025-02-26 08:34:47'),
+('c221b000e7ba31b2e570fef266821e28c030925f15160c669b4a5cd44d2026df68572c793411f460', 23, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 05:34:55', '2024-02-26 05:34:55', '2025-02-26 08:34:55'),
+('5cd067677dd1b49d332500ea27f5431abf17f3794827725afec35877e547890daf28aedae20cbb21', 23, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 05:35:09', '2024-02-26 05:35:09', '2025-02-26 08:35:09'),
+('9aa1e9ba3d366ab46e64bcb6a92587a49c966bb47b8935b1cf005942a7bdb582550597c7c171fead', 22, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 05:35:35', '2024-02-26 05:35:35', '2025-02-26 08:35:35'),
+('edfa5c04e0424b15dc9dc22a63a0f8a13fa5be8e159d24c1bfe6ad3835b7f90a6f53f029833d64de', 22, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 05:37:15', '2024-02-26 05:37:15', '2025-02-26 08:37:15'),
+('a2d352d5025f1541d4fd0e96970b1c6568e6d518c0e8a9db6405c43a1d24d7bb061623ae59b5fff9', 22, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 05:38:32', '2024-02-26 05:38:32', '2025-02-26 08:38:32'),
+('3a427677751bf4e60e4f9fbf20e5e782d7614dfb9f35b50f498be0affcf5d4530cc68b8a7c5d8299', 23, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 07:14:19', '2024-02-26 07:14:19', '2025-02-26 10:14:19'),
+('125f9db93d9319ef22b9cca6e4f0fb27eb215b2ce8184680ae9a9a95cff4d97c321663d5508b3aac', 23, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 07:15:26', '2024-02-26 07:15:26', '2025-02-26 10:15:26'),
+('720c10cae5225e59d4d5ecbda4c62ed55ea3373126853a84d274109482062701b1874bb6d76ad270', 23, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 07:17:08', '2024-02-26 07:17:08', '2025-02-26 10:17:08'),
+('98d30cd208ca5d75641400b009378cf047f4def34be2d431635ea98b850a7c90a53839cec52c4fa2', 1, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-26 07:25:31', '2024-02-26 07:25:31', '2025-02-26 10:25:31'),
+('ed7ec2600bd3a2c30c04a5dec2da53731d533f22778097e909af513b79f8c958a920b3171fafc0df', 1, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 07:25:36', '2024-02-26 07:25:36', '2025-02-26 10:25:36'),
+('23b2471732e563be02978631c4f10e8579ba94ec9a521511b3ddea6458257bc7ce4c38e615d7aa76', 1, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 07:26:48', '2024-02-26 07:26:48', '2025-02-26 10:26:48'),
+('1e1a4b877078e81e1e134cadd02dd61ca817b312a5e0c07630d352ea41224db374fa174fe9c96faf', 1, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-26 07:27:08', '2024-02-26 07:28:40', '2025-02-26 10:27:08'),
+('1c9faf67ea3048739d91c8ee3ec7d39b2fe3beedc386eae7cc378dfebe528eb5ee1ebb2f4e8f5cc6', 2, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-26 07:29:14', '2024-02-26 07:29:14', '2025-02-26 10:29:14'),
+('d0a7f686016704b51e3ea4c47d0259323056d457c0063eac29a6b8ff3431fd45480e15175f0fa2bc', 2, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-26 07:29:38', '2024-02-26 07:31:28', '2025-02-26 10:29:38'),
+('20299b0328b3a34b5b942e52145b8615c6403bd30ceb11cde84c6545e19e7919547e047ce64f11df', 2, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-26 07:35:40', '2024-02-26 07:35:55', '2025-02-26 10:35:40'),
+('61f2f11e8a46188c3af6f48581f973040cf14ca1cbf68e3c075077f0d2886e286953e322779f06e1', 2, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-26 07:40:19', '2024-02-26 07:41:39', '2025-02-26 10:40:19'),
+('2cffd11c2a82dcdd2bdf96ad6e12f00474122fe959387d20af46905ee44d774305ec072d3ae1f082', 2, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-26 07:46:30', '2024-02-26 07:47:39', '2025-02-26 10:46:30'),
+('d9e98f40c780a1539055689691a4b79ed0cf9e592bb0d4fa3b10e4d52a0241b8b58cba7c92e7359a', 1, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-26 07:49:28', '2024-02-26 08:03:24', '2025-02-26 10:49:28'),
+('0df0a2b1f69296b992c7567add2cebe4a13c269efafb76b24d6e8fa831edfe6184bac77fb6dd6145', 3, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-26 08:03:36', '2024-02-26 08:03:36', '2025-02-26 11:03:36'),
+('2b30fb156005163f94c4b2aab4251d099bb2860cac2f09cbb501c32cb28308961de28f840664be3e', 3, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-26 08:03:38', '2024-02-26 08:12:05', '2025-02-26 11:03:38'),
+('3280fbad65b5b58cf926f708c5efdac945a2f71d4dcda3a239bb741bcf195b50a4ff26cb40cbf320', 2, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-26 15:03:59', '2024-02-26 15:03:59', '2025-02-26 18:03:59'),
+('74084aa0935bc708bdbd7dd7c64993d43f95177b6e7abd977b0562a1104415f20d482e4ff0d05c06', 3, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-26 15:05:09', '2024-02-26 15:05:42', '2025-02-26 18:05:09'),
+('6843f883a25b5250ab801cc8693297cd7408149be397798197a30bda3db87f7ccf2665458d637fcc', 1, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-26 15:06:05', '2024-02-26 15:14:25', '2025-02-26 18:06:05'),
+('ffee29122c77a61c34d1ab3e0680039a1309d4c35f8aa375f7a62921b0460668e55059e82f8fbc62', 3, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-26 15:14:45', '2024-02-26 15:15:37', '2025-02-26 18:14:45'),
+('5569a2e1700d97ab53fd04bf8ab583a3cca4f64a02b99fad32f126b94015b2f63abbb42f97a4a533', 4, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-26 15:16:02', '2024-02-26 15:16:02', '2025-02-26 18:16:02'),
+('be0e17e9e07fd91532213e433b96bae65bbce1b63073dacbb627df6bac9b411e06060a608f51c595', 4, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-26 15:16:03', '2024-02-26 15:17:06', '2025-02-26 18:16:03');
 
 -- --------------------------------------------------------
 
@@ -2431,15 +2457,7 @@ CREATE TABLE IF NOT EXISTS `parents` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `parents_profile_id_foreign` (`profile_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `parents`
---
-
-INSERT INTO `parents` (`id`, `profile_id`, `created_at`, `updated_at`) VALUES
-(5, 20, '2024-02-23 16:06:52', '2024-02-23 16:06:52'),
-(4, 19, '2024-02-23 15:25:40', '2024-02-23 15:25:40');
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2496,16 +2514,7 @@ CREATE TABLE IF NOT EXISTS `profiles` (
   `remember_token` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`),
   UNIQUE KEY `profiles_email_unique` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `profiles`
---
-
-INSERT INTO `profiles` (`id`, `first_name`, `last_name`, `email`, `password`, `created_at`, `updated_at`, `remember_token`) VALUES
-(21, 'Mahmoud', 'Babi', 'Mahmoud@gmail.com', '$2y$12$J5KIblnvc9QEuErXt4Gn5uwWl4bDYa4wdZYhlKNACjG9sDXzAghxe', '2024-02-24 09:02:05', '2024-02-24 09:02:05', NULL),
-(19, 'walid', 'babi', 'waledo9397@gmail.com', '$2y$12$Dp0ZpTLjTN2.rA.i/y4rweBk/Vbvmz3jzKmfiGangT8B9crbnkD3S', '2024-02-23 15:25:40', '2024-02-23 15:25:40', NULL),
-(20, 'bashar', 'Usif', 'bashar9397@gmail.com', '$2y$12$.TUCW2DTBZLCU8TaxT3T8uhUN3EAmGOAyx8iSiJ9Cr.R34yvuFHOi', '2024-02-23 16:06:52', '2024-02-25 04:32:08', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5YWY3NjNmMS1lOGJjLTQxYTctOWIzNy0wMWU2NGY2ZmEzYjAiLCJqdGkiOiIzZTAwMWNiZTU1OGZlMGQ5MmE3MDAxMjUyMjMzYzMwNGJiZjZhYTBhMzQwYjI0ZjBhY2I4YmMxMjcwYjM0YWRjOTU2YTc4NzRlNDZhNTM0NSIsImlhdCI6MTcwODg0NjMyOC44NjUxOTYsIm5iZiI6MTcwODg0NjMyOC44NjUxOTgsImV4cCI6MTc0MDQ2ODcyOC44NTYyMDksInN1YiI6IjIwIiwic2NvcGVzIjpbXX0.dVLzvAMPxxp2_07Av6s4o50vqRQ4coEHbskAkCcAwuc-OK2kKHNGJVJKbOYfSAtJhd8O7_8ONnf_-lN_vlFW9Fv-h1gmFJsAp-C1hkm87L6xQVbPJmCuUBRMRDFOq1eZUJUFjPu-bKRSWbkumz-gDjwc0ReFDKRf0PE3GKd2Esdn2bQkUoSZlQtvSUsIIp5NMkyJkwqaZzgyHKvB6ca6N-7GP_hOUH_QOTsl28hPhkIuDXOfz7a65P5qCgiSMePlD-HlGSHTbicKm7J1PJp98dfGhaA6OUsvHf5WY_zoem0-F7qI3VkVTk4oQl7NArgM0x5WOKWU0x8_EtCJDtC-8f8Xtr5WoW_kCSBg_DPa7E-IlV7O2oEZQx6JtGbiPszRRF_V_DJPocU6vYi_hj26GRzcolgrTAbPGmBe-HRre9M58LdY_yV72KCa44FQTUe5YtSzjFopatm3vtFJezGpyFpjDnG-RYbyGEg4NFvke9XypB8of8RdVMxWqRWtx7ho8FoGQLQBloLBqeHO8v9rss54o3B1FxUTKBSYsLrsVwYH-Fq_PMC6vxNvJhyr5DeVyNZbRXQQtaH_5rcepMcZqKA9XvPXyymzjzEOF_mkrfpc-OZdhA3MDepKST_cgWpdSPCQkRUQp-glWZIBTam-GZdjoP0Lu2J5uGNKZH3T5hU');
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2524,7 +2533,14 @@ CREATE TABLE IF NOT EXISTS `reviews` (
   PRIMARY KEY (`id`),
   KEY `reviews_child_id_foreign` (`child_id`),
   KEY `reviews_toy_id_foreign` (`toy_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `child_id`, `toy_id`, `rating`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 5, '2024-02-26 14:56:43', '2024-02-26 14:56:43');
 
 -- --------------------------------------------------------
 

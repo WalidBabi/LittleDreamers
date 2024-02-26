@@ -3,8 +3,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import sys
 import json
-import pymysql
-from pymysql import cursors
 # Index Model: Vector space model
 class Indexer:
 
