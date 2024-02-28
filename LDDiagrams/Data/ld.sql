@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 28, 2024 at 07:44 AM
+-- Generation Time: Feb 28, 2024 at 08:14 AM
 -- Server version: 8.0.31
 -- PHP Version: 8.2.0
 
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `companies` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `companies`
@@ -125,8 +125,7 @@ INSERT INTO `companies` (`id`, `name`, `phone`, `created_at`, `updated_at`) VALU
 (37, 'B. Toys', -1209068, NULL, NULL),
 (38, 'Anki', -28356148, NULL, NULL),
 (39, 'Anki', -55503229, NULL, NULL),
-(40, 'MindWare', -82650309, NULL, NULL),
-(41, 'LD', NULL, '2024-02-28 04:40:54', '2024-02-28 04:40:54');
+(40, 'MindWare', -82650309, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1877,7 +1876,7 @@ CREATE TABLE IF NOT EXISTS `toys` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `toys_toy_description_id_foreign` (`toy_description_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=752 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=751 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `toys`
@@ -2634,8 +2633,7 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (747, 747, 'Futuristic Builder Block Set', 32.99, 'futuristic_builder_block_set.jpg', 25, NULL, NULL),
 (748, 748, 'Master Inventor Science Lab', 27.50, 'master_inventor_science_lab.jpg', 25, NULL, NULL),
 (749, 749, 'Adventurer\'s Compass Wristwatch', 24.99, 'adventurers_compass_wristwatch.jpg', 30, NULL, NULL),
-(750, 750, 'Ninja Warrior Challenge Obstacle', 42.50, 'ninja_warrior_challenge_obstacle.jpg', 18, NULL, NULL),
-(751, 751, 'Space Ship', 5.44, 'http://localhost:8000/img/65dee386419ce.jpg', 4, '2024-02-28 04:40:54', '2024-02-28 04:40:54');
+(750, 750, 'Ninja Warrior Challenge Obstacle', 42.50, 'ninja_warrior_challenge_obstacle.jpg', 18, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2658,7 +2656,7 @@ CREATE TABLE IF NOT EXISTS `toys_descriptions` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `toys_descriptions_company_id_foreign` (`company_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=752 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=751 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `toys_descriptions`
@@ -3416,8 +3414,7 @@ INSERT INTO `toys_descriptions` (`id`, `company_id`, `description`, `category`, 
 (747, 20, 'Build futuristic structures with the Futuristic Builder Block Set', 'Educational', 4, 'Male', 'New Year', 'Fine Motor Skills', 'Constructive Play', NULL, NULL),
 (748, 25, 'Invent amazing creations with the Master Inventor Science Lab', 'Pretend Play', 8, 'Male', 'Christmas', 'Cognitive Skills', 'Constructive Play', NULL, NULL),
 (749, 34, 'Find your way with the Adventurer\'s Compass Wristwatch', 'Outdoor Play', 6, 'Male', 'New Year', 'Cognitive Skills', 'Exploration Play', NULL, NULL),
-(750, 15, 'Conquer ninja challenges with the Ninja Warrior Challenge Obstacle', 'Sports and Outdoor Games', 9, 'Male', 'Christmas', 'Physical Activity', 'Outdoor Play', NULL, NULL),
-(751, 41, 'educational toy', 'Educational', 4, 'Male', 'Christmas', 'Fine Motor skills', 'pretend play', '2024-02-28 04:40:54', '2024-02-28 04:40:54');
+(750, 15, 'Conquer ninja challenges with the Ninja Warrior Challenge Obstacle', 'Sports and Outdoor Games', 9, 'Male', 'Christmas', 'Physical Activity', 'Outdoor Play', NULL, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
