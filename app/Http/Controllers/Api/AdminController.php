@@ -13,26 +13,6 @@ class AdminController extends Controller
 {
     public function addToy(Request $request)
     {
-        // Validate incoming request data for both Toy and ToyDescription
-        // $validator = Validator::make($request->all(), [
-        //     'name' => 'required|string|max:255',
-        //     'description' => 'nullable|string',
-        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Assuming image is required and supported formats are jpeg, png, jpg, gif with a max size of 2MB
-        //     // Add more validation rules for other Toy attributes as needed
-        //     'category' => 'required|string|max:255',
-        //     'age' => 'required|string|max:255',
-        //     'gender' => 'required|string|max:255',
-        //     'holiday' => 'required|string|max:255',
-        //     'skill_development' => 'required|string|max:255',
-        //     'play_pattern' => 'required|string|max:255',
-        //     'price' => 'required|numeric',
-        //     'quantity' => 'required|integer',
-        // ]);
-
-        // if ($validator->fails()) {
-        //     return Redirect::back()->withErrors($validator)->withInput();
-        // }
-
         // Create a new Company instance
         $company = new Company();
         $company->name = $request->input('company');
@@ -69,6 +49,57 @@ class AdminController extends Controller
         return response()->json(['success' => true, 'message' => 'Toy added successfully!'], 200);
     }
 
+    public function updateToy(Request $request, $id)
+    {
+        // Retrieve the toy to edit
+        $toy = Toy::findOrFail($id);
+        $ImageFile = $request->file('image');
+
+        // Update the associated toy description
+        $toyDescription = $toy->toy_description;
+        $toyDescription->category = $request->input('category');
+        $toyDescription->description = $request->input('description');
+        $toyDescription->age = $request->input('age');
+        $toyDescription->gender = $request->input('gender');
+        $toyDescription->holiday = $request->input('holiday');
+        $toyDescription->skill_development = $request->input('skill_development');
+        $toyDescription->play_pattern = $request->input('play_pattern');
+        $toyDescription->save();
+
+        $ImagePath = '/img'; // Set the default image path
+        $uniqueImageFileName = null; // Define $uniqueImageFileName with a default value
+
+        // Handle image upload if a new image is provided
+        if ($request->hasFile('image')) {
+            $ImageFile = $request->file('image');
+            // Set the path where you want to store cover images
+            $uniqueImageFileName = uniqid() . '.' . $ImageFile->getClientOriginalExtension();
+            $ImageFile->move(public_path($ImagePath), $uniqueImageFileName);
+        }
+
+        // Update other toy details
+        $toy->name = $request->input('name');
+        $toy->price = $request->input('price');
+        $toy->quantity = $request->input('quantity');
+
+        // Check if $uniqueImageFileName is not null before using it
+        if ($uniqueImageFileName !== null) {
+            $toy->image = 'http://localhost:8000' . $ImagePath . '/' . $uniqueImageFileName;
+        }
+        $toy->save();
+
+        // Retrieve company name associated with the toy's description
+        $companyName = $toyDescription->company;
+        $companyName->name = $request->input('company');
+        $companyName->save();
+        // Redirect back to dashboard with success message
+        return response()->json([
+            'success' => true,
+            'message' => 'Toy updated successfully!'
+        ], 200);
+    }
+
+
     public function delete($id)
     {
         try {
@@ -101,7 +132,7 @@ class AdminController extends Controller
                 // Construct the absolute file paths using public_path
                 // Construct the absolute file paths using public_path
                 $imageAbsolutePath = public_path('img/' . basename($imagepath));
-                
+
                 // Check if the file exists before attempting to delete it
                 if (File::exists($imageAbsolutePath)) {
                     // Delete the image file
