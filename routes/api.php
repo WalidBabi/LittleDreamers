@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AdminController;
 use App\Http\Controllers\Api\ChildFormController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -30,7 +31,10 @@ Route::middleware('auth:api')->group(function () {
 //Admin Auth
 Route::post('AdminRegister', [PassportAuthController::class, 'AdminRegister']);
 Route::post('AdminLogin', [PassportAuthController::class, 'AdminLogin']);
-
+//add-products
+Route::post('/add-product', [AdminController::class, 'addToy']);
+//delete toy
+Route::post('/delete', [AdminController::class, 'addToy']);
 //display products
 Route::get('/products', [ProductController::class, 'index']);
 //display products details
