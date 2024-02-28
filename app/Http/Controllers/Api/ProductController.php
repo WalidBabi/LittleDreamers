@@ -25,10 +25,13 @@ class ProductController extends Controller
         }
 
         $toy_description = ToyDescription::find($id);
+        // Assuming 'company' is the method to access the company relationship on ToyDescription
+        $company_name = $toy_description->company->name;
 
         return response()->json([
             'product' => $product,
-            'description' => $toy_description
+            'description' => $toy_description,
+            'company' => $company_name
         ], 200);
     }
 
