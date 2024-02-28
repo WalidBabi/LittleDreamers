@@ -34,7 +34,7 @@ class SearchController extends Controller
     public function getFilters()
     {
         $category = ToyDescription::distinct()->pluck('category');
-        $age = ToyDescription::distinct()->pluck('age');
+        $age = ToyDescription::distinct()->orderBy('age', 'asc')->pluck('age');
         $holiday = ToyDescription::distinct()->pluck('holiday');
         $skill_development = ToyDescription::distinct()->pluck('skill_development');
         $companies = Company::pluck('name', 'id');
