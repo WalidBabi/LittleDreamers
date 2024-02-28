@@ -34,7 +34,7 @@ Route::post('AdminLogin', [PassportAuthController::class, 'AdminLogin']);
 //add-products
 Route::post('/add-product', [AdminController::class, 'addToy']);
 //delete toy
-Route::post('/delete/{id}', [AdminController::class, 'delete']);
+Route::Delete('/delete/{id}', [AdminController::class, 'delete']);
 //display products
 Route::get('/products', [ProductController::class, 'index']);
 //display products details
@@ -47,6 +47,6 @@ Route::get('/recommendations', [RecommendationController::class,'recommendations
 Route::get('/search', [SearchController::class, 'search']);
 //filters
 Route::get('/filter', [SearchController::class, 'getFilters']);
-Route::post('/filterSubmit', [SearchController::class, 'handleCheckboxSubmission']);
+Route::get('/filterSubmit', [SearchController::class, 'handleCheckboxSubmission']);
 //Review toy
 Route::post('/Review', [ProductController::class,'Review']);

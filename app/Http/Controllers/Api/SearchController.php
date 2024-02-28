@@ -60,10 +60,10 @@ class SearchController extends Controller
         $selectedHolidays = $request->input('holidays', []);
         $selectedSkillDevelopments = $request->input('skill_developments', []);
         $selectedCompanies = $request->input('companies', []);
-
+        $priceRange = $request->input('price', ['min' => 0, 'max' => PHP_INT_MAX]);
         // Query toys based on selected criteria and company, eager loading the company relationship
         $toys = Toy::with(['toy_description', 'toy_description.company'])
-            ->whereHas('toy_description', function ($query) use ($selectedCompanies, $selectedCategories, $selectedAges, $selectedHolidays, $selectedSkillDevelopments) {
+            ->whereHas('toy_description', function ($query) use ($selectedCompanies, $selectedCategories, $selectedAges, $selectedHolidays, $selectedSkillDevelopments, $priceRange) {
                 if (!empty($selectedCompanies)) {
                     $query->whereIn('company_id', $selectedCompanies);
                 }
@@ -78,6 +78,9 @@ class SearchController extends Controller
                 }
                 if (!empty($selectedSkillDevelopments)) {
                     $query->whereIn('skill_development', $selectedSkillDevelopments);
+                }
+                if (!empty($selectedSkillDevelopments)) {
+                    $query->whereBetween('price', [$priceRange['min'], $priceRange['max']]);
                 }
             })
             ->get();

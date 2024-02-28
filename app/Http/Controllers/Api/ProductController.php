@@ -12,7 +12,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Toy::orderBy('created_at', 'desc')->get();
+        $products = Toy::orderBy('id', 'desc')->get();
         return response()->json($products);
     }
 
