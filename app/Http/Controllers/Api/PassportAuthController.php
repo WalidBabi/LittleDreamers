@@ -75,6 +75,7 @@ class PassportAuthController extends Controller
         }
        
         $fullName = $profile->first_name . ' ' . $profile->last_name;
+        $email = $profile->email;
         // dd($fullName);
         $profile_id = $profile->id;
         // dd($profile_id);
@@ -118,6 +119,7 @@ class PassportAuthController extends Controller
         return response()->json([
             'parent_id' => $parent_id,
             'fullName' => $fullName,
+            'email' => $email,
             'children' => $children
         ], 200);
     }
