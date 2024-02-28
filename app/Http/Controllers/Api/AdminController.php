@@ -7,6 +7,7 @@ use App\Models\Company;
 use App\Models\Toy;
 use App\Models\ToyDescription;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class AdminController extends Controller
 {
@@ -66,5 +67,54 @@ class AdminController extends Controller
 
         // Redirect back to dashboard with success message
         return response()->json(['success' => true, 'message' => 'Toy added successfully!'], 200);
+    }
+
+    public function delete($id)
+    {
+        try {
+            // Find the Toy record by ID
+            $toy = Toy::findOrFail($id);
+
+            // Fetch the associated ToyDescription record
+            $toyDescription = ToyDescription::where('id', $id)->first();
+
+            // Check if the ToyDescription record exists
+            if ($toyDescription) {
+                // Find the Company record by its ID
+                $company = Company::findOrFail($toyDescription->company_id);
+                // Delete the associated ToyDescription record
+                $toyDescription->delete();
+
+                // Check if the Company record exists
+                if ($company) {
+                    // Delete the associated Company record
+                    $company->delete();
+                }
+            }
+
+            // Check if the cover and attachment_url fields are not null or empty
+            if (!empty($toy->image)) {
+                // Define file paths
+                $imagepath =  $toy->image;
+                //"C:\Users\waled\Desktop\LittleDreamers\public\http://localhost:8000/img/65deea21e5943.jpg"
+                //the image is in C:\Users\waled\Desktop\LittleDreamers\public\img\65dee9a9e1b74.jpg
+                // Construct the absolute file paths using public_path
+                // Construct the absolute file paths using public_path
+                $imageAbsolutePath = public_path('img/' . basename($imagepath));
+                
+                // Check if the file exists before attempting to delete it
+                if (File::exists($imageAbsolutePath)) {
+                    // Delete the image file
+                    File::delete($imageAbsolutePath);
+                }
+            }
+
+            // Delete the Toy record
+            $toy->delete();
+
+            return "Toy Deleted";
+        } catch (\Throwable $th) {
+            return "error " . $th->getMessage();
+        }
     }
 }

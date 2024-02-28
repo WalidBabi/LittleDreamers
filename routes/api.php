@@ -34,7 +34,7 @@ Route::post('AdminLogin', [PassportAuthController::class, 'AdminLogin']);
 //add-products
 Route::post('/add-product', [AdminController::class, 'addToy']);
 //delete toy
-Route::post('/delete', [AdminController::class, 'addToy']);
+Route::post('/delete/{id}', [AdminController::class, 'delete']);
 //display products
 Route::get('/products', [ProductController::class, 'index']);
 //display products details
