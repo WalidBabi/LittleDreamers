@@ -61,7 +61,18 @@ class SearchController extends Controller
         $selectedSkillDevelopments = $request->input('skill_developments', []);
         $selectedCompanies = $request->input('companies', []);
         $priceRange = $request->input('price', ['min' => 0, 'max' => PHP_INT_MAX]);
-        // Query toys based on selected criteria and company, eager loading the company relationship
+
+        // Query toys based on selected criteria
+        $filteredToys = $this->queryToys($selectedCategories, $selectedAges, $selectedHolidays, $selectedSkillDevelopments, $selectedCompanies, $priceRange);
+
+        // Return the API response with the filtered toys
+        return response()->json([
+            'toys' => $filteredToys,
+        ]);
+    }
+
+    public function queryToys($selectedCategories, $selectedAges, $selectedHolidays, $selectedSkillDevelopments, $selectedCompanies, $priceRange)
+    {
         $toys = Toy::with(['toy_description', 'toy_description.company'])
             ->whereHas('toy_description', function ($query) use ($selectedCompanies, $selectedCategories, $selectedAges, $selectedHolidays, $selectedSkillDevelopments, $priceRange) {
                 if (!empty($selectedCompanies)) {

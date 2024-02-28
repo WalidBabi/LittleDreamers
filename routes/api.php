@@ -49,6 +49,7 @@ Route::get('/recommendations', [RecommendationController::class,'recommendations
 Route::get('/search', [SearchController::class, 'search']);
 //filters
 Route::get('/filter', [SearchController::class, 'getFilters']);
-Route::get('/filterSubmit', [SearchController::class, 'handleCheckboxSubmission']);
+Route::post('/filterSubmit', [SearchController::class, 'handleCheckboxSubmission']);
+Route::post('/filterResults', [SearchController::class, 'queryToys']);
 //Review toy
 Route::post('/Review', [ProductController::class,'Review']);
