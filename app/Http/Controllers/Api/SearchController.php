@@ -37,7 +37,7 @@ class SearchController extends Controller
         $age = ToyDescription::distinct()->orderBy('age', 'asc')->pluck('age');
         $holiday = ToyDescription::distinct()->pluck('holiday');
         $skill_development = ToyDescription::distinct()->pluck('skill_development');
-        $companies = Company::pluck('name', 'id');
+        $companies = Company::distinct()->pluck('name');
 
         // Prepare the response data
         $filters = [
@@ -55,35 +55,84 @@ class SearchController extends Controller
     public function handleCheckboxSubmission(Request $request)
     {
         // Retrieve selected categories, ages, holidays, skill developments, and companies
-        $selectedCategories = $request->input('category', []); // Note the change here
-        $selectedAges = $request->input('age', []); // Note the change here
-        $selectedHolidays = $request->input('holiday', []); // Note the change here
-        $selectedSkillDevelopments = $request->input('skill_development', []); // Note the change here
+        $selectedCategories = $request->input('categories', []);
+        $selectedAges = $request->input('ages', []);
+        $selectedHolidays = $request->input('holidays', []);
+        $selectedSkillDevelopments = $request->input('skill_developments', []);
         $selectedCompanies = $request->input('companies', []);
-        $priceRange = $request->input('price', ['min' => 0, 'max' => PHP_INT_MAX]);
+
+        // Retrieve price range from request parameters
+        $priceRange = $request->input('price');
 
         // Query toys based on selected criteria and company, eager loading the company relationship
         $toys = Toy::with(['toy_description', 'toy_description.company'])
             ->whereHas('toy_description', function ($query) use ($selectedCompanies, $selectedCategories, $selectedAges, $selectedHolidays, $selectedSkillDevelopments, $priceRange) {
-                if (!empty($selectedCompanies)) {
-                    $query->whereIn('company_id', $selectedCompanies);
-                }
-                if (!empty($selectedCategories)) {
-                    $query->whereIn('category', $selectedCategories);
-                }
-                if (!empty($selectedAges)) {
-                    $query->whereIn('age', $selectedAges);
-                }
-                if (!empty($selectedHolidays)) {
-                    $query->whereIn('holiday', $selectedHolidays);
-                }
-                if (!empty($selectedSkillDevelopments)) {
-                    $query->whereIn('skill_development', $selectedSkillDevelopments);
-                }
-                // Corrected the condition here to use $priceRange instead of $selectedSkillDevelopments
-                if (!empty($priceRange)) {
-                    $query->whereBetween('price', [$priceRange['min'], $priceRange['max']]);
-                }
+                // Applying filters if there are multiple criteria specified
+                $query->when(!empty($selectedCompanies), function ($q) use ($selectedCompanies) {
+                    $q->whereIn('company_id', $selectedCompanies);
+                });
+                $query->when(!empty($selectedCategories), function ($q) use ($selectedCategories) {
+                    $q->whereIn('category', $selectedCategories);
+                });
+                $query->when(!empty($selectedAges), function ($q) use ($selectedAges) {
+                    $q->whereIn('age', $selectedAges);
+                });
+                $query->when(!empty($selectedHolidays), function ($q) use ($selectedHolidays) {
+                    $q->whereIn('holiday', $selectedHolidays);
+                });
+                $query->when(!empty($selectedSkillDevelopments), function ($q) use ($selectedSkillDevelopments) {
+                    $q->whereIn('skill_development', $selectedSkillDevelopments);
+                });
+                $query->when(!empty($priceRange), function ($q) use ($priceRange) {
+                    if (isset($priceRange['min']) && isset($priceRange['max'])) {
+                        $q->whereBetween('price', [$priceRange['min'], $priceRange['max']]);
+                    }
+                });
+            })
+            ->get();
+
+        // Return the filtered toys along with the company name
+        return response()->json([
+            'toys' => $toys,
+        ]);
+    }
+
+    public function getFilteredToys(Request $request)
+    {
+        // Retrieve selected categories, ages, holidays, skill developments, and companies
+        $selectedCategories = $request->input('categories', []);
+        $selectedAges = $request->input('ages', []);
+        $selectedHolidays = $request->input('holidays', []);
+        $selectedSkillDevelopments = $request->input('skill_developments', []);
+        $selectedCompanies = $request->input('companies', []);
+
+        // Retrieve price range from request parameters
+        $priceRange = $request->input('price');
+
+        // Query toys based on selected criteria and company, eager loading the company relationship
+        $toys = Toy::with(['toy_description', 'toy_description.company'])
+            ->whereHas('toy_description', function ($query) use ($selectedCompanies, $selectedCategories, $selectedAges, $selectedHolidays, $selectedSkillDevelopments, $priceRange) {
+                // Applying filters if there are multiple criteria specified
+                $query->when(!empty($selectedCompanies), function ($q) use ($selectedCompanies) {
+                    $q->whereIn('company_id', $selectedCompanies);
+                });
+                $query->when(!empty($selectedCategories), function ($q) use ($selectedCategories) {
+                    $q->whereIn('category', $selectedCategories);
+                });
+                $query->when(!empty($selectedAges), function ($q) use ($selectedAges) {
+                    $q->whereIn('age', $selectedAges);
+                });
+                $query->when(!empty($selectedHolidays), function ($q) use ($selectedHolidays) {
+                    $q->whereIn('holiday', $selectedHolidays);
+                });
+                $query->when(!empty($selectedSkillDevelopments), function ($q) use ($selectedSkillDevelopments) {
+                    $q->whereIn('skill_development', $selectedSkillDevelopments);
+                });
+                $query->when(!empty($priceRange), function ($q) use ($priceRange) {
+                    if (isset($priceRange['min']) && isset($priceRange['max'])) {
+                        $q->whereBetween('price', [$priceRange['min'], $priceRange['max']]);
+                    }
+                });
             })
             ->get();
 
