@@ -62,7 +62,7 @@ class SearchController extends Controller
         $selectedCompanies = $request->input('companies', []);
         $priceRange = $request->input('price', ['min' => 0, 'max' => PHP_INT_MAX]);
         // Query toys based on selected criteria and company, eager loading the company relationship
-        $toys = Toy::with(['toy_description', 'toy_description.company'])
+        $toys = Toy::with(['toy_description','toy_description.company'])
             ->whereHas('toy_description', function ($query) use ($selectedCompanies, $selectedCategories, $selectedAges, $selectedHolidays, $selectedSkillDevelopments, $priceRange) {
                 if (!empty($selectedCompanies)) {
                     $query->whereIn('company_id', $selectedCompanies);
@@ -84,17 +84,23 @@ class SearchController extends Controller
                 }
             })
             ->get();
-
-        // Return the filtered toys along with the company name
-        $filteredToys = $toys->map(function ($toy) {
-            return [
+            // dd($toys);
+        // // Return the filtered toys along with the company name
+        foreach($toys as $toy){
+            return response()->json([
                 'toy' => $toy,
-                'company_name' => $toy->toy_description->company->name
-            ];
-        });
+            ]);
+        }
+        // $filteredToys = $toys->map(function ($toy) {
+        //     return [
+        //         'toy' => $toy,
+        //         'company_name' => $toy->toy_description->company->name
+        //     ];
+        // });
 
-        return response()->json([
-            'toys' => $filteredToys,
-        ]);
+        // return response()->json([
+        //     'toys' => $toys,
+        //     'company_name' => $filteredToys
+        // ]);
     }
 }
