@@ -12,9 +12,9 @@ class Order extends Model
     use HasFactory;
     protected $guarded = [];
     // an order belongs to a child
-    public function child(): BelongsTo
+    public function parentt(): BelongsTo
     {
-        return $this->belongsTo(Child::class);
+        return $this->belongsTo(Parentt::class,'parent_id');
     }
     // orders for many toys 
     public function toys(): BelongsToMany

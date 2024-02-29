@@ -13,6 +13,11 @@ class Parentt extends Model
     protected $guarded = [];
     protected $table = 'parents';
     // a parent belongs to a profile
+    //a child has many orders
+    public function orders(): HasMany
+    {
+        return $this->hasMany(Order::class);
+    }
     public function profile(): BelongsTo
     {
         return $this->belongsTo(Profile::class);
@@ -21,5 +26,10 @@ class Parentt extends Model
     public function children(): HasMany
     {
         return $this->hasMany(Child::class ,'parent_id');
+    }
+
+    public function reviews(): HasMany
+    {
+        return $this->hasMany(Review::class);
     }
 }

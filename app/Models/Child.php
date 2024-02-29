@@ -13,11 +13,6 @@ class Child extends Model
     use HasFactory;
     protected $guarded = [];
     protected $table = 'children';
-    //a child has many orders
-    public function orders(): HasMany
-    {
-        return $this->hasMany(Order::class);
-    }
     //a child belongs to a parent
     public function parent(): BelongsTo
     {
