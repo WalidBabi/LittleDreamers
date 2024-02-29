@@ -37,7 +37,7 @@ class SearchController extends Controller
         $age = ToyDescription::distinct()->orderBy('age', 'asc')->pluck('age');
         $holiday = ToyDescription::distinct()->pluck('holiday');
         $skill_development = ToyDescription::distinct()->pluck('skill_development');
-        $companies = Company::distinct()->pluck('name');
+        $companies = Company::distinct()->pluck('name','id');
 
         // Prepare the response data
         $filters = [
