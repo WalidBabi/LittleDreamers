@@ -55,14 +55,15 @@ class SearchController extends Controller
     public function handleCheckboxSubmission(Request $request)
     {
         // Retrieve selected categories, ages, holidays, skill developments, and companies
-        $selectedCategories = $request->input('categories', []);
-        $selectedAges = $request->input('ages', []);
-        $selectedHolidays = $request->input('holidays', []);
-        $selectedSkillDevelopments = $request->input('skill_developments', []);
+        $selectedCategories = $request->input('category', []); // Note the change here
+        $selectedAges = $request->input('age', []); // Note the change here
+        $selectedHolidays = $request->input('holiday', []); // Note the change here
+        $selectedSkillDevelopments = $request->input('skill_development', []); // Note the change here
         $selectedCompanies = $request->input('companies', []);
         $priceRange = $request->input('price', ['min' => 0, 'max' => PHP_INT_MAX]);
+
         // Query toys based on selected criteria and company, eager loading the company relationship
-        $toys = Toy::with(['toy_description','toy_description.company'])
+        $toys = Toy::with(['toy_description', 'toy_description.company'])
             ->whereHas('toy_description', function ($query) use ($selectedCompanies, $selectedCategories, $selectedAges, $selectedHolidays, $selectedSkillDevelopments, $priceRange) {
                 if (!empty($selectedCompanies)) {
                     $query->whereIn('company_id', $selectedCompanies);
@@ -79,28 +80,16 @@ class SearchController extends Controller
                 if (!empty($selectedSkillDevelopments)) {
                     $query->whereIn('skill_development', $selectedSkillDevelopments);
                 }
-                if (!empty($selectedSkillDevelopments)) {
+                // Corrected the condition here to use $priceRange instead of $selectedSkillDevelopments
+                if (!empty($priceRange)) {
                     $query->whereBetween('price', [$priceRange['min'], $priceRange['max']]);
                 }
             })
             ->get();
-            // dd($toys);
-        // // Return the filtered toys along with the company name
-        foreach($toys as $toy){
-            return response()->json([
-                'toy' => $toy,
-            ]);
-        }
-        // $filteredToys = $toys->map(function ($toy) {
-        //     return [
-        //         'toy' => $toy,
-        //         'company_name' => $toy->toy_description->company->name
-        //     ];
-        // });
 
-        // return response()->json([
-        //     'toys' => $toys,
-        //     'company_name' => $filteredToys
-        // ]);
+        // Return the filtered toys along with the company name
+        return response()->json([
+            'toys' => $toys,
+        ]);
     }
 }
