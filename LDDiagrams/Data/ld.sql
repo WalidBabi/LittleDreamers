@@ -504,19 +504,19 @@ CREATE TABLE IF NOT EXISTS `oauth_refresh_tokens` (
 DROP TABLE IF EXISTS `orders`;
 CREATE TABLE IF NOT EXISTS `orders` (
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `child_id` bigint UNSIGNED NOT NULL,
+  `parent_id` bigint UNSIGNED NOT NULL,
   `total_price` double NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `orders_child_id_foreign` (`child_id`)
+  KEY `orders_parent_id_foreign` (`parent_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=601 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`id`, `child_id`, `total_price`, `created_at`, `updated_at`) VALUES
+INSERT INTO `orders` (`id`, `parent_id`, `total_price`, `created_at`, `updated_at`) VALUES
 (1, 160, 59.98, NULL, NULL),
 (2, 55, 44.85, NULL, NULL),
 (3, 134, 22.95, NULL, NULL),
@@ -1841,13 +1841,13 @@ INSERT INTO `profiles` (`id`, `first_name`, `last_name`, `email`, `password`, `c
 DROP TABLE IF EXISTS `reviews`;
 CREATE TABLE IF NOT EXISTS `reviews` (
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `child_id` bigint UNSIGNED NOT NULL,
+  `parent_id` bigint UNSIGNED NOT NULL,
   `toy_id` bigint UNSIGNED NOT NULL,
   `rating` int NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `reviews_child_id_foreign` (`child_id`),
+  KEY `reviews_parent_id_foreign` (`parent_id`),
   KEY `reviews_toy_id_foreign` (`toy_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -1855,7 +1855,7 @@ CREATE TABLE IF NOT EXISTS `reviews` (
 -- Dumping data for table `reviews`
 --
 
-INSERT INTO `reviews` (`id`, `child_id`, `toy_id`, `rating`, `created_at`, `updated_at`) VALUES
+INSERT INTO `reviews` (`id`, `parent_id`, `toy_id`, `rating`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, 5, '2024-02-26 14:56:43', '2024-02-26 14:56:43');
 
 -- --------------------------------------------------------
@@ -2645,13 +2645,13 @@ DROP TABLE IF EXISTS `toys_descriptions`;
 CREATE TABLE IF NOT EXISTS `toys_descriptions` (
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `company_id` bigint UNSIGNED NOT NULL,
-  `description` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `category` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `age` int NOT NULL,
   `gender` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `holiday` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `skill_development` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `play_pattern` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `skill_development` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `play_pattern` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),

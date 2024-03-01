@@ -38,7 +38,7 @@ class ProductController extends Controller
     public function Review(Request $request)
     {
         $review = new Review();
-        $review->child_id = $request->input('child_id');
+        $review->parent_id = $request->input('parent_id');
         $review->toy_id = $request->input('product_Id');
         $review->rating = $request->input('rating');
         // Save the review
