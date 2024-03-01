@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Parentt;
+use App\Models\Profile;
 use App\Models\Review;
 use App\Models\Toy;
 use App\Models\ToyDescription;
@@ -37,8 +39,29 @@ class ProductController extends Controller
 
     public function Review(Request $request)
     {
+        // Authenticate the user using the token
+        if ($request->header('Authorization')) {
+            $token = str_replace('Bearer ', '', $request->header('Authorization'));
+            // dd( $token );
+            $profile = Profile::where('remember_token', $token)->first();
+            // dd( $profile );
+            if (!$profile) {
+                return response()->json(['error' => 'Unauthorized'], 401);
+            }
+        } else {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+        // dd( $profile);
+        $parent_ids = $profile->parents;
+        // dd($parent_ids);
+        foreach ($parent_ids as $parent_id) {
+            $parent_id = $parent_id->id;
+        }
+        // dd($parent_id);
+        $parent = Parentt::find($parent_id);
+        // dd($parent->id);
         $review = new Review();
-        $review->parent_id = $request->input('parent_id');
+        $review->parent_id = $parent->id;
         $review->toy_id = $request->input('product_Id');
         $review->rating = $request->input('rating');
         // Save the review
