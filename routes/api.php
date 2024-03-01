@@ -8,6 +8,7 @@ use App\Http\Controllers\API\PassportAuthController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\RecommendationController;
 use App\Http\Controllers\Api\SearchController;
+use App\Http\Controllers\Api\ShoppingCart;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,7 +50,9 @@ Route::get('/recommendations', [RecommendationController::class,'recommendations
 Route::get('/search', [SearchController::class, 'search']);
 //filters
 Route::get('/filter', [SearchController::class, 'getFilters']);
-Route::get('/filterSubmit', [SearchController::class, 'handleCheckboxSubmission']);
+Route::post('/filterSubmit', [SearchController::class, 'handleCheckboxSubmission']);
 Route::get('/filterResults', [SearchController::class, 'getFilteredToys']);
 //Review toy
-Route::post('/Review', [ProductController::class,'Review']);
+Route::post('/Review/{productId}/{rating}', [ProductController::class, 'Review']);
+//Shopping Cart
+Route::post('/orders', [ShoppingCart::class, 'store']);
