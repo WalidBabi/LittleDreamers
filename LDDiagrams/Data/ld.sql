@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 28, 2024 at 08:14 AM
+-- Generation Time: Mar 01, 2024 at 11:21 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.2.0
 
@@ -53,7 +53,7 @@ INSERT INTO `admins` (`id`, `profile_id`, `created_at`, `updated_at`) VALUES
 DROP TABLE IF EXISTS `children`;
 CREATE TABLE IF NOT EXISTS `children` (
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `parent_id` bigint UNSIGNED NOT NULL DEFAULT '1',
+  `parent_id` bigint UNSIGNED NOT NULL,
   `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `age` int NOT NULL,
   `gender` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -63,7 +63,18 @@ CREATE TABLE IF NOT EXISTS `children` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `children_parent_id_foreign` (`parent_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `children`
+--
+
+INSERT INTO `children` (`id`, `parent_id`, `name`, `age`, `gender`, `interests_and_preferences`, `challenges_or_learning_needs`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Sophia', 4, 'Female', 'The child enjoys building intricate structures with blocks, exploring different designs, and using their imagination extensively. They also have a keen interest in problem-solving activities and love constructing new things.', 'The child struggles with maintaining focus on tasks for extended periods and may require support in improving attention span. Additionally, they find it challenging to express emotional feelings and might benefit from activities that help them with communication.', NULL, NULL),
+(2, 1, 'Liam', 2, 'Male', 'The child is passionate about storytelling and imaginative play, often creating elaborate scenarios with their toys. They enjoy pretending to be characters from their favorite stories and engaging in role-playing activities with friends.', 'The child experiences difficulty in social situations and often finds it challenging to connect with peers. They may benefit from activities that promote social skills development and encourage interaction with others.', NULL, NULL),
+(3, 2, 'Olivia', 6, 'Female', 'The child shows a strong inclination towards outdoor activities and sports, enjoying games that involve physical movement and coordination. They have a competitive spirit and thrive in environments that allow them to engage in friendly competition.', 'The child faces challenges in academic settings, particularly with tasks requiring attention to detail and organization. They may require extra support in developing study skills and strategies to improve academic performance.', NULL, NULL),
+(4, 1, 'Noah', 8, 'Male', 'The child has a deep fascination with music and enjoys exploring different musical instruments and sounds. They express themselves through music and find joy in creative expression through rhythm and melody.', 'The child struggles with sensory processing, particularly in noisy or crowded environments. They may benefit from activities that help regulate sensory input and promote calmness and focus.', NULL, NULL),
+(5, 2, 'Ava', 3, 'Female', 'The child has a natural curiosity about science and enjoys conducting experiments and learning about how things work. They thrive in environments that foster curiosity and exploration, engaging enthusiastically in hands-on learning experiences.', 'The child experiences challenges with fine motor skills, particularly in tasks requiring precise movements and coordination. They may require support in developing fine motor skills to enhance their ability to engage in various activities effectively.', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -406,7 +417,14 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('0cf51679efcc9b49d6c6b42e05860834bf4833b8fe6b595ef9d7a43f6f538db3b1ecf71b712b35bc', 5, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-26 15:45:55', '2024-02-26 15:45:55', '2025-02-26 18:45:55'),
 ('89b5fcd53b77f808fe0e96d393db34e5daba76af2bda98f8bb62de0f3004466d7f53a513727d97b4', 5, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-02-26 15:45:57', '2024-02-28 03:51:03', '2025-02-26 18:45:57'),
 ('fe0a7e7bc21c617055bca2b5b10eaa2cc55a7a2f32a4544bf2e728147c832d8f2c9f66f555cc4adb', 6, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Register', '[]', 0, '2024-02-28 03:51:42', '2024-02-28 03:51:43', '2025-02-28 06:51:42'),
-('0c5acbc536d61bbf8f49f7096cee53539981033e6516d25c33a6132f591e3e6ca81c27c9aafa9f26', 6, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-28 03:51:49', '2024-02-28 03:51:49', '2025-02-28 06:51:49');
+('0c5acbc536d61bbf8f49f7096cee53539981033e6516d25c33a6132f591e3e6ca81c27c9aafa9f26', 6, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-02-28 03:51:49', '2024-02-28 03:51:49', '2025-02-28 06:51:49'),
+('5a66ad859d7f9c4de169436674e7037ea81e841380522580a3cd17fd1e0ead8058b011572a9220f7', 5, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-03-01 15:02:11', '2024-03-01 15:02:11', '2025-03-01 18:02:11'),
+('53822db9340d66e00094fdb1b0f6e7d59c9b9cf9af95e7bf212d50ef7ae4b51f46be046e8b21200b', 5, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-03-01 17:41:53', '2024-03-01 17:41:53', '2025-03-01 20:41:53'),
+('05978d2afd2c413f1a89efac53de7ec5a1afa2c977f9ff297c0d39ed1462dfaf0e57287e0a937c4c', 5, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-03-01 17:44:08', '2024-03-01 17:44:08', '2025-03-01 20:44:08'),
+('e9d95c7d6e6dc34dd01ff760fca3fd4cf08823ab5c4ef22e9e00091297ba9228b40351f2255835ac', 5, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-03-01 17:46:15', '2024-03-01 17:46:15', '2025-03-01 20:46:15'),
+('d6be729fe1be9462fb862b4a01cf0fb518e88caee2f337a6ae17b82147428f1c8a1ce66ad1c63bde', 5, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-03-01 17:55:04', '2024-03-01 18:07:30', '2025-03-01 20:55:04'),
+('0593969e5ffa51ed851f142df9b459c59b912357a29df9850c262ae0a5d00c2902a130195b73fc90', 5, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 1, '2024-03-01 18:27:56', '2024-03-01 19:04:06', '2025-03-01 21:27:56'),
+('1be84036c687ed71dda732898f42dbb11fd5d4f4147011a0e3c5ac1767feeed85b5dc41d8b14027b', 5, '9af763f1-e8bc-41a7-9b37-01e64f6fa3b0', 'Login', '[]', 0, '2024-03-01 19:04:22', '2024-03-01 19:04:22', '2025-03-01 22:04:22');
 
 -- --------------------------------------------------------
 
@@ -510,7 +528,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `orders_parent_id_foreign` (`parent_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=601 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=607 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `orders`
@@ -1116,7 +1134,13 @@ INSERT INTO `orders` (`id`, `parent_id`, `total_price`, `created_at`, `updated_a
 (597, 103, 22.95, NULL, NULL),
 (598, 119, 159.96, NULL, NULL),
 (599, 13, 16.49, NULL, NULL),
-(600, 154, 49.98, NULL, NULL);
+(600, 154, 49.98, NULL, NULL),
+(601, 4, 39.98, '2024-03-01 18:28:34', '2024-03-01 18:28:34'),
+(602, 4, 19.99, '2024-03-01 18:42:19', '2024-03-01 18:42:19'),
+(603, 4, 0, '2024-03-01 18:42:49', '2024-03-01 18:42:49'),
+(604, 4, 0, '2024-03-01 18:43:10', '2024-03-01 18:43:10'),
+(605, 4, 19.99, '2024-03-01 18:46:46', '2024-03-01 18:46:46'),
+(606, 4, 0, '2024-03-01 18:47:19', '2024-03-01 18:47:19');
 
 -- --------------------------------------------------------
 
@@ -1136,7 +1160,7 @@ CREATE TABLE IF NOT EXISTS `orders_toys` (
   PRIMARY KEY (`id`),
   KEY `orders_toys_toy_id_foreign` (`toy_id`),
   KEY `orders_toys_order_id_foreign` (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=601 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=604 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `orders_toys`
@@ -1742,7 +1766,10 @@ INSERT INTO `orders_toys` (`id`, `toy_id`, `order_id`, `quantity`, `price`, `cre
 (597, 275, 597, 1, 22.95, NULL, NULL),
 (598, 332, 598, 4, 39.99, NULL, NULL),
 (599, 496, 599, 1, 16.49, NULL, NULL),
-(600, 518, 600, 2, 24.99, NULL, NULL);
+(600, 518, 600, 2, 24.99, NULL, NULL),
+(601, 1, 601, 2, 19.99, '2024-03-01 18:28:34', '2024-03-01 18:28:34'),
+(602, 1, 602, 1, 19.99, '2024-03-01 18:42:19', '2024-03-01 18:42:19'),
+(603, 1, 605, 1, 19.99, '2024-03-01 18:46:46', '2024-03-01 18:46:46');
 
 -- --------------------------------------------------------
 
@@ -1765,7 +1792,7 @@ CREATE TABLE IF NOT EXISTS `parents` (
 --
 
 INSERT INTO `parents` (`id`, `profile_id`, `created_at`, `updated_at`) VALUES
-(4, 5, '2024-02-26 15:45:55', '2024-02-26 15:45:55');
+(1, 5, '2024-02-26 15:45:55', '2024-02-26 15:45:55');
 
 -- --------------------------------------------------------
 
@@ -1830,7 +1857,7 @@ CREATE TABLE IF NOT EXISTS `profiles` (
 
 INSERT INTO `profiles` (`id`, `first_name`, `last_name`, `email`, `password`, `created_at`, `updated_at`, `remember_token`) VALUES
 (6, 'Mahmoud', 'babi', 'Mahmoud@gmail.com', '$2y$12$M4fBR/QQ0P4Aq9hJ7jrHHOBmWdcOwOT3SHKFjt5ZnjoCZybjNzbpi', '2024-02-28 03:51:42', '2024-02-28 03:51:49', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5YWY3NjNmMS1lOGJjLTQxYTctOWIzNy0wMWU2NGY2ZmEzYjAiLCJqdGkiOiIwYzVhY2JjNTM2ZDYxYmJmOGY0OWY3MDk2Y2VlNTM1Mzk5ODEwMzNlNjUxNmQyNWMzM2E2MTMyZjU5MWUzZTZjYTgxYzI3YzlhYWZhOWYyNiIsImlhdCI6MTcwOTEwMzEwOS4yMTcyNzcsIm5iZiI6MTcwOTEwMzEwOS4yMTcyODMsImV4cCI6MTc0MDcyNTUwOS4yMTAzMzMsInN1YiI6IjYiLCJzY29wZXMiOltdfQ.QWyGSV2NuLfTR80br5Hr7hTxU6O5EL4FiupNcErigk15AkcBHGySyvnF00U-J1nHB76qpCOAnhqT_T8xpHV978pOIKw4-fqhaxERHQMVoN8n4QOFf6hG-DV6sFKr-XeISPW8YV8-RTltxUAowSsa4UlVj1iwKOYLCAObBoALixlVXfTCb39IHkjicbaad2q9YEQUxDbTruSMxyeCRZQIY2bgxtjoasz_5Y6Xr4Lms3VpXnNnMfXEzW800QU72GpU0PNOsXP3KmqMjsGGkjbJiYTF8QgX_9P_TmDj5sUSCKC4W9fcuqAnZ0O1xQDa81Em8xW_HTy9mrkcWlPVLo97td1-0IofhU8SqYpm-EVqXikmxX60uOSDuPmw8EAMbbC0fzlb1xL-uqhOWIdTDAk2tBrRtcaRgDusjFAeC3Z0tZRqOs3K7ixN2U9jZTr1xToPWwXfL_9B8JNiqon1bhLAh15vH_t-Es_c1p0pZvw4j4sBKwcbixwKbaqCkcJ_WDmBs-DO_mim5uqUIRzyo5htf3LhZ5-Ts_LAFxq3wEzS67TsRteBvenw-2-MprFfSKwhatTHlpBuf9NlNFi20M4cxeyOrIc8RdFiZYAEfdMNHKHPJigQuQynGHVKcxGs4TgCbZtG12Ebyv2knCHlKhvJDq2Akz2sLiF-7xxRIyiAJmM'),
-(5, 'Walid', 'Babi', 'walid.babi.du@gmail.com', '$2y$12$3gGAizkt8lDVQifc9L0mZe790lYSsMsCMKxXetYcj3nk2Tleyhwq2', '2024-02-26 15:45:55', '2024-02-26 15:45:57', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5YWY3NjNmMS1lOGJjLTQxYTctOWIzNy0wMWU2NGY2ZmEzYjAiLCJqdGkiOiI4OWI1ZmNkNTNiNzdmODA4ZmUwZTk2ZDM5M2RiMzRlNWRhYmE3NmFmMmJkYTk4ZjhiYjYyZGUwZjMwMDQ0NjZkN2Y1M2E1MTM3MjdkOTdiNCIsImlhdCI6MTcwODk3MzE1Ny41ODE3MzUsIm5iZiI6MTcwODk3MzE1Ny41ODE3NDUsImV4cCI6MTc0MDU5NTU1Ny41NzU2MDIsInN1YiI6IjUiLCJzY29wZXMiOltdfQ.io7aXd2RL1yF26eI_Ui9vM9KdRpZsrE5hfYWxmfhh9_vBkrbkCyYfptkQqQIwPQWjKsgqdFAGd3nZM3oFFm8-K78rsb26YYaiRQLgoMP1xvewMGULYIlGm1jUrFOfFCw3-sVMnAkSWtBrna2I48DTz4-N_LNRAlwIwmwG8swa-JAkt7MtAKAIi8N2G4CEm8i3hq0pVbZL787ybZPBar_q2w1fZloOuIEZifQXFgVKpK13K9nByNczi7XjPKUbLX8Z8lQNPuVcgClTlKV87IO0NRrcKNJNqLIiPLXQPcWum866KRpCxwsoaa1s6FvkOOpeoZHBLOpk6IjjV3n9Bd8_zgvlsaFEKPDFOpg96oy5h_1Azpfd-jMgbczSEnDQM4alezVnFpS15bSbff5Fc1GNOSwOK_O2eW2f79LkNA11557ae_G_pgwRygQWYv6inT2xLCGH5bLUz0BLzW9rMi5rd5lfMrGZd6E-JIRyqwR9SMu-h4acyCWxugbVZ8r04hnn2QJ_mAXO9l7B6nzhktYMFu1HnZsUvo8F5VA8eOTmo5Bzts7DDjf3497xAhlEn6SMnRdlNusWxfKMPZGc35YaQiFmBnjVY2aLsLb2ib1D0WA7qlnMK1ZCgnQtb5ynVHuETKg48HCOJNsbfKBF-pVC9UJIdIZUr4HlduZgZoGuX4');
+(5, 'Walid', 'Babi', 'walid.babi.du@gmail.com', '$2y$12$3gGAizkt8lDVQifc9L0mZe790lYSsMsCMKxXetYcj3nk2Tleyhwq2', '2024-02-26 15:45:55', '2024-03-01 19:04:22', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5YWY3NjNmMS1lOGJjLTQxYTctOWIzNy0wMWU2NGY2ZmEzYjAiLCJqdGkiOiIxYmU4NDAzNmM2ODdlZDcxZGRhNzMyODk4ZjQyZGJiMTFmZDVkNGY0MTQ3MDExYTBlM2M1YWMxNzY3ZmVlZWQ4NWI1ZGM0MWQ4YjE0MDI3YiIsImlhdCI6MTcwOTMzMDY2Mi4wNTIyMiwibmJmIjoxNzA5MzMwNjYyLjA1MjIyNywiZXhwIjoxNzQwODY2NjYyLjA0NjA1LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.RkWDn9W-uu__4EBrV7LAXznY0KND-mthdoMvsQ0HB91XrYDtbOPh4Pz_WLOzNmntrA-fPrc0w8Eh59dbUKslSIGlp1PcPmb6HvNUNTQOsIrLYxzBw7dEMECGgYWVWS8S0xZpiG8VkIZ6exi8xtqFcTLGjHKhLGLvqWwcNXDzw4NyExpp642OipIdEUd7qX9Y8ZqCduAn0ZwFMiN84MRSUaWeUh4v0jYMUAMiyE2y2iSV04_fLEfalodzNc6kO8DEDvktfYd9dbHaj434gLSL-X-dhrKYZwf9P8C1sdSO7JtRqICpNFBKSA3HN5WFCWmU9pCk1--DrIrUMk39iapYsR3MbVYs6bAl-42z5JYQxM5BFdIWMqqtwc1BA-EJB0WrJdG92YIx8q7eovzZZKqovQN5DWVIXI57L54v9pNVcT45TRhNU5FgSCF21J7u7awPqFDdoL4qen8wbDZdB3QGwthZZ_avrH0CAnOnPz91e_551KMdOqomD1T0gtHgtAhnAt8Cop46CqEzqeXj8enX2mi4YwSfFmbd9PvQ6nFcx-oCkn3mpULy_cluVEN717buafxQmQyUQIi3-Vb0KPdOCGizAPsOtDe-eGLIya5OlW3d9cIrhZSFGb3zEmL7wp3lya7i_3wkTFnQRwaNPEi1QAPsvlcltVEhZ34garxgq38');
 
 -- --------------------------------------------------------
 
@@ -1849,14 +1876,15 @@ CREATE TABLE IF NOT EXISTS `reviews` (
   PRIMARY KEY (`id`),
   KEY `reviews_parent_id_foreign` (`parent_id`),
   KEY `reviews_toy_id_foreign` (`toy_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `reviews`
 --
 
 INSERT INTO `reviews` (`id`, `parent_id`, `toy_id`, `rating`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 5, '2024-02-26 14:56:43', '2024-02-26 14:56:43');
+(1, 1, 1, 5, '2024-02-26 14:56:43', '2024-02-26 14:56:43'),
+(7, 1, 31, 4, '2024-03-01 19:13:39', '2024-03-01 19:13:39');
 
 -- --------------------------------------------------------
 
@@ -1883,7 +1911,7 @@ CREATE TABLE IF NOT EXISTS `toys` (
 --
 
 INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quantity`, `created_at`, `updated_at`) VALUES
-(1, 1, 'ABC Building Blocks', 19.99, 'http://localhost:8000/img/1.jpg', 50, NULL, NULL),
+(1, 1, 'ABC Building Blocks', 19.99, 'http://localhost:8000/img/1.jpg', 50, NULL, '2024-03-01 18:46:46'),
 (2, 2, 'Plush Teddy Bear', 14.95, 'http://localhost:8000/img/2.jpg', 30, NULL, NULL),
 (3, 3, 'Dino Adventure Set', 29.99, 'http://localhost:8000/img/3.jpg', 20, NULL, NULL),
 (4, 4, 'Interactive Learning Tablet', 39.99, 'http://localhost:8000/img/4.jpg', 15, NULL, NULL),
@@ -1958,7 +1986,7 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (73, 73, 'Robot Dog Companion', 35.99, 'robot_dog.jpg', 18, NULL, NULL),
 (74, 74, 'Colorful Wooden Puzzle', 14.50, 'wooden_puzzle.jpg', 25, NULL, NULL),
 (75, 75, 'Art and Craft Supplies Set', 29.75, 'art_craft_supplies.jpg', 15, NULL, NULL),
-(76, 76, 'Musical Drum Set for Kids', 26.99, 'kids_drum_set.jpg', 12, NULL, NULL),
+(76, 76, 'Musical Drum Set for Kids', 26.99, 'http://localhost:8000/img/drum.jpg', 12, NULL, NULL),
 (77, 77, 'Wooden 3D Puzzle', 18.25, 'wooden_3d_puzzle.jpg', 20, NULL, NULL),
 (78, 78, 'Colorful Building Blocks', 15.99, 'blocks_colorful.jpg', 25, NULL, NULL),
 (79, 79, 'Remote Control Drone', 69.99, 'drone_remote_control.jpg', 8, NULL, NULL),
@@ -1986,20 +2014,20 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (101, 101, 'Wooden Alphabet Puzzle', 14.25, 'alphabet_puzzle.jpg', 25, NULL, NULL),
 (102, 102, 'Wooden Railway Set', 49.99, 'wooden_railway_set.jpg', 12, NULL, NULL),
 (103, 103, 'Artistic Modeling Clay Set', 14.75, 'modeling_clay_set.jpg', 25, NULL, NULL),
-(104, 104, 'Musical Tambourine', 9.50, 'tambourine.jpg', 30, NULL, NULL),
+(104, 104, 'Musical Tambourine', 9.50, 'http://localhost:8000/img/tamb.jpg', 30, NULL, NULL),
 (105, 105, 'Plush Penguin', 12.99, 'plush_penguin.jpg', 40, NULL, NULL),
 (106, 106, 'Magnetic Drawing Board', 19.25, 'magnetic_drawing_board.jpg', 20, NULL, NULL),
 (107, 107, 'Play Kitchen Utensil Set', 14.99, 'kitchen_utensil_set.jpg', 25, NULL, NULL),
 (108, 108, 'Construction Truck Set', 32.50, 'construction_truck_set.jpg', 18, NULL, NULL),
 (109, 109, 'Wooden ABC Blocks', 22.75, 'wooden_abc_blocks.jpg', 12, NULL, NULL),
-(110, 110, 'Adventure Play Mat', 24.50, 'adventure_play_mat.jpg', 30, NULL, NULL),
+(110, 110, 'Adventure Play Mat', 24.50, 'http://localhost:8000/img/playmat.jpg', 30, NULL, NULL),
 (111, 111, 'Plush Giraffe', 16.50, 'plush_giraffe.jpg', 25, NULL, NULL),
 (112, 112, 'Junior Artist Painting Set', 18.99, 'junior_artist_painting_set.jpg', 15, NULL, NULL),
 (113, 113, 'Mini Basketball Hoop', 14.25, 'basketball_hoop.jpg', 20, NULL, NULL),
 (114, 114, 'Role Play Construction Helmet', 16.75, 'construction_helmet.jpg', 18, NULL, NULL),
 (115, 115, 'Plush Tiger', 14.50, 'plush_tiger.jpg', 30, NULL, NULL),
 (116, 116, 'Art Easel with Chalkboard', 36.50, 'art_easel_chalkboard.jpg', 10, NULL, NULL),
-(117, 117, 'Wooden Stacking Blocks', 17.99, 'wooden_stacking_blocks.jpg', 25, NULL, NULL),
+(117, 117, 'Wooden Stacking Blocks', 17.99, 'http://localhost:8000/img/wooden.jpg', 25, NULL, NULL),
 (118, 118, 'Wooden Shape Sorting Toy', 19.99, 'shape_sorting_toy.jpg', 20, NULL, NULL),
 (119, 119, 'Playful Animal Finger Puppets', 12.50, 'finger_puppets_animal.jpg', 25, NULL, NULL),
 (120, 120, 'Remote Control Monster Truck', 44.95, 'rc_monster_truck.jpg', 15, NULL, NULL),
@@ -2026,7 +2054,7 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (141, 141, 'Superhero Costume Set', 27.50, 'superhero_costume_set.jpg', 18, NULL, NULL),
 (142, 142, 'Racing Car Track Set', 42.99, 'racing_car_track_set.jpg', 12, NULL, NULL),
 (143, 143, 'Construction Worker Role Play Set', 26.75, 'construction_worker_role_play.jpg', 18, NULL, NULL),
-(144, 144, 'Interactive Robot Toy', 32.99, 'interactive_robot_toy.jpg', 20, NULL, NULL),
+(144, 144, 'Interactive Robot Toy', 32.99, 'http://localhost:8000/img/robot.jpg', 20, NULL, NULL),
 (145, 145, 'Unicorn Plush Pillow', 19.50, 'unicorn_plush_pillow.jpg', 25, NULL, NULL),
 (146, 146, 'Outdoor Adventure Kit', 29.99, 'outdoor_adventure_kit.jpg', 18, NULL, NULL),
 (147, 147, 'Dinosaur Building Blocks Set', 22.50, 'dinosaur_building_blocks.jpg', 30, NULL, NULL),
@@ -2056,7 +2084,7 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (171, 171, 'Magnetic Word Play Kit', 17.99, 'magnetic_word_play.jpg', 30, NULL, NULL),
 (172, 172, 'Soccer Star Robot', 32.95, 'soccer_star_robot.jpg', 15, NULL, NULL),
 (173, 173, 'Interactive Globe Voyager', 59.99, 'interactive_globe_voyager.jpg', 10, NULL, NULL),
-(174, 174, 'Gentle Rattle Harmony Set', 18.25, 'rattle_harmony_set.jpg', 25, NULL, NULL),
+(174, 174, 'Gentle Rattle Harmony Set', 18.25, 'http://localhost:8000/img/harmony.jpg', 25, NULL, NULL),
 (175, 175, 'Architectural Marvels Set', 35.75, 'architectural_marvels_set.jpg', 18, NULL, NULL),
 (176, 176, 'Imagination Station Tent', 45.95, 'imagination_station_tent.jpg', 12, NULL, NULL),
 (177, 177, 'Wooden Pattern Solver', 14.50, 'wooden_pattern_solver.jpg', 30, NULL, NULL),
@@ -2210,7 +2238,7 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (325, 325, 'Safari Adventure Play Tent', 29.99, 'safari_adventure_play_tent.jpg', 15, NULL, NULL),
 (326, 326, 'Penguin Pals Igloo Building Set', 25.50, 'penguin_pals_igloo_building_set.jpg', 30, NULL, NULL),
 (327, 327, 'Rocket Launch Astronaut Set', 34.75, 'rocket_launch_astronaut_set.jpg', 25, NULL, NULL),
-(328, 328, 'Puppy Love Plush Adoption Center', 28.50, 'puppy_love_plush_adoption_center.jpg', 20, NULL, NULL),
+(328, 328, 'Puppy Love Plush Adoption Center', 28.50, 'http://localhost:8000/img/puppy.jpg', 20, NULL, NULL),
 (329, 329, 'Creative Art Easel Studio', 39.99, 'creative_art_easel_studio.jpg', 25, NULL, NULL),
 (330, 330, 'Super Spy Detective Kit', 22.99, 'super_spy_detective_kit.jpg', 15, NULL, NULL),
 (331, 331, 'Retro Gamer Console Vault', 42.95, 'retro_gamer_console_vault.jpg', 20, NULL, NULL),
@@ -2246,7 +2274,7 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (361, 361, 'Mythical Creatures Puzzle Safari', 19.75, 'mythical_creatures_puzzle_safari.jpg', 30, NULL, NULL),
 (362, 362, 'Outdoor Discovery Adventure Kit', 24.99, 'outdoor_discovery_adventure_kit.jpg', 20, NULL, NULL),
 (363, 363, 'Robot Coding Squad Adventure', 35.99, 'robot_coding_squad_adventure.jpg', 15, NULL, NULL),
-(364, 364, 'Superhero Headquarters Training Grounds', 42.50, 'superhero_headquarters_training_grounds.jpg', 25, NULL, NULL),
+(364, 364, 'Superhero Headquarters Training Grounds', 42.50, 'http://localhost:8000/img/head.jpg', 25, NULL, NULL),
 (365, 365, 'Enchanted Forest Friends Dolls', 29.75, 'enchanted_forest_friends_dolls.jpg', 18, NULL, NULL),
 (366, 366, 'Construction Crew Excavator Builder', 26.50, 'construction_crew_excavator_builder.jpg', 30, NULL, NULL),
 (367, 367, 'Smart Explorer Globe Explorer', 38.75, 'smart_explorer_globe_explorer.jpg', 15, NULL, NULL),
@@ -2298,7 +2326,7 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (413, 413, 'Pixel Art Master Creative Studio', 32.95, 'pixel_art_master_creative_studio.jpg', 18, NULL, NULL),
 (414, 414, 'Outdoor Discovery Adventure Expedition', 24.99, 'outdoor_discovery_adventure_expedition.jpg', 20, NULL, NULL),
 (415, 415, 'Robot Coding Squad Adventure Quest', 35.99, 'robot_coding_squad_adventure_quest.jpg', 15, NULL, NULL),
-(416, 416, 'Superhero Headquarters Training Grounds Deluxe', 42.50, 'superhero_headquarters_training_grounds_deluxe.jpg', 25, NULL, NULL),
+(416, 416, 'Superhero Headquarters Training Grounds Deluxe', 42.50, 'http://localhost:8000/img/head2.jpg', 25, NULL, NULL),
 (417, 417, 'Enchanted Forest Friends Dollhouse', 29.75, 'enchanted_forest_friends_dollhouse.jpg', 18, NULL, NULL),
 (418, 418, 'Construction Crew Tower Crane Builder Deluxe', 26.50, 'construction_crew_tower_crane_builder_deluxe.jpg', 30, NULL, NULL),
 (419, 419, 'Smart Explorer Globe Explorer Plus', 38.75, 'smart_explorer_globe_explorer_plus.jpg', 15, NULL, NULL),
@@ -2357,7 +2385,7 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (472, 472, 'Penguin Paradise Igloo', 25.50, 'penguin_paradise_igloo.jpg', 30, NULL, NULL),
 (473, 473, 'Interactive Learning Tablet Pro', 19.95, 'interactive_learning_tablet_pro.jpg', 18, NULL, NULL),
 (474, 474, 'Astronaut Launch Mission', 34.75, 'astronaut_launch_mission.jpg', 25, NULL, NULL),
-(475, 475, 'Puppy Paradise Plush Play Center', 28.50, 'puppy_paradise_plush_play_center.jpg', 20, NULL, NULL),
+(475, 475, 'Puppy Paradise Plush Play Center', 28.50, 'http://localhost:8000/img/puppy2.jpg', 20, NULL, NULL),
 (476, 476, 'Creative Canvas Art Studio', 39.99, 'creative_canvas_art_studio.jpg', 25, NULL, NULL),
 (477, 477, 'Super Spy Secret Agent Master Kit', 22.99, 'super_spy_secret_agent_master_kit.jpg', 15, NULL, NULL),
 (478, 478, 'Undersea Explorer Submarine Supreme', 37.50, 'undersea_explorer_submarine_supreme.jpg', 18, NULL, NULL),
@@ -2367,7 +2395,7 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (482, 482, 'Musical Symphony Orchestra Maestro', 45.50, 'musical_symphony_orchestra_maestro.jpg', 18, NULL, NULL),
 (483, 483, 'Adventure Seeker Explorer Kit', 28.99, 'adventure_seeker_explorer_kit.jpg', 20, NULL, NULL),
 (484, 484, 'Magical Potion Making Lab', 26.50, 'magical_potion_making_lab.jpg', 25, NULL, NULL),
-(485, 485, 'Superhero Adventure Training Set', 39.99, 'superhero_adventure_training_set.jpg', 18, NULL, NULL),
+(485, 485, 'Superhero Adventure Training Set', 39.99, 'http://localhost:8000/img/super.jpg', 18, NULL, NULL),
 (486, 486, 'Dinosaur Discovery Expedition', 22.75, 'dinosaur_discovery_expedition.jpg', 30, NULL, NULL),
 (487, 487, 'Fantasy Kingdom Building Blocks', 32.50, 'fantasy_kingdom_building_blocks.jpg', 15, NULL, NULL),
 (488, 488, 'Music Maestro Keyboard Symphony', 36.99, 'music_maestro_keyboard_symphony.jpg', 25, NULL, NULL),
@@ -2401,9 +2429,9 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (516, 516, 'Wild West Adventure Cowboy Set', 31.50, 'wild_west_adventure_cowboy_set.jpg', 20, NULL, NULL),
 (517, 517, 'Robotic Coding Quest Lab', 45.50, 'robotic_coding_quest_lab.jpg', 18, NULL, NULL),
 (518, 518, 'Soccer Pro Training Masterclass', 22.99, 'soccer_pro_training_masterclass.jpg', 15, NULL, NULL),
-(519, 519, 'Robot Explorer Space Adventure', 34.95, 'robot_explorer_space_adventure.jpg', 18, NULL, NULL),
-(520, 520, 'Artistic Masterpiece Easel Studio', 28.99, 'artistic_masterpiece_easel_studio.jpg', 25, NULL, NULL);
+(519, 519, 'Robot Explorer Space Adventure', 34.95, 'robot_explorer_space_adventure.jpg', 18, NULL, NULL);
 INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quantity`, `created_at`, `updated_at`) VALUES
+(520, 520, 'Artistic Masterpiece Easel Studio', 28.99, 'artistic_masterpiece_easel_studio.jpg', 25, NULL, NULL),
 (521, 521, 'Farmyard Friends Plush Wonderland', 19.75, 'farmyard_friends_plush_wonderland.jpg', 30, NULL, NULL),
 (522, 522, 'Smart Science Discovery Lab', 42.99, 'smart_science_discovery_lab.jpg', 20, NULL, NULL),
 (523, 523, 'Princess Palace Tea Fantasy Set', 28.50, 'princess_palace_tea_fantasy_set.jpg', 25, NULL, NULL),
@@ -2462,7 +2490,7 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (576, 576, 'Colorful Paper Craft Kit', 9.99, 'colorful_paper_craft_kit.jpg', 35, NULL, NULL),
 (577, 577, 'Wizard\'s Magic Wand Set', 15.75, 'wizards_magic_wand_set.jpg', 25, NULL, NULL),
 (578, 578, 'Miniature Furniture Wonderland', 12.99, 'miniature_furniture_wonderland.jpg', 40, NULL, NULL),
-(579, 579, 'Space Odyssey Rocket Ship', 42.50, 'space_odyssey_rocket_ship.jpg', 10, NULL, NULL),
+(579, 579, 'Space Odyssey Rocket Ship', 42.50, 'http://localhost:8000/img/space.jpg', 10, NULL, NULL),
 (580, 580, 'Dynamic Rainbow Puzzle', 18.99, 'rainbow_puzzle.jpg', 25, NULL, NULL),
 (581, 581, 'Magical Adventure Castle', 34.50, 'adventure_castle.jpg', 15, NULL, NULL),
 (582, 582, 'Safari Explorer Binoculars', 15.75, 'safari_binoculars.jpg', 30, NULL, NULL),
@@ -2533,7 +2561,7 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (647, 647, 'Magical Unicorn Wand Set', 24.50, 'unicorn_wand_set.jpg', 25, NULL, NULL),
 (648, 648, 'Farmyard Friends Playset', 28.95, 'farmyard_friends_playset.jpg', 20, NULL, NULL),
 (649, 649, 'Solar-Powered Racing Car', 19.75, 'solar_racing_car.jpg', 25, NULL, NULL),
-(650, 650, 'Creative Storytelling Puppet Set', 32.99, 'storytelling_puppet_set.jpg', 18, NULL, NULL),
+(650, 650, 'Creative Storytelling Puppet Set', 32.99, 'http://localhost:8000/img/story.jpg', 18, NULL, NULL),
 (651, 651, 'Jungle Explorer Binoculars', 14.50, 'jungle_binoculars.jpg', 30, NULL, NULL),
 (652, 652, 'Police Patrol Motorcycle', 26.25, 'police_motorcycle.jpg', 15, NULL, NULL),
 (653, 653, 'Adventure Quest Board Game', 29.95, 'adventure_quest_game.jpg', 25, NULL, NULL),
@@ -2550,7 +2578,7 @@ INSERT INTO `toys` (`id`, `toy_description_id`, `name`, `price`, `image`, `quant
 (664, 664, 'RoboTech Warriors Battle Pack', 39.99, 'robotech_warriors_battle_pack.jpg', 20, NULL, NULL),
 (665, 665, 'Ultimate Racing Drone Circuit', 49.95, 'ultimate_racing_drone_circuit.jpg', 15, NULL, NULL),
 (666, 666, 'Space Explorer Rocket Launcher', 29.75, 'space_explorer_rocket_launcher.jpg', 25, NULL, NULL),
-(667, 667, 'Construction Master Builder Set', 34.50, 'construction_master_builder_set.jpg', 22, NULL, NULL),
+(667, 667, 'Construction Master Builder Set', 34.50, 'http://localhost:8000/img/construction.jpg', 22, NULL, NULL),
 (668, 668, 'DinoQuest Paleontology Kit', 28.99, 'dinoquest_paleontology_kit.jpg', 18, NULL, NULL),
 (669, 669, 'Superhero Command Center', 42.95, 'superhero_command_center.jpg', 15, NULL, NULL),
 (670, 670, 'Adventure Wilderness Survival Kit', 26.50, 'adventure_wilderness_survival_kit.jpg', 18, NULL, NULL),
@@ -2650,8 +2678,8 @@ CREATE TABLE IF NOT EXISTS `toys_descriptions` (
   `age` int NOT NULL,
   `gender` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `holiday` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `skill_development` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `play_pattern` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `skill_development` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `play_pattern` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -2715,7 +2743,7 @@ INSERT INTO `toys_descriptions` (`id`, `company_id`, `description`, `category`, 
 (50, 33, 'Interactive electronic learning pad for early education', 'Educational', 5, 'Male', 'Christmas', 'Cognitive Skills', 'Interactive Learning', NULL, NULL),
 (51, 35, 'Beautifully crafted wooden dollhouse for hours of play', 'Dolls and Accessories', 9, 'Male', 'Easter', 'Fine Motor Skills', 'Pretend Play', NULL, NULL),
 (52, 17, 'Compact train set for small spaces', 'Vehicle Toys', 6, 'Male', 'New Year', 'Hand-Eye Coordination', 'Constructive Play', NULL, NULL),
-(53, 22, 'Robot that teaches coding and programming skills', 'STEM Toys', 6, 'Male', 'Thanksgiving', 'Cognitive Skills', 'Technology Play', NULL, NULL),
+(53, 22, 'Robot teaches coding and programming skills', 'STEM Toys', 6, 'Male', 'Thanksgiving', 'Cognitive Skills', 'Technology Play', NULL, NULL),
 (54, 18, 'Vibrant play dough set for creative sculpting', 'Arts and Crafts', 8, 'Male', 'Easter', 'Fine Motor Skills', 'Creative Play', NULL, NULL),
 (55, 4, 'Real binoculars for young adventurers', 'Outdoor Play', 5, 'Male', 'New Year', 'Cognitive Skills', 'Exploration Play', NULL, NULL),
 (56, 14, 'Colorful magnetic alphabet letters for learning', 'Educational', 5, 'Male', 'New Year', 'Cognitive Skills', 'Constructive Play', NULL, NULL),
@@ -2738,7 +2766,7 @@ INSERT INTO `toys_descriptions` (`id`, `company_id`, `description`, `category`, 
 (73, 25, 'Interactive robot dog companion with sound and movement', 'Interactive Toys', 4, 'Male', 'Thanksgiving', 'Emotional Intelligence', 'Interactive Play', NULL, NULL),
 (74, 29, 'Colorful wooden puzzle for early problem-solving skills', 'Educational', 5, 'Male', 'Easter', 'Cognitive Skills', 'Problem Solving', NULL, NULL),
 (75, 10, 'Comprehensive set of art and craft supplies for creative projects', 'Arts and Crafts', 5, 'Male', 'Easter', 'Fine Motor Skills', 'Creative Play', NULL, NULL),
-(76, 16, 'Child-friendly musical drum set for rhythm and coordination', 'Musical Toys', 8, 'Male', 'Easter', 'Hand-Eye Coordination', 'Music Play', NULL, NULL),
+(76, 16, 'musical drum set for rhythm and coordination', 'Musical Toys', 8, 'Male', 'Easter', 'Hand-Eye Coordination', 'Music Play', NULL, NULL),
 (77, 14, 'Challenging wooden 3D puzzle for spatial reasoning', 'Educational', 6, 'Male', 'Christmas', 'Cognitive Skills', 'Constructive Play', NULL, NULL),
 (78, 37, 'Set of colorful building blocks for creative play', 'Educational', 5, 'Male', 'Christmas', 'Fine Motor Skills', 'Constructive Play', NULL, NULL),
 (79, 4, 'Advanced remote control drone with camera', 'Remote Control', 10, 'Male', 'Easter', 'Hand-Eye Coordination', 'Remote Control Play', NULL, NULL),
@@ -2824,7 +2852,7 @@ INSERT INTO `toys_descriptions` (`id`, `company_id`, `description`, `category`, 
 (159, 14, 'Interactive robotic explorer for STEM learning', 'Educational', 6, 'Male', 'Christmas', 'Cognitive Skills', 'Imaginative Play', NULL, NULL),
 (160, 34, 'Intriguing puzzle box for critical thinking skills development', 'Educational', 9, 'Male', 'Easter', 'Cognitive Skills', 'Problem Solving', NULL, NULL),
 (161, 32, 'Complete art kit for aspiring young artists', 'Arts and Crafts', 5, 'Male', 'Thanksgiving', 'Fine Motor Skills', 'Artistic Play', NULL, NULL),
-(162, 38, 'Musical drum set for exploring rhythm and harmony', 'Musical Toys', 4, 'Male', 'Easter', 'Hand-Eye Coordination', 'Music Play', NULL, NULL),
+(162, 38, 'Musical drum set rhythm ,harmony', 'Musical Toys', 4, 'Male', 'Easter', 'Hand-Eye Coordination', 'Music Play', NULL, NULL),
 (163, 25, '3D puzzle featuring space exploration scenes', 'Educational', 6, 'Male', 'Thanksgiving', 'Cognitive Skills', 'Problem Solving', NULL, NULL),
 (164, 8, 'Vibrant building blocks set for creative play', 'Educational', 5, 'Male', 'Christmas', 'Fine Motor Skills', 'Constructive Play', NULL, NULL),
 (165, 3, 'Advanced drone with camera for aerial adventures', 'Remote Control', 10, 'Male', 'Thanksgiving', 'Hand-Eye Coordination', 'Remote Control Play', NULL, NULL),
