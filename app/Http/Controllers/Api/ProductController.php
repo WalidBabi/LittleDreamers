@@ -62,7 +62,7 @@ class ProductController extends Controller
         // dd($parent->id);
         $review = new Review();
         $review->parent_id = $parent->id;
-        $review->toy_id = $request->input('product_Id');
+        $review->toy_id = $request->input('productId');
         $review->rating = $request->input('rating');
         // Save the review
         $review->save();
