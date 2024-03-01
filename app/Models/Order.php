@@ -19,6 +19,6 @@ class Order extends Model
     // orders for many toys 
     public function toys(): BelongsToMany
     {
-        return $this->belongsToMany(Toy::class, 'order_toy' ,'toy_id' ,'order_id')->withTimestamps();
+        return $this->belongsToMany(Toy::class, 'orders_toys' ,'order_id' ,'toy_id')->withTimestamps();
     }
 }
