@@ -5,18 +5,18 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 4,9,Tablet for early education and interactive learning,Educational,5,Male,Christmas,"Cognitive Skills, Literacy Skills, Numeracy Skills, Problem-Solving, Critical Thinking, Digital Literacy, Technology Skills, Communication Skills, Information Processing","Interactive Learning, Educational Play, Screen-Based Play, Guided Play, Independent Play"
 5,20,Complete coloring kit with various art supplies,Arts and Crafts,5,Male,Christmas,"Fine Motor Skills, Creativity, Self-Expression, Color Recognition, Hand-Eye Coordination, Artistic Expression, Color Mixing, Design","Creative Play, Open-Ended Play, Artistic Expression, Individual Play, Sensory Play"
 6,11,DIY robot building kit for STEM education,Educational,9,Male,New Year,Cognitive Skills,Constructive Play
-7,1,Soft and safe puzzle play mat for infants,Infant Toys,2,Male,Easter,Cognitive Skills,Problem Solving
+7,1,Soft and safe puzzle play mat for infants,Infant,2,Male,Easter,Cognitive Skills,Problem Solving
 8,28,Imaginative play tent for indoor adventures,Outdoor Play,8,Male,Thanksgiving,Physical Activity,Imaginative Play
-9,26,Introduction to musical instruments for kids,Musical Toys,8,Male,Thanksgiving,Hand-Eye Coordination,Music Play
+9,26,Introduction to musical instruments for kids,Musical,8,Male,Thanksgiving,Hand-Eye Coordination,Music Play
 10,7,High-speed remote control car for racing,Remote Control,6,Male,Thanksgiving,Hand-Eye Coordination,Remote Control Play
-11,39,Gentle rattle for sensory stimulation,Infant Toys,1,Male,Christmas,Sensory Development,Sensory Play
+11,39,Gentle rattle for sensory stimulation,Infant,1,Male,Christmas,Sensory Development,Sensory Play
 12,31,Play dough set for imaginative sculpting,Arts and Crafts,8,Male,Thanksgiving,Fine Motor Skills,Creative Play
 13,7,Assorted sports balls for outdoor play,Outdoor Play,9,Male,New Year,Physical Activity,Sports Play
 14,27,Classic wooden blocks with letters and numbers,Educational,5,Male,New Year,Cognitive Skills,Constructive Play
 15,26,Realistic kitchen playset for pretend cooking,Pretend Play,8,Male,New Year,Social Skills,Pretend Play
 16,17,Hands-on science experiments for curious minds,Educational,9,Male,Christmas,Cognitive Skills,Scientific Exploration
 17,21,Adorable soft dollhouse for imaginative play,Dolls and Accessories,7,Male,Christmas,Imagination,Pretend Play
-18,21,Durable construction vehicles for sandbox fun,Vehicle Toys,6,Male,New Year,Hand-Eye Coordination,Constructive Play
+18,21,Durable construction vehicles for sandbox fun,Vehicle,6,Male,New Year,Hand-Eye Coordination,Constructive Play
 19,16,Classic chess and checkers set for strategic play,Board Games,6,Male,Christmas,Cognitive Skills,Strategy Play
 20,31,Organizer for stuffed animals with zoo theme,Stuffed Animals,10,Male,Thanksgiving,Imagination,Pretend Play
 21,6,Mini helicopter with remote control,Remote Control,9,Male,Christmas,Hand-Eye Coordination,Remote Control Play
@@ -25,11 +25,11 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 24,16,Assorted costumes for imaginative dress-up play,Pretend Play,8,Male,Thanksgiving,Imagination,Pretend Play
 25,8,Bouncy ball with handle for active play,Outdoor Play,5,Male,Christmas,Physical Activity,Active Play
 26,1,Complete doctor kit for pretend medical play,Pretend Play,7,Male,Thanksgiving,Social Skills,Pretend Play
-27,19,Classic wooden train set with tracks,Vehicle Toys,8,Male,Christmas,Hand-Eye Coordination,Constructive Play
+27,19,Classic wooden train set with tracks,Vehicle,8,Male,Christmas,Hand-Eye Coordination,Constructive Play
 28,31,Wooden cube with animal shapes for learning,Educational,3,Male,Easter,Cognitive Skills,Sorting Play
 29,27,Flexible and colorful play tunnel for crawling,Outdoor Play,5,Male,Thanksgiving,Physical Activity,Imaginative Play
 30,19,Adjustable art easel with painting accessories,Arts and Crafts,4,Male,Thanksgiving,Fine Motor Skills,Artistic Play
-31,38,Futuristic robot that engages in interactive conversations,Interactive Toys,6,Male,Christmas,Cognitive Skills,Interactive Play
+31,38,Futuristic robot that engages in interactive conversations,Interactive,6,Male,Christmas,Cognitive Skills,Interactive Play
 32,30,Vibrant construction paper for arts and crafts projects,Arts and Crafts,5,Male,New Year,Fine Motor Skills,Artistic Play
 33,8,Magician's wand and hat for magical play,Pretend Play,8,Male,Christmas,Imagination,Pretend Play
 34,32,Assorted wooden jigsaw puzzles for problem-solving,Educational,7,Male,Thanksgiving,Cognitive Skills,Problem Solving
@@ -37,9 +37,9 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 36,29,Soft and cute animal hand puppets for imaginative play,Pretend Play,8,Male,Thanksgiving,Imagination,Pretend Play
 37,18,Mini furniture set for dollhouse play,Dolls and Accessories,7,Male,New Year,Fine Motor Skills,Pretend Play
 38,34,Mini soccer ball and goal for backyard fun,Sports and Outdoor Games,4,Male,Christmas,Physical Activity,Sports Play
-39,37,Colorful musical keyboard for budding musicians,Musical Toys,4,Male,Christmas,Hand-Eye Coordination,Music Play
+39,37,Colorful musical keyboard for budding musicians,Musical,4,Male,Christmas,Hand-Eye Coordination,Music Play
 40,1,Spaceship toy with lights and sounds for imaginative play,Action Figures,6,Male,Thanksgiving,Imagination,Space Play
-41,33,Smart robot with AI capabilities for interactive learning,Interactive Toys,9,Male,New Year,Cognitive Skills,Technology Play
+41,33,Smart robot with AI capabilities for interactive learning,Interactive,9,Male,New Year,Cognitive Skills,Technology Play
 42,23,Adjustable basketball hoop for indoor or outdoor play,Sports and Outdoor Games,5,Male,Easter,Physical Activity,Sports Play
 43,30,Traditional wooden building blocks for creative construction,Educational,6,Male,Thanksgiving,Fine Motor Skills,Constructive Play
 44,22,Enchanting castle play tent for imaginative adventures,Pretend Play,8,Female,New Year,Imagination,Pretend Play
@@ -50,8 +50,8 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 49,28,Delightful tea party playset for imaginative social play,Pretend Play,8,Male,Easter,Social Skills,Pretend Play
 50,33,Interactive electronic learning pad for early education,Educational,5,Male,Christmas,Cognitive Skills,Interactive Learning
 51,35,Beautifully crafted wooden dollhouse for hours of play,Dolls and Accessories,9,Male,Easter,Fine Motor Skills,Pretend Play
-52,17,Compact train set for small spaces,Vehicle Toys,6,Male,New Year,Hand-Eye Coordination,Constructive Play
-53,22,Robot that teaches coding and programming skills,STEM Toys,6,Male,Thanksgiving,Cognitive Skills,Technology Play
+52,17,Compact train set for small spaces,Vehicle,6,Male,New Year,Hand-Eye Coordination,Constructive Play
+53,22,Robot that teaches coding and programming skills,STEM,6,Male,Thanksgiving,Cognitive Skills,Technology Play
 54,18,Vibrant play dough set for creative sculpting,Arts and Crafts,8,Male,Easter,Fine Motor Skills,Creative Play
 55,4,Real binoculars for young adventurers,Outdoor Play,5,Male,New Year,Cognitive Skills,Exploration Play
 56,14,Colorful magnetic alphabet letters for learning,Educational,5,Male,New Year,Cognitive Skills,Constructive Play
@@ -65,16 +65,16 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 64,33,Classic wooden memory match game for cognitive development,Educational,7,Male,Thanksgiving,Cognitive Skills,Memory Play
 65,24,Hammock for organizing and displaying stuffed animals,Stuffed Animals,10,Male,Thanksgiving,Organizational Skills,Storage Play
 66,33,Interactive toy cash register for pretend play,Pretend Play,8,Male,New Year,Cognitive Skills,Pretend Play
-67,26,Exciting race car track set with loop-de-loop,Vehicle Toys,4,Male,New Year,Physical Activity,Imaginative Play
+67,26,Exciting race car track set with loop-de-loop,Vehicle,4,Male,New Year,Physical Activity,Imaginative Play
 68,7,Interactive globe for learning about geography and cultures,Educational,6,Male,Christmas,Cognitive Skills,Interactive Learning
-69,37,Set of soft baby books with sensory features,Infant Toys,2,Male,Christmas,Sensory Development,Reading Play
+69,37,Set of soft baby books with sensory features,Infant,2,Male,Christmas,Sensory Development,Reading Play
 70,16,Exciting kit for digging and discovering dinosaur fossils,Science and Nature,5,Male,New Year,Cognitive Skills,Scientific Exploration
 71,1,Wooden pattern blocks for shape recognition and creativity,Educational,8,Male,Christmas,Cognitive Skills,Constructive Play
 72,40,Realistic kitchen playset for imaginative cooking,Pretend Play,8,Male,Easter,Social Skills,Pretend Play
-73,25,Interactive robot dog companion with sound and movement,Interactive Toys,4,Male,Thanksgiving,Emotional Intelligence,Interactive Play
+73,25,Interactive robot dog companion with sound and movement,Interactive,4,Male,Thanksgiving,Emotional Intelligence,Interactive Play
 74,29,Colorful wooden puzzle for early problem-solving skills,Educational,5,Male,Easter,Cognitive Skills,Problem Solving
 75,10,Comprehensive set of art and craft supplies for creative projects,Arts and Crafts,5,Male,Easter,Fine Motor Skills,Creative Play
-76,16,Child-friendly musical drum set for rhythm and coordination,Musical Toys,8,Male,Easter,Hand-Eye Coordination,Music Play
+76,16,Child-friendly musical drum set for rhythm and coordination,Musical,8,Male,Easter,Hand-Eye Coordination,Music Play
 77,14,Challenging wooden 3D puzzle for spatial reasoning,Educational,6,Male,Christmas,Cognitive Skills,Constructive Play
 78,37,Set of colorful building blocks for creative play,Educational,5,Male,Christmas,Fine Motor Skills,Constructive Play
 79,4,Advanced remote control drone with camera,Remote Control,10,Male,Easter,Hand-Eye Coordination,Remote Control Play
@@ -82,11 +82,11 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 81,19,Simple dinosaur puzzle for young learners,Educational,6,Male,Easter,Cognitive Skills,Problem Solving
 82,1,Complete role play set for aspiring firefighters,Pretend Play,7,Male,Thanksgiving,Social Skills,Pretend Play
 83,7,Inflatable bounce house for backyard fun,Outdoor Play,9,Male,Christmas,Physical Activity,Active Play
-84,37,Electronic drum set for young musicians,Musical Toys,4,Male,New Year,Hand-Eye Coordination,Music Play
+84,37,Electronic drum set for young musicians,Musical,4,Male,New Year,Hand-Eye Coordination,Music Play
 85,16,Magnetic poetry kit for language and literacy development,Educational,9,Male,Thanksgiving,Linguistic Skills,Creative Play
 86,7,Robot soccer player toy with kicking action,Action Figures,6,Male,Christmas,Cognitive Skills,Interactive Play
 87,40,Interactive globe for learning about countries and cultures,Educational,6,Male,Christmas,Cognitive Skills,Interactive Learning
-88,20,Set of soft baby rattles for sensory stimulation,Infant Toys,1,Male,Easter,Sensory Development,Sensory Play
+88,20,Set of soft baby rattles for sensory stimulation,Infant,1,Male,Easter,Sensory Development,Sensory Play
 89,38,Comprehensive building and construction set for creative play,Educational,4,Male,Thanksgiving,Fine Motor Skills,Constructive Play
 90,8,Spacious adventure playhouse tent for imaginative play,Outdoor Play,8,Male,New Year,Imagination,Imaginative Play
 91,40,Wooden puzzle cube for developing problem-solving skills,Educational,5,Male,New Year,Cognitive Skills,Problem Solving
@@ -97,16 +97,16 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 96,36,Watercolor painting set for budding artists,Arts and Crafts,6,Male,Thanksgiving,Fine Motor Skills,Artistic Play
 97,1,DIY robot building blocks kit for STEM education,Educational,9,Male,New Year,Cognitive Skills,Constructive Play
 98,40,Adorable and huggable plush bunny for comfort,Stuffed Animals,3,Male,Thanksgiving,Emotional Intelligence,Comfort Play
-99,18,Complete science lab kit for hands-on experiments,STEM Toys,9,Male,New Year,Cognitive Skills,Scientific Exploration
+99,18,Complete science lab kit for hands-on experiments,STEM,9,Male,New Year,Cognitive Skills,Scientific Exploration
 100,8,Construction set for building various structures,Educational,5,Male,New Year,Fine Motor Skills,Constructive Play
 101,4,Wooden puzzle for learning letters and alphabet,Educational,5,Male,Christmas,Cognitive Skills,Constructive Play
-102,32,Classic wooden railway set for endless adventures,Vehicle Toys,8,Male,Easter,Hand-Eye Coordination,Constructive Play
+102,32,Classic wooden railway set for endless adventures,Vehicle,8,Male,Easter,Hand-Eye Coordination,Constructive Play
 103,7,Colorful modeling clay set for sculpting and creativity,Arts and Crafts,5,Male,Thanksgiving,Fine Motor Skills,Creative Play
-104,10,Colorful musical tambourine for rhythm and music play,Musical Toys,6,Male,Easter,Hand-Eye Coordination,Music Play
+104,10,Colorful musical tambourine for rhythm and music play,Musical,6,Male,Easter,Hand-Eye Coordination,Music Play
 105,36,Adorable and soft plush penguin for cuddling,Stuffed Animals,10,Male,Christmas,Emotional Intelligence,Comfort Play
 106,14,Magnetic drawing board for creative and mess-free doodling,Educational,8,Male,Thanksgiving,Fine Motor Skills,Artistic Play
 107,29,Set of play kitchen utensils for imaginative cooking play,Pretend Play,8,Male,New Year,Social Skills,Pretend Play
-108,37,Set of construction trucks for sandbox or indoor play,Vehicle Toys,8,Male,Easter,Hand-Eye Coordination,Constructive Play
+108,37,Set of construction trucks for sandbox or indoor play,Vehicle,8,Male,Easter,Hand-Eye Coordination,Constructive Play
 109,24,Wooden blocks with letters for early literacy development,Educational,5,Male,Easter,Cognitive Skills,Constructive Play
 110,37,Colorful and engaging adventure play mat for floor play,Outdoor Play,5,Male,Thanksgiving,Cognitive Skills,Imaginative Play
 111,39,Soft and cuddly plush giraffe for comfort,Stuffed Animals,3,Male,Christmas,Emotional Intelligence,Comfort Play
@@ -127,22 +127,22 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 126,5,Space-themed play tent for cosmic adventures,Pretend Play,9,Male,New Year,Imagination,Imaginative Play
 127,6,Delightful wooden tea set for imaginative tea parties,Pretend Play,8,Female,Thanksgiving,Social Skills,Pretend Play
 128,6,Interactive tool bench playset for little builders,Pretend Play,7,Male,Christmas,Fine Motor Skills,Pretend Play
-129,38,Interactive fire truck playset for action-packed rescue play,Vehicle Toys,8,Male,New Year,Imagination,Pretend Play
+129,38,Interactive fire truck playset for action-packed rescue play,Vehicle,8,Male,New Year,Imagination,Pretend Play
 130,34,Enchanting princess castle playset for magical adventures,Pretend Play,8,Female,Easter,Imagination,Pretend Play
 131,7,Playmat with construction site theme for imaginative play,Pretend Play,8,Male,Christmas,Cognitive Skills,Imaginative Play
-132,1,Interactive toy fire truck with lights and sounds,Vehicle Toys,8,Male,Christmas,Hand-Eye Coordination,Imaginative Play
+132,1,Interactive toy fire truck with lights and sounds,Vehicle,8,Male,Christmas,Hand-Eye Coordination,Imaginative Play
 133,21,Beautiful mermaid princess doll for magical play,Pretend Play,8,Female,Easter,Imagination,Pretend Play
-134,34,High-speed remote control racing car for thrilling races,Vehicle Toys,6,Male,Easter,Hand-Eye Coordination,Remote Control Play
+134,34,High-speed remote control racing car for thrilling races,Vehicle,6,Male,Easter,Hand-Eye Coordination,Remote Control Play
 135,8,Sparkling princess dress-up set for magical play,Pretend Play,8,Female,Easter,Imagination,Pretend Play
 136,25,Complete toy tool set for little builders,Pretend Play,7,Male,New Year,Fine Motor Skills,Pretend Play
-137,35,Colorful musical guitar for young aspiring musicians,Musical Toys,4,Male,New Year,Hand-Eye Coordination,Music Play
+137,35,Colorful musical guitar for young aspiring musicians,Musical,4,Male,New Year,Hand-Eye Coordination,Music Play
 138,17,Adorable doll stroller for pretend walks with dolls,Pretend Play,8,Female,Easter,Imagination,Pretend Play
-139,31,Intelligent remote control robot with various functions,Interactive Toys,9,Male,Easter,Cognitive Skills,Interactive Play
+139,31,Intelligent remote control robot with various functions,Interactive,9,Male,Easter,Cognitive Skills,Interactive Play
 140,7,Set of wooden puzzles for cognitive development,Educational,8,Male,Easter,Cognitive Skills,Problem Solving
 141,27,Superhero costume set for exciting pretend play,Pretend Play,8,Male,New Year,Imagination,Pretend Play
-142,2,Exciting racing car track set for high-speed adventures,Vehicle Toys,4,Male,Christmas,Physical Activity,Imaginative Play
+142,2,Exciting racing car track set for high-speed adventures,Vehicle,4,Male,Christmas,Physical Activity,Imaginative Play
 143,16,Complete construction worker role play set with accessories,Pretend Play,7,Male,Easter,Social Skills,Pretend Play
-144,9,Cute and interactive robot toy with lights and sounds,Interactive Toys,8,Male,Christmas,Cognitive Skills,Interactive Play
+144,9,Cute and interactive robot toy with lights and sounds,Interactive,8,Male,Christmas,Cognitive Skills,Interactive Play
 145,25,Soft and huggable unicorn plush pillow for bedtime comfort,Stuffed Animals,10,Female,Christmas,Emotional Intelligence,Comfort Play
 146,33,Complete outdoor adventure kit for young explorers,Outdoor Play,5,Male,Christmas,Cognitive Skills,Exploration Play
 147,35,Dinosaur-themed building blocks set for imaginative play,Educational,8,Male,Christmas,Cognitive Skills,Constructive Play
@@ -151,7 +151,7 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 150,1,Double-sided kids art easel set for creative drawing and painting,Arts and Crafts,8,Male,Thanksgiving,Fine Motor Skills,Artistic Play
 151,2,Creative bead jewelry kit for making personalized accessories,Arts and Crafts,7,Female,Thanksgiving,Fine Motor Skills,Creative Play
 152,11,Do-it-yourself bracelet kit for creative jewelry crafting,Arts and Crafts,6,Female,Christmas,Fine Motor Skills,Creative Play
-153,17,Classic toy train set for endless railway adventures,Vehicle Toys,8,Male,Thanksgiving,Hand-Eye Coordination,Constructive Play
+153,17,Classic toy train set for endless railway adventures,Vehicle,8,Male,Thanksgiving,Hand-Eye Coordination,Constructive Play
 154,28,Compact binoculars for young explorers,Science and Nature,6,Male,New Year,Cognitive Skills,Exploration Play
 155,1,Complete pretend play tool set for little builders,Pretend Play,8,Male,New Year,Social Skills,Pretend Play
 156,3,Set of fairy tale storybooks for bedtime adventures,Books and Learning,7,Female,Christmas,Cognitive Skills,Storytelling Play
@@ -160,7 +160,7 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 159,14,Interactive robotic explorer for STEM learning,Educational,6,Male,Christmas,Cognitive Skills,Imaginative Play
 160,34,Intriguing puzzle box for critical thinking skills development,Educational,9,Male,Easter,Cognitive Skills,Problem Solving
 161,32,Complete art kit for aspiring young artists,Arts and Crafts,5,Male,Thanksgiving,Fine Motor Skills,Artistic Play
-162,38,Musical drum set for exploring rhythm and harmony,Musical Toys,4,Male,Easter,Hand-Eye Coordination,Music Play
+162,38,Musical drum set for exploring rhythm and harmony,Musical,4,Male,Easter,Hand-Eye Coordination,Music Play
 163,25,3D puzzle featuring space exploration scenes,Educational,6,Male,Thanksgiving,Cognitive Skills,Problem Solving
 164,8,Vibrant building blocks set for creative play,Educational,5,Male,Christmas,Fine Motor Skills,Constructive Play
 165,3,Advanced drone with camera for aerial adventures,Remote Control,10,Male,Thanksgiving,Hand-Eye Coordination,Remote Control Play
@@ -168,42 +168,42 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 167,10,Exciting dinosaur discovery puzzle for young learners,Educational,6,Male,Christmas,Cognitive Skills,Problem Solving
 168,6,Complete rescue kit for aspiring young firefighters,Pretend Play,7,Male,Christmas,Social Skills,Pretend Play
 169,35,Inflatable air bounce adventure for active play,Outdoor Play,9,Male,Thanksgiving,Physical Activity,Active Play
-170,24,Electric beat drum kit for aspiring young musicians,Musical Toys,4,Male,Easter,Hand-Eye Coordination,Music Play
+170,24,Electric beat drum kit for aspiring young musicians,Musical,4,Male,Easter,Hand-Eye Coordination,Music Play
 171,39,Magnetic word play kit for language and literacy development,Educational,9,Male,Easter,Linguistic Skills,Creative Play
 172,12,Soccer star robot toy with kicking action,Action Figures,6,Male,Thanksgiving,Cognitive Skills,Interactive Play
 173,3,Interactive globe for a fascinating voyage of learning,Educational,6,Male,Christmas,Cognitive Skills,Interactive Learning
-174,24,Set of gentle rattles for sensory stimulation,Infant Toys,1,Male,Easter,Sensory Development,Music Play
+174,24,Set of gentle rattles for sensory stimulation,Infant,1,Male,Easter,Sensory Development,Music Play
 175,32,Comprehensive architectural set for creative play,Educational,4,Male,Christmas,Cognitive Skills,Constructive Play
 176,36,Spacious imagination station tent for creative play,Outdoor Play,8,Male,New Year,Imagination,Imaginative Play
 177,23,Wooden pattern solver for developing problem-solving skills,Educational,5,Male,Christmas,Cognitive Skills,Problem Solving
 178,2,Complete medical role play set with realistic accessories,Pretend Play,7,Male,Christmas,Social Skills,Pretend Play
-179,27,Organizer for neatly storing and displaying various toys,Stuffed Animals,10,Male,New Year,Organizational Skills,Storage Play
+179,27,Organizer for neatly storing and displaying various,Stuffed Animals,10,Male,New Year,Organizational Skills,Storage Play
 180,34,Watercolor painting set for exploring artistic wonders,Arts and Crafts,6,Male,New Year,Fine Motor Skills,Artistic Play
 181,25,DIY bot builder engineering kit for STEM education,Educational,9,Female,Thanksgiving,Cognitive Skills,Constructive Play
 182,25,Magical unicorn palace for enchanting adventures,Pretend Play,8,Female,Thanksgiving,Imagination,Pretend Play
 183,19,Innovative robot inventor lab for STEM learning,Educational,6,Male,New Year,Cognitive Skills,Technology Play
 184,28,Fascinating discovery chest for critical thinking skills development,Educational,9,Male,Thanksgiving,Cognitive Skills,Exploration Play
 185,2,Complete art studio for aspiring young artists,Arts and Crafts,5,Male,Easter,Fine Motor Skills,Artistic Play
-186,39,Musical drum kit for little rockstars,Musical Toys,4,Male,Thanksgiving,Hand-Eye Coordination,Music Play
+186,39,Musical drum kit for little rockstars,Musical,4,Male,Thanksgiving,Hand-Eye Coordination,Music Play
 187,33,Exciting space odyssey puzzle set for cosmic learners,Educational,6,Male,Easter,Cognitive Skills,Problem Solving
 188,1,Soft plush jungle animals for cuddling,Stuffed Animals,3,Female,Thanksgiving,Imagination,Pretend Play
 189,35,Exciting dinosaur adventure puzzle for little explorers,Educational,6,Male,Christmas,Cognitive Skills,Problem Solving
 190,18,Complete rescue heroes kit for aspiring young firefighters,Pretend Play,7,Male,Thanksgiving,Social Skills,Pretend Play
-191,6,Set of gentle rattles for little princesses,Infant Toys,1,Female,Christmas,Sensory Development,Music Play
+191,6,Set of gentle rattles for little princesses,Infant,1,Female,Christmas,Sensory Development,Music Play
 192,22,Telescope set for young cosmic explorers,Science and Nature,6,Male,New Year,Cognitive Skills,Exploration Play
-193,15,Adorable pony carousel for gentle play,Infant Toys,1,Female,Christmas,Imagination,Pretend Play
-194,8,Coding kit for aspiring young robot builders,STEM Toys,9,Male,Easter,Cognitive Skills,Technology Play
+193,15,Adorable pony carousel for gentle play,Infant,1,Female,Christmas,Imagination,Pretend Play
+194,8,Coding kit for aspiring young robot builders,STEM,9,Male,Easter,Cognitive Skills,Technology Play
 195,31,Majestic castle playhouse for royal adventures,Pretend Play,8,Female,Thanksgiving,Imagination,Pretend Play
 196,31,Wooden galaxy puzzle for cosmic problem-solving,Educational,7,Male,New Year,Cognitive Skills,Problem Solving
 197,19,Complete police force hero set for imaginative play,Pretend Play,7,Male,New Year,Social Skills,Pretend Play
 198,28,Fantasy airship adventure for imaginative journeys,Outdoor Play,8,Male,Christmas,Imagination,Imaginative Play
-199,34,Starlight mobile for dreamy nights,Infant Toys,1,Female,Easter,Sensory Development,Comfort Play
-200,9,Complete cooking playset with robotic chef,Interactive Toys,4,Male,Christmas,Social Skills,Pretend Play
+199,34,Starlight mobile for dreamy nights,Infant,1,Female,Easter,Sensory Development,Comfort Play
+200,9,Complete cooking playset with robotic chef,Interactive,4,Male,Christmas,Social Skills,Pretend Play
 201,28,Rainbow sketch pad for colorful artistic expression,Arts and Crafts,5,Male,New Year,Fine Motor Skills,Artistic Play
 202,22,Space pioneer action figures for cosmic adventures,Action Figures,6,Male,Christmas,Imagination,Imaginative Play
 203,34,Magical fairy garden for enchanting play,Pretend Play,8,Female,Thanksgiving,Imagination,Pretend Play
 204,12,Sailing adventure boat set for aquatic fun,Sports and Outdoor Games,4,Male,Easter,Hand-Eye Coordination,Imaginative Play
-205,14,Complete symphony set for budding young musicians,Musical Toys,4,Female,Christmas,Hand-Eye Coordination,Music Play
+205,14,Complete symphony set for budding young musicians,Musical,4,Female,Christmas,Hand-Eye Coordination,Music Play
 206,13,Embark on a thrilling adventure with this interactive treasure map,Adventure,5,Male,New Year,Cognitive Skills,Exploration Play
 207,18,Ignite the imagination with a rocket launch commander set,Science and Nature,6,Male,Easter,Cognitive Skills,Constructive Play
 208,33,Step into a world of dreams with this enchanting dollhouse,Pretend Play,8,Female,Christmas,Imagination,Pretend Play
@@ -211,30 +211,30 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 210,8,Unleash creativity with this all-in-one artistic marvel painting kit,Arts and Crafts,5,Male,Thanksgiving,Fine Motor Skills,Artistic Play
 211,16,Embark on prehistoric journeys with this thrilling dino adventure play set,Pretend Play,7,Male,Thanksgiving,Imagination,Imaginative Play
 212,33,Assemble the pieces of this magical rainbow castle puzzle for hours of fun,Educational,7,Male,Thanksgiving,Cognitive Skills,Problem Solving
-213,16,Inspire future rockstars with this superstar guitar prodigy set,Musical Toys,4,Female,Easter,Hand-Eye Coordination,Music Play
+213,16,Inspire future rockstars with this superstar guitar prodigy set,Musical,4,Female,Easter,Hand-Eye Coordination,Music Play
 214,25,Dive into underwater adventures with this remote control explorer submarine,Remote Control,9,Male,Christmas,Cognitive Skills,Exploration Play
 215,26,Cuddle up with adorable stuffed safari animals for endless comfort,Stuffed Animals,3,Female,Thanksgiving,Imagination,Pretend Play
 216,38,Discover the cosmos with this space explorer telescope set,Science and Nature,6,Male,Christmas,Cognitive Skills,Exploration Play
 217,22,Construct majestic castles with this builder's block castle kit,Educational,5,Male,Thanksgiving,Fine Motor Skills,Constructive Play
-218,28,Whip up imaginative meals with this robot chef cooking playset,Interactive Toys,4,Male,Christmas,Social Skills,Pretend Play
+218,28,Whip up imaginative meals with this robot chef cooking playset,Interactive,4,Male,Christmas,Social Skills,Pretend Play
 219,19,Experience thrilling races with this racing pro mini car set,Sports and Outdoor Games,4,Male,Christmas,Hand-Eye Coordination,Imaginative Play
 220,36,Get lost in magical stories with this enchanted fairy tale book,Interactive Books,8,Female,Easter,Cognitive Skills,Storytelling Play
-221,28,Introduce coding concepts with this junior coding whiz kit,STEM Toys,6,Male,Christmas,Cognitive Skills,Technology Play
+221,28,Introduce coding concepts with this junior coding whiz kit,STEM,6,Male,Christmas,Cognitive Skills,Technology Play
 222,30,Embark on a wild safari with this animal adventure tent,Outdoor Play,8,Male,Easter,Imagination,Imaginative Play
-223,4,Create beautiful melodies with this musical maestro symphony set,Musical Toys,4,Female,Thanksgiving,Hand-Eye Coordination,Music Play
+223,4,Create beautiful melodies with this musical maestro symphony set,Musical,4,Female,Thanksgiving,Hand-Eye Coordination,Music Play
 224,2,Unearth ancient secrets with this dino discovery excavation kit,Educational,6,Male,Christmas,Cognitive Skills,Scientific Exploration
 225,31,Sail the high seas with this adventurous pirate ship playset,Pretend Play,8,Male,New Year,Imagination,Pretend Play
 226,9,Rule a kingdom in style with this princess castle playhouse,Pretend Play,8,Female,Christmas,Imagination,Pretend Play
-227,3,Inspire creativity with this inventor's workshop lab kit,STEM Toys,9,Male,New Year,Cognitive Skills,Constructive Play
+227,3,Inspire creativity with this inventor's workshop lab kit,STEM,9,Male,New Year,Cognitive Skills,Constructive Play
 228,12,Explore artistic wonders with this creativity corner art studio,Arts and Crafts,5,Male,Easter,Fine Motor Skills,Artistic Play
 229,7,Become a soccer champ with this goal set for backyard matches,Sports and Outdoor Games,4,Male,Christmas,Physical Activity,Sports Play
 230,31,Conquer dragons in a medieval fantasy with this adventure castle playset,Pretend Play,8,Male,Easter,Imagination,Pretend Play
 231,15,Unveil cosmic mysteries with this cosmic explorer telescope,Science and Nature,6,Male,Thanksgiving,Cognitive Skills,Exploration Play
 232,11,Embark on cosmic adventures with these galactic hero action figures,Action Figures,6,Male,Easter,Imagination,Imaginative Play
 233,37,Bring magic to life with this fairy garden enchantment playset,Pretend Play,8,Female,New Year,Imagination,Pretend Play
-234,39,Explore the beat of the jungle with this rhythmic drum set,Musical Toys,4,Female,Christmas,Hand-Eye Coordination,Music Play
+234,39,Explore the beat of the jungle with this rhythmic drum set,Musical,4,Female,Christmas,Hand-Eye Coordination,Music Play
 235,32,Discover the wonders of nature with this woodland explorer kit,Science and Nature,5,Male,Thanksgiving,Cognitive Skills,Exploration Play
-236,34,Create robots and code with this builder coding kit,STEM Toys,9,Male,New Year,Cognitive Skills,Technology Play
+236,34,Create robots and code with this builder coding kit,STEM,9,Male,New Year,Cognitive Skills,Technology Play
 237,40,Dive into magical adventures with this majestic mermaid castle playset,Pretend Play,8,Female,New Year,Imagination,Pretend Play
 238,29,Challenge the mind with this wooden puzzle delight set,Educational,7,Male,Christmas,Cognitive Skills,Problem Solving
 239,23,Embark on a journey through the solar system with this adventure set,Science and Nature,6,Male,Christmas,Cognitive Skills,Scientific Exploration
@@ -257,14 +257,14 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 256,11,Cuddle up with adorable plush safari animals for endless comfort,Stuffed Animals,3,Female,Christmas,Imagination,Pretend Play
 257,28,Discover the cosmos with this space explorer telescope adventure set,Science and Nature,6,Male,New Year,Cognitive Skills,Exploration Play
 258,14,Construct majestic castles with this builder's block castle construction kit,Educational,5,Male,New Year,Fine Motor Skills,Constructive Play
-259,4,Whip up imaginative meals with this robot chef cooking extravaganza,Interactive Toys,4,Male,Christmas,Social Skills,Pretend Play
+259,4,Whip up imaginative meals with this robot chef cooking extravaganza,Interactive,4,Male,Christmas,Social Skills,Pretend Play
 260,5,Experience thrilling races with this racing pro mini car adventure,Sports and Outdoor Games,4,Male,Thanksgiving,Hand-Eye Coordination,Imaginative Play
 261,17,Get lost in magical stories with this enchanted fairy tale interactive book,Interactive Books,8,Female,New Year,Cognitive Skills,Interactive Play
-262,35,Introduce coding concepts with this junior coding whiz exploration kit,STEM Toys,6,Male,Christmas,Cognitive Skills,Technology Play
-263,14,Create beautiful melodies with this musical maestro symphony ensemble,Musical Toys,4,Female,New Year,Hand-Eye Coordination,Music Play
+262,35,Introduce coding concepts with this junior coding whiz exploration kit,STEM,6,Male,Christmas,Cognitive Skills,Technology Play
+263,14,Create beautiful melodies with this musical maestro symphony ensemble,Musical,4,Female,New Year,Hand-Eye Coordination,Music Play
 264,13,Unearth ancient secrets with this dino discovery excavation adventure,Educational,6,Male,Thanksgiving,Cognitive Skills,Scientific Exploration
 265,17,Rule a magical kingdom in style with this princess castle kingdom playhouse,Pretend Play,8,Female,Thanksgiving,Imagination,Pretend Play
-266,10,Inspire creativity with this inventor's workshop creative lab kit,STEM Toys,9,Male,New Year,Cognitive Skills,Constructive Play
+266,10,Inspire creativity with this inventor's workshop creative lab kit,STEM,9,Male,New Year,Cognitive Skills,Constructive Play
 267,16,Explore artistic wonders with this creativity corner artistic studio,Arts and Crafts,5,Male,Christmas,Fine Motor Skills,Artistic Play
 268,18,Become a soccer champ with this goal scorer set for backyard matches,Sports and Outdoor Games,4,Male,New Year,Physical Activity,Sports Play
 269,34,Conquer dragons in a medieval fantasy with this adventure castle quest playset,Pretend Play,8,Male,Christmas,Imagination,Pretend Play
@@ -280,7 +280,7 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 279,28,Be a hero with this firefighter rescue heroes adventure playset,Pretend Play,7,Male,New Year,Social Skills,Pretend Play
 280,24,Soar through the skies with this fantasy airship adventure soar playset,Outdoor Play,8,Male,Easter,Imagination,Imaginative Play
 281,3,Learn the alphabet with these colorful ABC learning block delight sets,Educational,5,Male,New Year,Cognitive Skills,Constructive Play
-282,33,Create beats with this electric beat drum rhythm kit,Musical Toys,4,Female,New Year,Fine Motor Skills,Musical Play
+282,33,Create beats with this electric beat drum rhythm kit,Musical,4,Female,New Year,Fine Motor Skills,Musical Play
 283,16,Embark on a space adventure with this rocket launch set,Sports and Outdoor Games,4,Male,Easter,Imagination,Outdoor Play
 284,4,Explore the jungle with these safari animal discovery figures,Stuffed Animals,3,Male,Thanksgiving,Imagination,Pretend Play
 285,14,Construct creative wonders with this builder's workshop creative construction set,Educational,4,Male,Christmas,Fine Motor Skills,Constructive Play
@@ -295,34 +295,34 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 294,24,Build futuristic creations with the RoboTech Engineer Building Blocks,Educational,5,Male,New Year,Fine Motor Skills,Constructive Play
 295,5,Unearth dinosaur fossils with the Dinosaur Explorer Digging Kit,Educational,6,Male,Christmas,Cognitive Skills,Scientific Exploration
 296,11,Ride in royal style with the Princess Royal Carriage,Pretend Play,8,Female,Thanksgiving,Imagination,Pretend Play
-297,17,Invent and learn with the Junior Inventor Robotics Lab,STEM Toys,9,Male,Thanksgiving,Cognitive Skills,Constructive Play
+297,17,Invent and learn with the Junior Inventor Robotics Lab,STEM,9,Male,Thanksgiving,Cognitive Skills,Constructive Play
 298,14,Launch space missions with the Space Command Shuttle Expedition,Science and Nature,6,Male,Easter,Imagination,Pretend Play
 299,19,Embark on a safari with the Animal Safari Jeep Adventure,Outdoor Play,8,Male,Thanksgiving,Imagination,Outdoor Play
 300,8,Rule a fairy tale kingdom with this magical castle playset,Pretend Play,8,Female,Thanksgiving,Imagination,Pretend Play
-301,23,Create musical harmony with the Music Maestro Keyboard,Musical Toys,4,Female,New Year,Fine Motor Skills,Musical Play
+301,23,Create musical harmony with the Music Maestro Keyboard,Musical,4,Female,New Year,Fine Motor Skills,Musical Play
 302,15,Challenge friends with the Retro Arcade Gaming Challenge,Electronics,6,Male,Christmas,Cognitive Skills,Imaginative Play
 303,40,Explore artistic wonders with the Sketch Studio,Arts and Crafts,5,Male,Thanksgiving,Fine Motor Skills,Artistic Play
 304,36,Shoot hoops like a sports superstar with this basketball hoop,Sports and Outdoor Games,4,Male,Thanksgiving,Physical Activity,Sports Play
 305,38,Explore wildlife with the Safari Binocular Discovery set,Science and Nature,6,Male,Christmas,Cognitive Skills,Exploration Play
 306,29,Care for magical unicorns in the Unicorn Stable Playset,Pretend Play,8,Female,New Year,Imagination,Pretend Play
-307,15,Experiment with the DIY Science Lab Chemistry Kit,STEM Toys,6,Male,Easter,Cognitive Skills,Scientific Exploration
+307,15,Experiment with the DIY Science Lab Chemistry Kit,STEM,6,Male,Easter,Cognitive Skills,Scientific Exploration
 308,24,Experience speed with the Racing Pro Turbo Car Challenge,Sports and Outdoor Games,4,Male,New Year,Physical Activity,Outdoor Play
 309,37,Build fantastical castles with these building blocks,Educational,5,Male,Thanksgiving,Fine Motor Skills,Constructive Play
-310,16,Take the stage with the Pop Star Stage Performance set,Musical Toys,4,Female,Christmas,Imagination,Pretend Play
+310,16,Take the stage with the Pop Star Stage Performance set,Musical,4,Female,Christmas,Imagination,Pretend Play
 311,21,Discover the cosmos with the Space Explorer Telescope,Science and Nature,6,Male,Easter,Cognitive Skills,Exploration Play
 312,26,Create digital art with the Pixel Power Digital Art Studio,Arts and Crafts,5,Male,New Year,Fine Motor Skills,Artistic Play
 313,24,Embark on a puzzle quest with mythical creatures,Educational,7,Male,Easter,Cognitive Skills,Constructive Play
 314,1,Explore the great outdoors with the Outdoor Explorer Adventure Kit,Science and Nature,5,Male,Thanksgiving,Imagination,Outdoor Play
-315,1,Learn coding with the Robot Squad Coding Adventure,STEM Toys,9,Male,Thanksgiving,Cognitive Skills,Technology Play
+315,1,Learn coding with the Robot Squad Coding Adventure,STEM,9,Male,Thanksgiving,Cognitive Skills,Technology Play
 316,9,Train to be a superhero in the Superhero Training Headquarters,Pretend Play,8,Male,Thanksgiving,Imagination,Pretend Play
 317,28,Enter an enchanted forest with these fairy dolls,Dolls and Accessories,8,Female,Easter,Imagination,Pretend Play
 318,21,Build with the Construction Crew Bulldozer Builder set,Educational,5,Male,Easter,Fine Motor Skills,Constructive Play
 319,31,Explore the world with the Smart Explorer Interactive Globe,Science and Nature,6,Male,Easter,Cognitive Skills,Exploration Play
 320,18,Host royal tea parties in the Princess Tea Party Castle,Pretend Play,8,Female,Easter,Social Skills,Pretend Play
 321,32,Experience the thrill with the Ultimate Raceway Car Track Set,Sports and Outdoor Games,4,Male,Easter,Physical Activity,Outdoor Play
-322,15,Brew magical potions with the Magic Science Potion Kit,STEM Toys,6,Male,Christmas,Cognitive Skills,Scientific Exploration
+322,15,Brew magical potions with the Magic Science Potion Kit,STEM,6,Male,Christmas,Cognitive Skills,Scientific Exploration
 323,39,Play with adorable animals in the Farmyard Friends Animal Barn,Stuffed Animals,3,Male,Christmas,Imagination,Pretend Play
-324,13,Build your own robots with the Robotics Engineer DIY Kit,STEM Toys,9,Male,New Year,Cognitive Skills,Constructive Play
+324,13,Build your own robots with the Robotics Engineer DIY Kit,STEM,9,Male,New Year,Cognitive Skills,Constructive Play
 325,38,Embark on a safari adventure in this play tent,Outdoor Play,8,Male,Easter,Imagination,Pretend Play
 326,32,Create an igloo home with the Penguin Pals Igloo Building Set,Educational,5,Male,Christmas,Imagination,Pretend Play
 327,39,Experience space travel with the Rocket Launch Astronaut Set,Science and Nature,4,Male,Christmas,Imagination,Pretend Play
@@ -331,46 +331,46 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 330,29,Become a super spy with the Detective Kit,Pretend Play,5,Male,New Year,Imagination,Pretend Play
 331,6,Secure your retro games in the Gamer Console Vault,Electronics,6,Male,Thanksgiving,Cognitive Skills,Imaginative Play
 332,17,Embark on magical adventures in the Enchanted Treehouse,Pretend Play,8,Male,New Year,Imagination,Pretend Play
-333,38,Conduct a symphony with the Musical Symphony Orchestra Set,Musical Toys,4,Male,Christmas,Fine Motor Skills,Musical Play
-334,14,Make friends with the Robot Buddy Interactive Companion,Interactive Toys,7,Male,New Year,Imagination,Pretend Play
+333,38,Conduct a symphony with the Musical Symphony Orchestra Set,Musical,4,Male,Christmas,Fine Motor Skills,Musical Play
+334,14,Make friends with the Robot Buddy Interactive Companion,Interactive,7,Male,New Year,Imagination,Pretend Play
 335,2,Explore the jungle with the Safari Animal Exploration set,Science and Nature,7,Male,Christmas,Imagination,Outdoor Play
 336,39,Embark on a wild journey with the Majestic Jungle Explorer Kit,Outdoor Play,4,Male,New Year,Imagination,Outdoor Play
 337,24,Join a cute penguin parade in the Penguin Parade Igloo Playset,Pretend Play,8,Male,Thanksgiving,Imagination,Pretend Play
-338,6,Dance to the funky beat with this interactive Dance Mat,Musical Toys,9,Male,New Year,Physical Activity,Musical Play
+338,6,Dance to the funky beat with this interactive Dance Mat,Musical,9,Male,New Year,Physical Activity,Musical Play
 339,26,Unearth dinosaur fossils with the Dino Dig Adventure Excavator,Educational,6,Male,New Year,Fine Motor Skills,Outdoor Play
 340,37,Transform into a fairytale princess with this Dress-Up Trunk,Pretend Play,8,Female,Thanksgiving,Social Skills,Pretend Play
 341,14,Score goals in the Super Soccer Showdown Goal Set,Sports and Outdoor Games,4,Male,Christmas,Physical Activity,Sports Play
-342,34,Create robotic wonders with the Robot Rangers Building Lab,STEM Toys,9,Male,New Year,Cognitive Skills,Constructive Play
+342,34,Create robotic wonders with the Robot Rangers Building Lab,STEM,9,Male,New Year,Cognitive Skills,Constructive Play
 343,26,Cultivate magic in the Enchanted Unicorn Garden playset,Pretend Play,8,Female,Christmas,Imagination,Pretend Play
 344,15,Become a junior chef with the Cooking Academy playset,Pretend Play,5,Male,New Year,Social Skills,Pretend Play
 345,32,Explore ocean depths with the Underwater Adventure Submarine,Outdoor Play,8,Male,Thanksgiving,Imagination,Outdoor Play
 346,32,Build with the Construction Crew Crane Builder set,Educational,5,Male,Christmas,Fine Motor Skills,Constructive Play
-347,13,Learn wizardry with the Fantasy Wizard Spellbook Kit,STEM Toys,6,Male,New Year,Cognitive Skills,Imagination
+347,13,Learn wizardry with the Fantasy Wizard Spellbook Kit,STEM,6,Male,New Year,Cognitive Skills,Imagination
 348,23,Experience retro racing with the Arcade Racing Challenge,Electronics,6,Male,New Year,Physical Activity,Outdoor Play
 349,29,Embark on an adventure with the Adventure Quest Map Compass,Adventure,5,Male,Thanksgiving,Cognitive Skills,Outdoor Play
 350,24,Create masterpieces with the Artistic Masterpiece Studio,Arts and Crafts,5,Female,Easter,Fine Motor Skills,Artistic Play
 351,27,Shoot hoops like a pro with the Sports Pro Basketball Hoop,Sports and Outdoor Games,4,Female,Thanksgiving,Physical Activity,Sports Play
 352,12,Explore wildlife with the Safari Explorer Kit,Science and Nature,6,Female,Thanksgiving,Imagination,Outdoor Play
 353,37,Conquer dragons in the Dragon's Lair Castle Playset,Pretend Play,8,Male,New Year,Imagination,Pretend Play
-354,28,Experiment with the DIY Science Lab Physics Kit,STEM Toys,6,Female,New Year,Cognitive Skills,Scientific Exploration
+354,28,Experiment with the DIY Science Lab Physics Kit,STEM,6,Female,New Year,Cognitive Skills,Scientific Exploration
 355,27,Feel the speed with the Racing Turbo Car Speedway,Sports and Outdoor Games,4,Female,Christmas,Physical Activity,Outdoor Play
 356,14,Build enchanting castles with these Building Blocks,Educational,5,Female,New Year,Fine Motor Skills,Constructive Play
-357,14,Take the stage with the Pop Star Concert Stage set,Musical Toys,4,Female,Thanksgiving,Imagination,Pretend Play
+357,14,Take the stage with the Pop Star Concert Stage set,Musical,4,Female,Thanksgiving,Imagination,Pretend Play
 358,18,Discover the cosmos with the Space Explorer Telescope Kit,Science and Nature,6,Female,New Year,Cognitive Skills,Exploration Play
 359,3,Be a hero with the Firefighter Rescue Truck Adventure,Pretend Play,7,Male,Christmas,Imagination,Pretend Play
 360,30,Create digital art with the Pixel Art Creative Studio,Arts and Crafts,5,Female,Easter,Fine Motor Skills,Artistic Play
 361,22,Embark on a puzzle safari with mythical creatures,Educational,7,Female,Thanksgiving,Cognitive Skills,Problem Solving
 362,1,Explore the great outdoors with the Outdoor Discovery Adventure Kit,Science and Nature,5,Female,Easter,Cognitive Skills,Exploration Play
-363,13,Learn coding with the Robot Coding Squad Adventure,STEM Toys,9,Female,Christmas,Cognitive Skills,Technology Play
+363,13,Learn coding with the Robot Coding Squad Adventure,STEM,9,Female,Christmas,Cognitive Skills,Technology Play
 364,11,Train to be a superhero in the Superhero Headquarters Training Grounds,Pretend Play,8,Male,Easter,Social Skills,Pretend Play
 365,15,Enter an enchanted forest with these Friends Dolls,Dolls and Accessories,8,Female,Thanksgiving,Imagination,Pretend Play
 366,1,Build with the Construction Crew Excavator Builder set,Educational,5,Female,Thanksgiving,Fine Motor Skills,Constructive Play
 367,1,Explore the world with the Smart Explorer Globe Explorer,Science and Nature,6,Female,Christmas,Cognitive Skills,Exploration Play
 368,27,Host royal tea parties in the Princess Tea Time Castle,Pretend Play,8,Female,Thanksgiving,Social Skills,Pretend Play
 369,21,Experience the thrill with the Ultimate Racecar Track Set,Sports and Outdoor Games,4,Female,Christmas,Physical Activity,Imaginative Play
-370,7,Brew magical potions with the Magic Chemistry Potion Kit,STEM Toys,6,Female,Easter,Cognitive Skills,Scientific Exploration
+370,7,Brew magical potions with the Magic Chemistry Potion Kit,STEM,6,Female,Easter,Cognitive Skills,Scientific Exploration
 371,27,Play with adorable animals in the Farmyard Animal Friends Barn,Stuffed Animals,3,Female,Christmas,Imagination,Pretend Play
-372,28,Build your own robots with the Robotics Engineer Workshop,STEM Toys,9,Female,Easter,Cognitive Skills,Technology Play
+372,28,Build your own robots with the Robotics Engineer Workshop,STEM,9,Female,Easter,Cognitive Skills,Technology Play
 373,17,Embark on a safari adventure in this playhouse,Outdoor Play,8,Female,New Year,Imagination,Imaginative Play
 374,23,Create an igloo paradise with the Penguin Paradise Igloo Set,Educational,5,Female,New Year,Fine Motor Skills,Constructive Play
 375,34,Learn and play with the Interactive Learning Tablet Deluxe,Educational,7,Female,Easter,Cognitive Skills,Interactive Learning
@@ -382,47 +382,47 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 381,23,Learn the alphabet with these Colorful Alphabet Learning Blocks,Educational,5,Female,Christmas,Cognitive Skills,Constructive Play
 382,33,Secure your retro games in the Gamer Console Vault Deluxe,Electronics,6,Male,Christmas,Cognitive Skills,Technology Play
 383,31,Embark on magical quests in the Enchanted Treehouse Quest,Pretend Play,8,Female,New Year,Imagination,Imaginative Play
-384,8,Conduct a symphony with the Musical Symphony Orchestra Conductor,Musical Toys,4,Female,New Year,Hand-Eye Coordination,Music Play
-385,40,Make friends with the Robot Companion Interactive Buddy,Interactive Toys,7,Female,Thanksgiving,Cognitive Skills,Interactive Play
+384,8,Conduct a symphony with the Musical Symphony Orchestra Conductor,Musical,4,Female,New Year,Hand-Eye Coordination,Music Play
+385,40,Make friends with the Robot Companion Interactive Buddy,Interactive,7,Female,Thanksgiving,Cognitive Skills,Interactive Play
 386,32,Explore the jungle with the Safari Animal Safari Adventure set,Science and Nature,7,Female,Thanksgiving,Imagination,Exploration Play
 387,22,Build enchanting castles with this Building Set,Educational,5,Female,Christmas,Fine Motor Skills,Constructive Play
 388,27,Pilot a mech warrior robot with the RoboTech Mech Warrior Robot,Action Figures,6,Male,New Year,Cognitive Skills,Technology Play
 389,29,Embark on a cosmic journey with the Sparkling Galaxy Adventure Kit,Science and Nature,4,Female,Thanksgiving,Imagination,Exploration Play
-390,28,Explore different eras with the Time Traveler Chrono Cruiser,STEM Toys,5,Female,New Year,Imagination,Imaginative Play
+390,28,Explore different eras with the Time Traveler Chrono Cruiser,STEM,5,Female,New Year,Imagination,Imaginative Play
 391,34,Conquer icy challenges with the Arctic Explorer Ice Fortress,Pretend Play,8,Female,Christmas,Cognitive Skills,Exploration Play
-392,37,Dance to the funky beats with the Funky Groove Dance Revolution,Musical Toys,9,Female,Easter,Physical Activity,Music Play
+392,37,Dance to the funky beats with the Funky Groove Dance Revolution,Musical,9,Female,Easter,Physical Activity,Music Play
 393,20,Uncover prehistoric secrets with the Dino Excavation Adventure Truck,Educational,6,Male,Easter,Cognitive Skills,Scientific Exploration
 394,30,Transform into royalty with the Enchanting Princess Wardrobe,Pretend Play,8,Female,Easter,Imagination,Pretend Play
 395,10,Become a soccer pro with the Soccer Pro Goal Scorer Set,Sports and Outdoor Games,4,Female,Christmas,Physical Activity,Sports Play
-396,24,Innovate with robots in the Robo Innovator Engineering Lab,STEM Toys,9,Female,Christmas,Cognitive Skills,Constructive Play
+396,24,Innovate with robots in the Robo Innovator Engineering Lab,STEM,9,Female,Christmas,Cognitive Skills,Constructive Play
 397,30,Create magic in the Mystical Unicorn Fantasy Garden playset,Pretend Play,8,Female,New Year,Imagination,Pretend Play
 398,2,Become a young chef at the Culinary School playset,Pretend Play,5,Female,Easter,Social Skills,Pretend Play
 399,8,Discover ocean mysteries with the Deep Sea Explorer Submarine,Outdoor Play,8,Female,New Year,Cognitive Skills,Exploration Play
 400,33,Build with the Construction Crew Tower Crane set,Educational,5,Female,Christmas,Fine Motor Skills,Constructive Play
-401,23,Practice enchanting spells with the Fantasy Enchantress Spell Kit,STEM Toys,6,Female,New Year,Imagination,Pretend Play
+401,23,Practice enchanting spells with the Fantasy Enchantress Spell Kit,STEM,6,Female,New Year,Imagination,Pretend Play
 402,18,Compete in retro racing with the Retro Racing Arcade Showdown,Electronics,6,Male,New Year,Physical Activity,Imaginative Play
 403,9,Embark on thrilling adventures with the Adventure Seeker Map Compass,Adventure,5,Female,Thanksgiving,Cognitive Skills,Exploration Play
 404,8,Express creativity with the Canvas Artistic Expression Studio,Arts and Crafts,5,Female,Christmas,Fine Motor Skills,Artistic Play
 405,15,Dunk like a pro with the Pro Basketball Dunker Hoop,Sports and Outdoor Games,4,Female,Christmas,Physical Activity,Sports Play
 406,22,Explore wildlife with the Wildlife Explorer Safari Kit,Science and Nature,6,Female,Thanksgiving,Cognitive Skills,Exploration Play
 407,5,Embark on a quest in the Dragon Slayer Castle Adventure,Pretend Play,8,Male,New Year,Imagination,Pretend Play
-408,18,Experiment with quantum physics in the DIY Science Lab Quantum Physics kit,STEM Toys,6,Female,New Year,Cognitive Skills,Scientific Exploration
+408,18,Experiment with quantum physics in the DIY Science Lab Quantum Physics kit,STEM,6,Female,New Year,Cognitive Skills,Scientific Exploration
 409,25,Feel the speed with the Turbo Racing Car Speedway,Sports and Outdoor Games,4,Female,Thanksgiving,Physical Activity,Imaginative Play
 410,28,Build a fairytale kingdom with these Building Blocks,Educational,5,Female,New Year,Fine Motor Skills,Constructive Play
-411,13,Take the grand stage with the Pop Star Concert Grand Stage,Musical Toys,4,Female,Easter,Imagination,Pretend Play
+411,13,Take the grand stage with the Pop Star Concert Grand Stage,Musical,4,Female,Easter,Imagination,Pretend Play
 412,10,Be a hero with the Firefighter Rescue Truck Heroes set,Pretend Play,7,Male,Thanksgiving,Social Skills,Pretend Play
 413,1,Create digital masterpieces with the Pixel Art Master Creative Studio,Arts and Crafts,5,Female,Thanksgiving,Fine Motor Skills,Artistic Play
 414,17,Explore the great outdoors with the Outdoor Discovery Adventure Expedition,Science and Nature,5,Female,Thanksgiving,Cognitive Skills,Exploration Play
-415,38,Learn coding with the Robot Coding Squad Adventure Quest,STEM Toys,9,Female,New Year,Cognitive Skills,Technology Play
+415,38,Learn coding with the Robot Coding Squad Adventure Quest,STEM,9,Female,New Year,Cognitive Skills,Technology Play
 416,39,Train to be a superhero in the Superhero Headquarters Training Grounds Deluxe,Pretend Play,8,Male,New Year,Social Skills,Pretend Play
 417,39,Enter an enchanted forest with the Enchanted Forest Friends Dollhouse,Dolls and Accessories,8,Female,Easter,Imagination,Pretend Play
 418,27,Build with the Construction Crew Tower Crane Builder Deluxe set,Educational,5,Female,Easter,Fine Motor Skills,Constructive Play
 419,12,Explore the world with the Smart Explorer Globe Explorer Plus,Science and Nature,6,Female,Thanksgiving,Cognitive Skills,Exploration Play
 420,21,Host royal tea parties in the Princess Tea Time Castle Deluxe,Pretend Play,8,Female,Easter,Social Skills,Pretend Play
 421,40,Experience extreme thrills with the Ultimate Racecar Track Set Extreme,Sports and Outdoor Games,4,Female,Christmas,Physical Activity,Imaginative Play
-422,27,Brew magical potions with the Magic Chemistry Potion Kit Supreme,STEM Toys,6,Female,New Year,Cognitive Skills,Scientific Exploration
+422,27,Brew magical potions with the Magic Chemistry Potion Kit Supreme,STEM,6,Female,New Year,Cognitive Skills,Scientific Exploration
 423,10,Play with adorable animals in the Farmyard Animal Friends Barn Deluxe,Stuffed Animals,3,Female,New Year,Imagination,Pretend Play
-424,4,Build your own robots with the Robotics Engineer Workshop Pro,STEM Toys,9,Female,New Year,Cognitive Skills,Technology Play
+424,4,Build your own robots with the Robotics Engineer Workshop Pro,STEM,9,Female,New Year,Cognitive Skills,Technology Play
 425,25,Create an igloo paradise with the Penguin Paradise Igloo Set Deluxe,Educational,5,Female,Christmas,Fine Motor Skills,Constructive Play
 426,23,Learn and play with the Interactive Learning Tablet Deluxe Pro,Educational,7,Female,Thanksgiving,Cognitive Skills,Interactive Learning
 427,17,Experience space travel with the Astronaut Launch Expedition Ultimate,Science and Nature,4,Female,Christmas,Imagination,Imaginative Play
@@ -433,21 +433,21 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 432,2,Learn the alphabet with these Colorful Alphabet Learning Blocks Ultimate,Educational,5,Female,Easter,Cognitive Skills,Constructive Play
 433,3,Secure your retro games in the Gamer Console Vault Deluxe Pro,Electronics,6,Male,Thanksgiving,Cognitive Skills,Technology Play
 434,12,Embark on magical quests in the Enchanted Treehouse Quest Supreme,Pretend Play,8,Female,Easter,Imagination,Imaginative Play
-435,21,Conduct a symphony with the Musical Symphony Orchestra Conductor Pro,Musical Toys,4,Female,Thanksgiving,Hand-Eye Coordination,Music Play
-436,12,Make friends with the Robot Companion Interactive Buddy Master,Interactive Toys,7,Female,Thanksgiving,Cognitive Skills,Interactive Play
-437,38,Unleash creativity with the RoboCraft Engineering Set,STEM Toys,5,Female,New Year,Cognitive Skills,Constructive Play
+435,21,Conduct a symphony with the Musical Symphony Orchestra Conductor Pro,Musical,4,Female,Thanksgiving,Hand-Eye Coordination,Music Play
+436,12,Make friends with the Robot Companion Interactive Buddy Master,Interactive,7,Female,Thanksgiving,Cognitive Skills,Interactive Play
+437,38,Unleash creativity with the RoboCraft Engineering Set,STEM,5,Female,New Year,Cognitive Skills,Constructive Play
 438,40,Embark on a cosmic adventure with the Starship Galaxy Explorer,Science and Nature,6,Female,New Year,Imagination,Exploration Play
 439,17,Conquer icy challenges with the Arctic Adventure Base Camp,Outdoor Play,4,Female,Thanksgiving,Cognitive Skills,Exploration Play
-440,23,Dance to the electric beats with the Electric Groove Dance Mat,Musical Toys,4,Female,Easter,Physical Activity,Music Play
+440,23,Dance to the electric beats with the Electric Groove Dance Mat,Musical,4,Female,Easter,Physical Activity,Music Play
 441,20,Uncover prehistoric wonders with the Dino Explorer Dig Kit,Educational,6,Male,New Year,Cognitive Skills,Scientific Exploration
 442,34,Rule your kingdom with the Enchanted Princess Castle,Pretend Play,8,Female,Easter,Imagination,Pretend Play
 443,9,Become a soccer star with the Super Striker Soccer Set,Sports and Outdoor Games,4,Female,Thanksgiving,Physical Activity,Sports Play
-444,17,Invent and build with the Inventor's Robotics Lab,STEM Toys,9,Female,Easter,Cognitive Skills,Constructive Play
+444,17,Invent and build with the Inventor's Robotics Lab,STEM,9,Female,Easter,Cognitive Skills,Constructive Play
 445,32,Create magic in the Majestic Unicorn Palace playset,Pretend Play,8,Female,Thanksgiving,Imagination,Pretend Play
 446,14,Become a little chef with the Cooking Playset,Pretend Play,5,Female,Thanksgiving,Social Skills,Pretend Play
 447,30,Launch into deep space with the Deep Space Explorer Rocket,Science and Nature,5,Female,Christmas,Imagination,Exploration Play
 448,2,Build and construct with the Builder's Construction Zone,Educational,8,Female,New Year,Fine Motor Skills,Constructive Play
-449,15,Learn mystical arts with the Magical Sorcerer's Kit,STEM Toys,6,Female,Thanksgiving,Imagination,Pretend Play
+449,15,Learn mystical arts with the Magical Sorcerer's Kit,STEM,6,Female,Thanksgiving,Imagination,Pretend Play
 450,32,Experience retro gaming with the Arcade Console,Electronics,6,Male,Christmas,Cognitive Skills,Technology Play
 451,39,Embark on exciting adventures with the Explorer's Adventure Compass,Adventure,5,Female,Christmas,Cognitive Skills,Exploration Play
 452,1,Create masterpieces with the Artistic Mastermind Studio,Arts and Crafts,5,Female,Thanksgiving,Fine Motor Skills,Artistic Play
@@ -455,20 +455,20 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 454,24,Explore wildlife with the Wildlife Safari Explorer Set,Science and Nature,6,Female,Thanksgiving,Cognitive Skills,Exploration Play
 455,7,Feel the speed with the Racing Turbo Car Track,Sports and Outdoor Games,4,Female,Thanksgiving,Physical Activity,Imaginative Play
 456,16,Build enchanted castles with Fantasy Castle Building Bricks,Educational,5,Female,Christmas,Fine Motor Skills,Constructive Play
-457,16,Take the mega stage with the Pop Star Concert Mega Stage,Musical Toys,4,Female,Christmas,Imagination,Pretend Play
+457,16,Take the mega stage with the Pop Star Concert Mega Stage,Musical,4,Female,Christmas,Imagination,Pretend Play
 458,29,Discover the cosmos with the Space Explorer Telescope Kit Supreme,Science and Nature,6,Female,New Year,Cognitive Skills,Exploration Play
 459,20,Be a hero with the Firefighter Rescue Heroes Truck,Pretend Play,7,Male,Christmas,Social Skills,Pretend Play
 460,15,Create digital art with the Pixel Art Creator Studio,Arts and Crafts,5,Female,Christmas,Fine Motor Skills,Artistic Play
 461,29,Embark on a puzzle expedition with mythical creatures,Educational,7,Female,Christmas,Cognitive Skills,Problem Solving
 462,9,Explore the great outdoors with the Outdoor Discovery Adventure Quest,Science and Nature,5,Female,Thanksgiving,Cognitive Skills,Exploration Play
-463,21,Embark on a coding mission with the Robot Coding Squad Mission,STEM Toys,9,Female,New Year,Cognitive Skills,Technology Play
+463,21,Embark on a coding mission with the Robot Coding Squad Mission,STEM,9,Female,New Year,Cognitive Skills,Technology Play
 464,39,Train to be a superhero at the Superhero Training Grounds,Pretend Play,8,Male,New Year,Social Skills,Pretend Play
 465,9,Build with the Construction Crew Tower Builder set,Educational,5,Female,Easter,Fine Motor Skills,Constructive Play
 466,16,Explore the world with the Smart Explorer Globe Adventure,Science and Nature,6,Female,Christmas,Cognitive Skills,Exploration Play
 467,9,Experience the ultimate racecar thrills with the Ultimate Racecar Speedway,Sports and Outdoor Games,4,Female,New Year,Physical Activity,Imaginative Play
-468,5,Brew magical potions with the Magic Alchemy Potion Kit,STEM Toys,6,Female,New Year,Cognitive Skills,Scientific Exploration
+468,5,Brew magical potions with the Magic Alchemy Potion Kit,STEM,6,Female,New Year,Cognitive Skills,Scientific Exploration
 469,30,Play with adorable animals in the Farmyard Animal Play Barn,Stuffed Animals,3,Female,Christmas,Imagination,Pretend Play
-470,36,Build your own robots with the Robotics Engineer Lab,STEM Toys,9,Female,Christmas,Cognitive Skills,Technology Play
+470,36,Build your own robots with the Robotics Engineer Lab,STEM,9,Female,Christmas,Cognitive Skills,Technology Play
 471,16,Embark on a safari expedition in this playhouse,Outdoor Play,8,Female,Easter,Imagination,Imaginative Play
 472,2,Create an igloo paradise with the Penguin Paradise Igloo,Educational,5,Female,New Year,Fine Motor Skills,Constructive Play
 473,18,Learn and play with the Interactive Learning Tablet Pro,Educational,7,Female,Easter,Cognitive Skills,Interactive Learning
@@ -480,21 +480,21 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 479,26,Learn the alphabet with these Colorful Alphabet Learning Blocks Pro,Educational,5,Female,New Year,Cognitive Skills,Constructive Play
 480,38,Secure your retro games in the Gamer Console Vault Pro,Electronics,6,Male,Thanksgiving,Cognitive Skills,Technology Play
 481,24,Embark on magical adventures in the Enchanted Treehouse Adventures,Pretend Play,8,Female,Easter,Imagination,Imaginative Play
-482,24,Conduct a symphony with the Musical Symphony Orchestra Maestro,Musical Toys,4,Female,Christmas,Hand-Eye Coordination,Music Play
+482,24,Conduct a symphony with the Musical Symphony Orchestra Maestro,Musical,4,Female,Christmas,Hand-Eye Coordination,Music Play
 483,32,Embark on thrilling adventures with the Adventure Seeker Explorer Kit,Outdoor Play,5,Female,Easter,Cognitive Skills,Exploration Play
-484,39,Stir up enchanting potions with the Magical Potion Making Lab,STEM Toys,5,Female,New Year,Cognitive Skills,Scientific Exploration
+484,39,Stir up enchanting potions with the Magical Potion Making Lab,STEM,5,Female,New Year,Cognitive Skills,Scientific Exploration
 485,20,Train to be a superhero with the Superhero Adventure Training Set,Pretend Play,8,Female,New Year,Social Skills,Pretend Play
 486,14,Uncover ancient fossils with the Dinosaur Discovery Expedition,Science and Nature,6,Female,New Year,Cognitive Skills,Scientific Exploration
 487,20,Build magical kingdoms with Fantasy Kingdom Building Blocks,Educational,8,Female,New Year,Fine Motor Skills,Constructive Play
-488,38,Compose musical masterpieces with the Music Maestro Keyboard Symphony,Musical Toys,5,Female,New Year,Hand-Eye Coordination,Music Play
+488,38,Compose musical masterpieces with the Music Maestro Keyboard Symphony,Musical,5,Female,New Year,Hand-Eye Coordination,Music Play
 489,18,Experience the Wild West with the Cowboy Adventure Set,Pretend Play,4,Male,Thanksgiving,Imagination,Pretend Play
-490,40,Take on coding challenges with the Robotic Coding Challenge Lab,STEM Toys,9,Female,Easter,Cognitive Skills,Technology Play
+490,40,Take on coding challenges with the Robotic Coding Challenge Lab,STEM,9,Female,Easter,Cognitive Skills,Technology Play
 491,9,Explore magical meadows with the Enchanted Unicorn Meadow,Pretend Play,8,Female,Christmas,Imagination,Pretend Play
 492,9,Train like a soccer pro with the Soccer Star Pro Training Kit,Sports and Outdoor Games,4,Female,Easter,Physical Activity,Sports Play
 493,21,Explore distant planets with the Robot Explorer Space Rover,Science and Nature,5,Female,New Year,Cognitive Skills,Exploration Play
 494,10,Create artistic masterpieces with the Artistic Masterpiece Easel Set,Arts and Crafts,5,Female,Easter,Fine Motor Skills,Artistic Play
 495,27,Cuddle with adorable farmyard friends in the Plush Collection,Stuffed Animals,3,Female,Christmas,Imagination,Pretend Play
-496,7,Engage in smart science experiments with the Smart Science Explorer Kit,STEM Toys,6,Female,Thanksgiving,Cognitive Skills,Scientific Exploration
+496,7,Engage in smart science experiments with the Smart Science Explorer Kit,STEM,6,Female,Thanksgiving,Cognitive Skills,Scientific Exploration
 497,12,Host royal tea parties in the Princess Palace Tea Party Set,Pretend Play,8,Female,Thanksgiving,Social Skills,Pretend Play
 498,1,Become a racing champion on the Turbo Track,Sports and Outdoor Games,4,Female,Easter,Physical Activity,Imaginative Play
 499,4,Embark on a pirate adventure with the Treasure Map,Outdoor Play,4,Male,Thanksgiving,Imagination,Exploration Play
@@ -510,20 +510,20 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 509,37,Secure your retro games in the Arcade Gamer Vault,Electronics,6,Male,Christmas,Cognitive Skills,Technology Play
 510,10,Embark on a magical journey with the Magic Rainbow Adventure Kit,Outdoor Play,4,Female,New Year,Imagination,Exploration Play
 511,9,Discover distant galaxies with the Space Explorer Discovery Telescope,Science and Nature,6,Female,Thanksgiving,Cognitive Skills,Exploration Play
-512,26,Create fairy potions in the Enchanted Garden Fairy Lab,STEM Toys,5,Female,Thanksgiving,Imagination,Pretend Play
+512,26,Create fairy potions in the Enchanted Garden Fairy Lab,STEM,5,Female,Thanksgiving,Imagination,Pretend Play
 513,21,Embark on a dinosaur excavation adventure,Science and Nature,5,Female,Easter,Cognitive Skills,Scientific Exploration
 514,24,Build magical castles with Fantasy Castle Building Blocks,Educational,8,Female,New Year,Fine Motor Skills,Constructive Play
-515,26,Create harmonious melodies with the Harmony Melody Music Keyboard,Musical Toys,5,Female,Easter,Hand-Eye Coordination,Music Play
+515,26,Create harmonious melodies with the Harmony Melody Music Keyboard,Musical,5,Female,Easter,Hand-Eye Coordination,Music Play
 516,33,Embark on a wild west adventure with the Cowboy Set,Pretend Play,4,Male,Thanksgiving,Imagination,Pretend Play
-517,11,Embark on a coding quest with the Robotic Coding Quest Lab,STEM Toys,9,Female,New Year,Cognitive Skills,Technology Play
+517,11,Embark on a coding quest with the Robotic Coding Quest Lab,STEM,9,Female,New Year,Cognitive Skills,Technology Play
 518,34,Master soccer skills with the Pro Training Masterclass,Sports and Outdoor Games,4,Female,Easter,Physical Activity,Sports Play
 519,25,Embark on a space adventure with the Robot Explorer Space Adventure,Science and Nature,5,Female,Easter,Cognitive Skills,Exploration Play
 520,19,Create artistic masterpieces with the Easel Studio,Arts and Crafts,5,Female,Thanksgiving,Fine Motor Skills,Artistic Play
 521,2,Discover a plush wonderland with Farmyard Friends,Stuffed Animals,3,Female,Thanksgiving,Imagination,Pretend Play
-522,16,Discover smart science with the Smart Science Discovery Lab,STEM Toys,6,Female,Thanksgiving,Cognitive Skills,Scientific Exploration
+522,16,Discover smart science with the Smart Science Discovery Lab,STEM,6,Female,Thanksgiving,Cognitive Skills,Scientific Exploration
 523,35,Experience a tea fantasy in the Princess Palace Tea Fantasy Set,Pretend Play,8,Female,New Year,Social Skills,Pretend Play
 524,37,Become a racing champion on the Turbo Speedway,Sports and Outdoor Games,4,Female,Easter,Physical Activity,Imaginative Play
-525,38,Innovate with robots in the Engineer Innovation Lab,STEM Toys,9,Female,Christmas,Cognitive Skills,Constructive Play
+525,38,Innovate with robots in the Engineer Innovation Lab,STEM,9,Female,Christmas,Cognitive Skills,Constructive Play
 526,7,Rescue animals with the Pet Vet Animal Rescue Clinic,Pretend Play,8,Female,New Year,Social Skills,Pretend Play
 527,3,Embark on fairy tale adventures with the Storybook Adventures,Books and Learning,5,Female,New Year,Imagination,Pretend Play
 528,28,Explore dinosaurs on a safari with the Jeep Expedition,Action Figures,4,Female,Easter,Cognitive Skills,Exploration Play
@@ -537,9 +537,9 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 536,6,Exciting space explorer action figures set,Action Figures,8,Female,Christmas,Imagination,Pretend Play
 537,35,Next-gen tablet for interactive and early education,Educational,5,Female,Thanksgiving,Cognitive Skills,Interactive Learning
 538,9,DIY robot inventor workshop for STEM education,Educational,9,Female,New Year,Cognitive Skills,Constructive Play
-539,33,Musical instruments set for budding musicians,Musical Toys,8,Female,Christmas,Hand-Eye Coordination,Music Play
+539,33,Musical instruments set for budding musicians,Musical,8,Female,Christmas,Hand-Eye Coordination,Music Play
 540,26,High-speed remote control car for thrilling racing,Remote Control,6,Female,Christmas,Physical Activity,Imaginative Play
-541,18,Gentle rattle trio for sensory exploration,Infant Toys,1,Female,Easter,Hand-Eye Coordination,Comfort Play
+541,18,Gentle rattle trio for sensory exploration,Infant,1,Female,Easter,Hand-Eye Coordination,Comfort Play
 542,25,Play dough set for imaginative sculpting fun,Arts and Crafts,8,Female,Thanksgiving,Fine Motor Skills,Artistic Play
 543,37,Assorted sports balls for outdoor active play,Outdoor Play,9,Female,New Year,Physical Activity,Outdoor Play
 544,40,Realistic kitchen playset for aspiring chefs,Pretend Play,8,Female,New Year,Social Skills,Pretend Play
@@ -548,18 +548,18 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 547,6,Mini helicopter with remote control for sky adventures,Remote Control,9,Female,Easter,Physical Activity,Outdoor Play
 548,17,Bouncy ball with handle for adventurous active play,Outdoor Play,5,Female,Easter,Physical Activity,Outdoor Play
 549,31,Complete medical kit for pretend doctor play,Pretend Play,7,Female,Easter,Social Skills,Pretend Play
-550,7,Classic wooden train set with exciting tracks,Vehicle Toys,8,Female,Christmas,Imagination,Constructive Play
+550,7,Classic wooden train set with exciting tracks,Vehicle,8,Female,Christmas,Imagination,Constructive Play
 551,9,Flexible and colorful play tunnel for galactic adventures,Outdoor Play,5,Female,Easter,Imagination,Imaginative Play
 552,7,Vibrant paper for arts and crafts projects,Arts and Crafts,5,Female,Easter,Fine Motor Skills,Artistic Play
 553,20,Assorted wooden puzzles for problem-solving,Educational,7,Female,Thanksgiving,Cognitive Skills,Problem Solving
 554,27,Kit for young nature explorers with binoculars and compass,Science and Nature,10,Female,Thanksgiving,Cognitive Skills,Exploration Play
 555,7,Soft and cute animal hand puppets for puppet theater fun,Pretend Play,8,Female,Thanksgiving,Imagination,Pretend Play
 556,40,Mini soccer ball and goal for backyard challenge,Sports and Outdoor Games,4,Female,Christmas,Physical Activity,Sports Play
-557,29,Colorful musical piano for budding young musicians,Musical Toys,4,Female,Easter,Hand-Eye Coordination,Music Play
+557,29,Colorful musical piano for budding young musicians,Musical,4,Female,Easter,Hand-Eye Coordination,Music Play
 558,21,Embark on a cosmic journey with this galaxy explorer playset,Action Figures,8,Female,Thanksgiving,Imagination,Exploration Play
 559,23,Design and build with this smart architect kit for little creators,Educational,5,Female,Easter,Cognitive Skills,Constructive Play
 560,6,Care for adorable toy pets with this interactive vet clinic,Pretend Play,8,Female,Easter,Social Skills,Pretend Play
-561,3,Get moving and grooving on this dynamic dance party mat,Musical Toys,8,Female,Christmas,Physical Activity,Music Play
+561,3,Get moving and grooving on this dynamic dance party mat,Musical,8,Female,Christmas,Physical Activity,Music Play
 562,3,Become a mini chef with this delightful cooking playset,Pretend Play,6,Female,Thanksgiving,Social Skills,Pretend Play
 563,40,Engage in a coding challenge with this fun and educational robot kit,Educational,6,Female,New Year,Cognitive Skills,Technology Play
 564,30,Sculpt and shape with this creative clay sculpture kit,Arts and Crafts,5,Female,Easter,Fine Motor Skills,Artistic Play
@@ -571,7 +571,7 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 570,20,Create marvels with these magnetic building blocks,Educational,8,Female,Christmas,Cognitive Skills,Constructive Play
 571,36,Transform into superheroes with this costume extravaganza,Pretend Play,8,Female,Thanksgiving,Imagination,Pretend Play
 572,39,Role-play as a medical professional with this play kit,Pretend Play,7,Female,Easter,Social Skills,Pretend Play
-573,31,Embark on a railway adventure with this wooden train set,Vehicle Toys,8,Female,Thanksgiving,Imagination,Constructive Play
+573,31,Embark on a railway adventure with this wooden train set,Vehicle,8,Female,Thanksgiving,Imagination,Constructive Play
 574,35,Discover shapes with these friendly animal cubes,Educational,3,Female,New Year,Cognitive Skills,Constructive Play
 575,13,Crawl through a safari adventure with this flexible play tunnel,Outdoor Play,5,Female,New Year,Imagination,Imaginative Play
 576,25,Get creative with this colorful paper craft kit,Arts and Crafts,5,Female,Easter,Fine Motor Skills,Artistic Play
@@ -584,12 +584,12 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 583,21,Build and code your own robots with this RoboCrafter kit,Educational,9,Female,Christmas,Cognitive Skills,Technology Play
 584,20,Host a magical tea party in this enchanted garden playset,Pretend Play,7,Female,Easter,Social Skills,Pretend Play
 585,40,Learn about the world with this interactive discovery globe,Science and Nature,5,Female,Christmas,Cognitive Skills,Exploration Play
-586,21,Become a singing superstar with this fun karaoke microphone,Musical Toys,6,Female,Christmas,Hand-Eye Coordination,Music Play
+586,21,Become a singing superstar with this fun karaoke microphone,Musical,6,Female,Christmas,Hand-Eye Coordination,Music Play
 587,22,Blast off into space with lights and sounds in this rocketship,Action Figures,4,Female,New Year,Imagination,Exploration Play
 588,27,Encourage artistic expression with this vibrant painting easel,Arts and Crafts,8,Female,Thanksgiving,Fine Motor Skills,Artistic Play
 589,17,Rescue and care for toy animals with this wildlife playset,Pretend Play,8,Female,New Year,Social Skills,Pretend Play
 590,27,Build and create with this construction builder toolbox,Educational,8,Female,Christmas,Fine Motor Skills,Constructive Play
-591,35,Create harmonious tunes with this colorful rainbow piano,Musical Toys,9,Female,New Year,Hand-Eye Coordination,Music Play
+591,35,Create harmonious tunes with this colorful rainbow piano,Musical,9,Female,New Year,Hand-Eye Coordination,Music Play
 592,7,Ride into a world of magic with this mystical unicorn carousel,Pretend Play,8,Female,Easter,Imagination,Imaginative Play
 593,33,Embark on adventures with this interactive adventure seeker backpack,Outdoor Play,5,Female,New Year,Imagination,Exploration Play
 594,36,Build your own robot friends with this engaging building set,Educational,6,Female,Easter,Fine Motor Skills,Constructive Play
@@ -610,10 +610,10 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 609,29,Create beautiful dream catchers with the colorful dream catcher kit,Arts and Crafts,5,Female,Thanksgiving,Fine Motor Skills,Artistic Play
 610,15,Dive into a mermaid's underwater adventure with this imaginative playset,Pretend Play,7,Female,Easter,Imagination,Exploration Play
 611,25,Explore the safari wildlife with this engaging puzzle,Educational,6,Female,New Year,Cognitive Skills,Problem Solving
-612,13,Go on a time-traveling adventure with the interactive adventure clock,Interactive Toys,6,Female,New Year,Cognitive Skills,Imaginative Play
+612,13,Go on a time-traveling adventure with the interactive adventure clock,Interactive,6,Female,New Year,Cognitive Skills,Imaginative Play
 613,5,Enter the magical world of dragons with the dragon castle playset,Pretend Play,8,Female,Christmas,Imagination,Pretend Play
 614,36,Experience an astronaut's spacewalk with this unique backpack,Science and Nature,5,Female,Easter,Imagination,Exploration Play
-615,19,Adopt a robotic pet companion for interactive and playful moments,Interactive Toys,7,Female,New Year,Social Skills,Pretend Play
+615,19,Adopt a robotic pet companion for interactive and playful moments,Interactive,7,Female,New Year,Social Skills,Pretend Play
 616,36,Create stunning galaxy paintings with this artistic painting kit,Arts and Crafts,6,Female,Christmas,Fine Motor Skills,Artistic Play
 617,38,Experience the Wild West with the cowboy adventure playset,Pretend Play,4,Female,Easter,Imagination,Pretend Play
 618,23,Build and explore a futuristic space station with this playset,Action Figures,6,Female,New Year,Imagination,Pretend Play
@@ -652,13 +652,13 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 651,13,Discover the wonders of the jungle with these explorer binoculars,Science and Nature,4,Female,Easter,Cognitive Skills,Exploration Play
 652,34,Patrol the streets with the police patrol motorcycle,Action Figures,8,Female,Christmas,Physical Activity,Imaginative Play
 653,2,Embark on a thrilling adventure with the Adventure Quest Board Game,Board Games,9,Female,New Year,Cognitive Skills,Problem Solving
-654,37,Build and program your own robots with the Robotics Engineer Kit,STEM Toys,10,Female,Thanksgiving,Cognitive Skills,Constructive Play
+654,37,Build and program your own robots with the Robotics Engineer Kit,STEM,10,Female,Thanksgiving,Cognitive Skills,Constructive Play
 655,12,Express your creativity with the Artistic Canvas Painting Set,Arts and Crafts,7,Female,Easter,Fine Motor Skills,Artistic Play
 656,30,Create epic superhero battles with the Superhero Action Figure Set,Action Figures,5,Female,Christmas,Imagination,Pretend Play
 657,24,Take a royal journey with the Princess Royal Carriage Set,Pretend Play,7,Female,Christmas,Imagination,Pretend Play
 658,39,Go on a prehistoric journey with the Dinosaur Fossil Expedition Kit,Science and Nature,6,Female,Thanksgiving,Cognitive Skills,Scientific Exploration
 659,28,Inspire STEM learning with the Robot Builder Workshop Kit,Educational,9,Female,Easter,Cognitive Skills,Constructive Play
-660,9,Unleash your creativity in robotics with the RoboCraze Robotics Kit,STEM Toys,9,Female,New Year,Cognitive Skills,Constructive Play
+660,9,Unleash your creativity in robotics with the RoboCraze Robotics Kit,STEM,9,Female,New Year,Cognitive Skills,Constructive Play
 661,9,Explore vibrant art with the Color Burst Art Studio,Arts and Crafts,6,Female,New Year,Fine Motor Skills,Artistic Play
 662,11,Train to become a superhero at the Superhero Training Camp,Action Figures,8,Female,Easter,Imagination,Pretend Play
 663,14,Discover the secrets of the deep sea with the Underwater Discovery Submarine,Action Figures,5,Female,New Year,Cognitive Skills,Exploration Play
@@ -671,27 +671,27 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 670,5,Explore the great outdoors with the Adventure Wilderness Survival Kit,Outdoor Play,6,Male,New Year,Imagination,Outdoor Play
 671,19,Engage in intense robot battles with the Robot Xtreme Battle Arena,Remote Control,9,Male,New Year,Physical Activity,Imaginative Play
 672,37,Operate a powerful construction crane with the MegaBuilder Construction Crane,Remote Control,5,Male,New Year,Fine Motor Skills,Constructive Play
-673,40,Invent and experiment with the FutureTech Inventor Lab,STEM Toys,9,Male,Easter,Cognitive Skills,Constructive Play
+673,40,Invent and experiment with the FutureTech Inventor Lab,STEM,9,Male,Easter,Cognitive Skills,Constructive Play
 674,3,Join the elite DinoRangers team with this action figure set,Action Figures,4,Male,Easter,Imagination,Pretend Play
 675,32,Command your own rocket launch missions with the Rocket Launch Command Center,Action Figures,6,Male,Christmas,Imagination,Outdoor Play
-676,40,Explore the world of tech gadgets with the TechGadget Explorer Kit,STEM Toys,6,Male,New Year,Cognitive Skills,Exploration Play
+676,40,Explore the world of tech gadgets with the TechGadget Explorer Kit,STEM,6,Male,New Year,Cognitive Skills,Exploration Play
 677,5,Embark on a wildlife safari adventure with the Wildlife Safari Adventure Jeep,Action Figures,5,Male,Thanksgiving,Cognitive Skills,Exploration Play
 678,19,Train to become the ultimate ninja with this Warrior Training Set,Action Figures,8,Male,Thanksgiving,Physical Activity,Sports Play
 679,17,Experience space exploration with the Futuristic Space Explorer Helmet,Pretend Play,7,Male,Easter,Imagination,Pretend Play
 680,13,Feel the thrill of super-speed racing with this Racing Track Set,Remote Control,5,Male,New Year,Physical Activity,Imaginative Play
-681,14,Become a rocket scientist with the Rocket Scientist Laboratory Kit,STEM Toys,9,Male,New Year,Cognitive Skills,Scientific Exploration
+681,14,Become a rocket scientist with the Rocket Scientist Laboratory Kit,STEM,9,Male,New Year,Cognitive Skills,Scientific Exploration
 682,28,Embark on a space odyssey in this realistic Astronaut Suit,Pretend Play,8,Male,New Year,Imagination,Exploration Play
 683,23,Construct futuristic robots with the RoboBuilders Construction Kit,Educational,6,Male,New Year,Fine Motor Skills,Constructive Play
 684,39,Become a master chef with this Junior Cooking Set,Pretend Play,4,Male,New Year,Social Skills,Pretend Play
 685,34,Create legendary races with the Racing Legends Slot Car Track,Remote Control,6,Male,Thanksgiving,Hand-Eye Coordination,Imaginative Play
-686,37,Build advanced robots with the Future Inventors Robotics Lab,STEM Toys,9,Male,Thanksgiving,Cognitive Skills,Constructive Play
+686,37,Build advanced robots with the Future Inventors Robotics Lab,STEM,9,Male,Thanksgiving,Cognitive Skills,Constructive Play
 687,33,Train like a soccer pro with the Soccer Pro Training Kit,Sports and Outdoor Games,6,Male,Thanksgiving,Physical Activity,Sports Play
 688,4,Embark on a thrilling safari with the Animal Safari Jeep Expedition,Action Figures,5,Male,Thanksgiving,Cognitive Skills,Exploration Play
 689,32,Explore dinosaur territories with the DinoQuest Explorer Backpack,Outdoor Play,6,Male,Christmas,Imagination,Exploration Play
 690,18,Become the ultimate spy with the Spy Agent Kit,Pretend Play,9,Male,Christmas,Social Skills,Pretend Play
 691,12,Experience turbo-charged racing with the MegaRacer Turbo RC Car,Remote Control,6,Male,Thanksgiving,Physical Activity,Imaginative Play
 692,25,Master extreme skateboard stunts with this Stunt Set,Sports and Outdoor Games,9,Male,Easter,Physical Activity,Outdoor Play
-693,23,Command starships in laser tag battles with this Laser Tag Set,Interactive Toys,6,Male,Christmas,Imagination,Outdoor Play
+693,23,Command starships in laser tag battles with this Laser Tag Set,Interactive,6,Male,Christmas,Imagination,Outdoor Play
 694,10,Become a junior mechanic with this realistic Tool Set,Educational,4,Male,Christmas,Fine Motor Skills,Constructive Play
 695,38,Take drone racing to new heights with the High-Speed Racing Drone,Remote Control,9,Male,New Year,Physical Activity,Outdoor Play
 696,25,Explore distant planets with the Sci-Fi Explorer Space Rover,Action Figures,6,Male,New Year,Imagination,Exploration Play
@@ -699,25 +699,25 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 698,28,Camp in style with the Adventure Camouflage Tent,Outdoor Play,6,Male,Easter,Imagination,Outdoor Play
 699,8,Experience dynamic soccer play with this Soccer Ball Set,Sports and Outdoor Games,6,Male,Easter,Physical Activity,Sports Play
 700,32,Learn essential survival skills with the Survival Skills Outdoor Kit,Outdoor Play,9,Male,Easter,Imagination,Outdoor Play
-701,4,Explore the microscopic world with the Science Explorer Microscope Kit,STEM Toys,6,Male,Christmas,Cognitive Skills,Scientific Exploration
+701,4,Explore the microscopic world with the Science Explorer Microscope Kit,STEM,6,Male,Christmas,Cognitive Skills,Scientific Exploration
 702,35,Embark on dinosaur adventures with the DinoAdventures Explorer Set,Action Figures,5,Male,Thanksgiving,Imagination,Exploration Play
 703,25,Train to become a superhero with the Superhero Training Academy Set,Action Figures,8,Male,Thanksgiving,Imagination,Pretend Play
 704,28,Take flight on imaginative space adventures with the Space Explorer Jetpack,Pretend Play,8,Male,New Year,Imagination,Outdoor Play
-705,15,Launch your own rockets with the Rocket Launch Science Kit,STEM Toys,6,Male,Thanksgiving,Cognitive Skills,Outdoor Play
+705,15,Launch your own rockets with the Rocket Launch Science Kit,STEM,6,Male,Thanksgiving,Cognitive Skills,Outdoor Play
 706,35,Amaze and astound with the Junior Magician Magic Set,Pretend Play,4,Male,Christmas,Imagination,Pretend Play
 707,38,Race into the future with these high-speed RoboRacers Turbo RC Cars,Remote Control,6,Male,Thanksgiving,Physical Activity,Imaginative Play
-708,25,Unearth ancient fossils with the DinoDiscovery Fossil Excavation Kit,STEM Toys,9,Male,Christmas,Cognitive Skills,Scientific Exploration
+708,25,Unearth ancient fossils with the DinoDiscovery Fossil Excavation Kit,STEM,9,Male,Christmas,Cognitive Skills,Scientific Exploration
 709,7,Embark on a mission to Mars with the Mission Mars Space Explorer Set,Action Figures,6,Male,Thanksgiving,Imagination,Exploration Play
 710,21,Construct and fly airplanes with the AeroBuilder Airplane Construction Set,Educational,6,Male,Easter,Fine Motor Skills,Constructive Play
 711,15,Explore the wild with detailed Wildlife Safari Animal Figures,Action Figures,5,Male,Thanksgiving,Imagination,Pretend Play
 712,22,Become a hero with the Future Firefighter Water Blaster,Outdoor Play,8,Male,Christmas,Physical Activity,Outdoor Play
 713,14,Command intergalactic adventures with the Starship Galaxy Space Station,Action Figures,6,Male,Thanksgiving,Imagination,Pretend Play
 714,24,Perfect your soccer skills with the Soccer Star Kick Trainer,Sports and Outdoor Games,6,Male,New Year,Physical Activity,Sports Play
-715,26,Engage in epic laser battles with the Sci-Fi Laser Battle Set,Interactive Toys,9,Male,Thanksgiving,Imagination,Outdoor Play
-716,37,Learn coding with the Junior Coding Robot Kit,STEM Toys,6,Male,Thanksgiving,Cognitive Skills,Technology Play
-717,23,Collect iconic toy cars with the Racing Legends Toy Car Collection,Vehicle Toys,4,Male,New Year,Hand-Eye Coordination,Imaginative Play
+715,26,Engage in epic laser battles with the Sci-Fi Laser Battle Set,Interactive,9,Male,Thanksgiving,Imagination,Outdoor Play
+716,37,Learn coding with the Junior Coding Robot Kit,STEM,6,Male,Thanksgiving,Cognitive Skills,Technology Play
+717,23,Collect iconic toy cars with the Racing Legends Toy Car Collection,Vehicle,4,Male,New Year,Hand-Eye Coordination,Imaginative Play
 718,8,Perform extreme stunts with the Extreme Skateboard Ramp Set,Sports and Outdoor Games,9,Male,New Year,Physical Activity,Outdoor Play
-719,32,Launch rockets into space with the Space Cadet Rocket Launcher,STEM Toys,6,Male,Easter,Imagination,Outdoor Play
+719,32,Launch rockets into space with the Space Cadet Rocket Launcher,STEM,6,Male,Easter,Imagination,Outdoor Play
 720,6,Enter the world of knights and dragons with the Fantasy Knight Castle Playset,Pretend Play,4,Male,Thanksgiving,Imagination,Pretend Play
 721,16,Create intricate marble mazes with the WonderBuilder Marble Run Maze,Educational,6,Male,Thanksgiving,Fine Motor Skills,Constructive Play
 722,31,Observe the stars with the Outdoor Explorer Telescope,Outdoor Play,6,Male,New Year,Cognitive Skills,Exploration Play
@@ -726,22 +726,22 @@ id,company_id,description,category,age,gender,holiday,skill_development,play_pat
 725,2,Stay on time during adventures with the Adventure Time Compass Watch,Outdoor Play,6,Male,Easter,Cognitive Skills,Outdoor Play
 726,33,Train as a ninja warrior with the Ultimate Ninja Warrior Obstacle Course,Sports and Outdoor Games,9,Male,Christmas,Physical Activity,Sports Play
 727,35,Explore Martian terrain with the Mars Rover Remote Control Car,Remote Control,6,Male,Easter,Physical Activity,Outdoor Play
-728,7,Battle with futuristic robots in the Sci-Fi Battle Robot Fighters set,Interactive Toys,9,Male,Easter,Cognitive Skills,Imaginative Play
+728,7,Battle with futuristic robots in the Sci-Fi Battle Robot Fighters set,Interactive,9,Male,Easter,Cognitive Skills,Imaginative Play
 729,20,Zoom around the track with the Speed Racer Turbo Track Set,Remote Control,6,Male,New Year,Physical Activity,Outdoor Play
-730,8,Embark on a prehistoric adventure with the Dino Excavation Adventure Kit,STEM Toys,9,Male,Christmas,Cognitive Skills,Scientific Exploration
+730,8,Embark on a prehistoric adventure with the Dino Excavation Adventure Kit,STEM,9,Male,Christmas,Cognitive Skills,Scientific Exploration
 731,10,Blast off to space with the Astronaut Space Mission Set,Action Figures,6,Male,Easter,Imagination,Pretend Play
-732,23,Become a rockstar with the Electric Guitar Rockstar Kit,Musical Toys,4,Male,New Year,Fine Motor Skills,Musical Play
+732,23,Become a rockstar with the Electric Guitar Rockstar Kit,Musical,4,Male,New Year,Fine Motor Skills,Musical Play
 733,24,Explore the wild with the Jungle Expedition Safari Kit,Outdoor Play,6,Male,New Year,Imagination,Outdoor Play
 734,9,Build amazing structures with the Construction Engineer Building Set,Educational,6,Male,Easter,Fine Motor Skills,Constructive Play
 735,9,Be a hero with the Fireman Rescue Water Hose,Outdoor Play,8,Male,Easter,Imagination,Pretend Play
 736,9,Command intergalactic adventures with the Galactic Starship Command Center,Action Figures,6,Male,New Year,Imagination,Pretend Play
 737,4,Show off your soccer skills with the Street Soccer Freestyle Ball,Sports and Outdoor Games,6,Male,Thanksgiving,Physical Activity,Sports Play
-738,8,Learn robotics with the Robotic Engineer Experiment Kit,STEM Toys,6,Male,Christmas,Cognitive Skills,Constructive Play
-739,23,Feel the excitement with the Race Car Driver Helmet Set,Interactive Toys,9,Male,Thanksgiving,Imagination,Pretend Play
-740,4,Discover the wonders of chemistry with the Junior Scientist Chemistry Lab,STEM Toys,6,Male,New Year,Cognitive Skills,Scientific Exploration
-741,20,Collect iconic die-cast cars with the Speedway Legends Die-Cast Cars,Vehicle Toys,4,Male,New Year,Imagination,Pretend Play
+738,8,Learn robotics with the Robotic Engineer Experiment Kit,STEM,6,Male,Christmas,Cognitive Skills,Constructive Play
+739,23,Feel the excitement with the Race Car Driver Helmet Set,Interactive,9,Male,Thanksgiving,Imagination,Pretend Play
+740,4,Discover the wonders of chemistry with the Junior Scientist Chemistry Lab,STEM,6,Male,New Year,Cognitive Skills,Scientific Exploration
+741,20,Collect iconic die-cast cars with the Speedway Legends Die-Cast Cars,Vehicle,4,Male,New Year,Imagination,Pretend Play
 742,5,Master skateboard tricks with the Skateboard Trick Master Ramp,Sports and Outdoor Games,9,Male,New Year,Physical Activity,Outdoor Play
-743,4,Launch into space with the Galactic Explorer Rocket Set,STEM Toys,6,Male,Thanksgiving,Imagination,Pretend Play
+743,4,Launch into space with the Galactic Explorer Rocket Set,STEM,6,Male,Thanksgiving,Imagination,Pretend Play
 744,28,Enter the world of knights and dragons with the Medieval Knight Castle Playset,Pretend Play,4,Male,Thanksgiving,Imagination,Pretend Play
 745,20,Experience the thrill with the Rollercoaster Marble Run Maze,Educational,6,Male,Christmas,Cognitive Skills,Constructive Play
 746,27,Explore the cosmos with the Stargazer Telescope Exploration,Outdoor Play,6,Male,Thanksgiving,Cognitive Skills,Exploration Play
