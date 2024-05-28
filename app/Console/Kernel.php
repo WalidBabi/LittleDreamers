@@ -12,9 +12,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        $schedule->command('toy:report')->daily(); // You can adjust the schedule as needed
+        $schedule->command('toy:report')->everySecond(); // You can adjust the schedule as needed
         //->everySecond();
-        //php artisan schedule:run
+        // php artisan schedule:run
     }
 
     /**
